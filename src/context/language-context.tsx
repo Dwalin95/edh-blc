@@ -1,6 +1,6 @@
 import { useEffect, useState, createContext, useContext } from "react";
 
-type language = "EN" | "DE";
+type language = "EN" | "IT";
 
 type LanguageContextProviderProps = {
   children: React.ReactNode;
@@ -20,13 +20,13 @@ export default function LanguageContextProvider({
 
   const toggleLanguage = () => {
     if (language === "EN") {
-      setLanguage("DE");
-      window.localStorage.setItem("language", "DE");
-      document.documentElement.classList.add("DE");
+      setLanguage("IT");
+      window.localStorage.setItem("language", "IT");
+      document.documentElement.classList.add("IT");
     } else {
       setLanguage("EN");
       window.localStorage.setItem("language", "EN");
-      document.documentElement.classList.remove("DE");
+      document.documentElement.classList.remove("IT");
     }
   };
 
@@ -38,12 +38,12 @@ export default function LanguageContextProvider({
     if (localLanguage) {
       setLanguage(localLanguage);
 
-      if (localLanguage === "DE") {
-        document.documentElement.classList.add("DE");
+      if (localLanguage === "IT") {
+        document.documentElement.classList.add("IT");
       }
-    } else if (window.matchMedia("(prefers-color-scheme: DE)").matches) {
-      setLanguage("DE");
-      document.documentElement.classList.add("DE");
+    } else if (window.matchMedia("(prefers-color-scheme: IT)").matches) {
+      setLanguage("IT");
+      document.documentElement.classList.add("IT");
     }
   }, []);
 
@@ -61,12 +61,8 @@ export default function LanguageContextProvider({
 
 export function useLanguage() {
   const context = useContext(LanguageContext);
-
-  if (context === null) {
-    throw new Error(
-      "useLanguage must be used within a LanguageContextProvider"
-    );
+  if (!context) {
+    throw new Error("useLanguage must be used within a LanguageContextProvider");
   }
-
   return context;
 }

@@ -26,8 +26,8 @@ const ProjectSlider: React.FC = () => {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const notifyServerRequest = () => {
-    if (language === "DE") {
-      toast.info(toastMessages.loadingProject.de);
+    if (language === "IT") {
+      toast.info(toastMessages.loadingProject.it);
     } else {
       toast.info(toastMessages.loadingProject.en);
     }
@@ -73,11 +73,11 @@ const ProjectSlider: React.FC = () => {
             >
               <p className="text-[--white] mt-16 mb-6">
                 <span className="text-[--orange]">&lt;</span>
-                {language === "DE" ? "Projekte" : "Projects"}
+                {language === "IT" ? "Progetti" : "Projects"}
                 <span className="text-[--orange]">/&gt;</span>
               </p>
               <h2 className="text-[--white] mb-16">
-                {language === "DE" ? "Meine Projekte" : "My Projects"}
+                {language === "IT" ? "I miei Progetti" : "My Projects"}
               </h2>
             </motion.div>
             <Swiper
@@ -104,13 +104,13 @@ const ProjectSlider: React.FC = () => {
                     <h2>{project.title}</h2>
 
                     <p className="text-white">
-                      {language === "DE"
+                      {language === "IT"
                         ? project.description
                         : project.description_EN}
                     </p>
                     <div className="technologies">
                       <h3>
-                        {language === "DE" ? "Technologien" : "Technologies"}
+                        {language === "IT" ? "Technologien" : "Technologies"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
                         {project.technologies.map(
@@ -185,14 +185,14 @@ const ProjectSlider: React.FC = () => {
                   />
                 </div>
                 <p className="text-white  max-lg:text-4xl">
-                  {language === "DE"
+                  {language === "IT"
                     ? project.description
                     : project.description_EN}
                 </p>
 
                 <div className="technologies">
                   <h3 className="text-white">
-                    {language === "DE" ? "Technologien" : "Technologies"}
+                    {language === "IT" ? "Technologien" : "Technologies"}
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
