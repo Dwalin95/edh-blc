@@ -10,7 +10,7 @@ const SiteBarLeft: React.FC = () => {
           to={sideBarRightMail.link}
           className=" text-gray-700 mb-2 [writing-mode:vertical-lr] absolute top-0 right-0  h-[50%] text-[--orange] hover:text-[--lightblue] transition-all duration-200 "
         >
-          {sideBarRightMail.text}
+          {/* {sideBarRightMail.text} */}
         </Link>
       </div>
       <div className="flex items-center justify-center flex-col h-[70%] ">

@@ -110,7 +110,7 @@ const ProjectSlider: React.FC = () => {
                     </p>
                     <div className="technologies">
                       <h3>
-                        {language === "IT" ? "Technologien" : "Technologies"}
+                        {language === "IT" ? "Costo di mana" : "Mana cost"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
                         {project.technologies.map(
@@ -129,17 +129,17 @@ const ProjectSlider: React.FC = () => {
                     </div>
                     <div className="buttons flex gap-10">
                       <Button
-                        label="Live Demo"
-                        link={project.deploymenturl}
-                        iconSVG={project.deploymenticon}
+                        label="Link lista"
+                        link={project.mtgGoldfishUrl}
+                        iconSVG={project.mtgGoldfishIcon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
                         onClick={notifyServerRequest}
                       />
                       <Button
-                        label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
+                        label="Foto Lista"
+                        link={project.driveUrl}
+                        iconSVG={project.downloadIcon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
                       />
@@ -170,16 +170,16 @@ const ProjectSlider: React.FC = () => {
                 />
                 <div className="buttons flex gap-10 max-lg:flex-col">
                   <Button
-                    label="Live Demo"
-                    link={project.deploymenturl}
-                    iconSVG={project.deploymenticon}
+                    label="Link lista"
+                    link={project.mtgGoldfishUrl}
+                    iconSVG={project.mtgGoldfishIcon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
                   />
                   <Button
-                    label="Github Repository"
-                    link={project.githuburl}
-                    iconSVG={project.githubicon}
+                    label="Foto lista"
+                    link={project.driveUrl}
+                    iconSVG={project.downloadIcon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
                   />
@@ -192,7 +192,8 @@ const ProjectSlider: React.FC = () => {
 
                 <div className="technologies">
                   <h3 className="text-white">
-                    {language === "IT" ? "Technologien" : "Technologies"}
+                  {language === "IT" ? "Costo di mana" : "Mana cost"}
+
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(

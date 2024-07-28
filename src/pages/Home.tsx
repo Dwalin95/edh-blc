@@ -86,8 +86,9 @@ const Home: React.FC = () => {
                 height="middle"
                 dividerStyle="solid"
               />
-
+              
               <LazyAboutMe />
+              
               <Divider
                 thickness="0.25rem"
                 direction="inner-left-to-middle"

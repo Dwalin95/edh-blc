@@ -2,6 +2,7 @@ import pianura from "../icons/pianura.svg";
 import palude from "../../assets/icons/palude.svg";
 import isola from "../../assets/icons/isola.svg";
 import foresta from "../../assets/icons/foresta.svg";
+import cost1 from "../../assets/icons/1.svg";
 import montagna from "../../assets/icons/montagna.svg";
 import adobexdicon from "../../assets/icons/adobexdicon.svg";
 import canvaicon from "../../assets/icons/canvaicon.svg";
@@ -18,19 +19,12 @@ import mongodbicon from "../../assets/icons/mongoicon.svg";
 import vuejsicon from "../../assets/icons/vueicon.svg";
 import expressicon from "../../assets/icons/expressicon.svg";
 import sassscssicon from "../../assets/icons/sassicon.svg";
-import trelloicon from "../../assets/icons/trelloicon.svg";
-import apiicon from "../../assets/icons/apiicon.svg";
-import axiosicon from "../../assets/icons/axiosicon.svg";
-import spotifyicon from "../../assets/icons/spotifyicon.svg";
-import netlifyicon from "../../assets/icons/netlifyicon.svg";
-import rendericon from "../../assets/icons/rendericon.svg";
-import jwticon from "../../assets/icons/jwticon.svg";
 import wordpressicon from "../../assets/icons/wordpressicon.svg";
 import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
-import tastyMockup from "../../assets/img/tasty_mockup.webp";
-import instorMockup from "../../assets/img/instor_mockup.webp";
-import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
+import liveBane from "../../assets/img/livebane.webp";
+import sliver from "../../assets/img/Sliver.webp";
+import vraska from "../../assets/img/vraska.webp";
 import profilepicture from "../img/logo.webp";
 import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
@@ -38,7 +32,14 @@ import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
-import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
+import {
+  FiGithub,
+  FiLink,
+  FiLinkedin,
+  FiMail,
+  FiDownload,
+} from "react-icons/fi";
+import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
 
@@ -79,20 +80,21 @@ export const projectsData = [
   {
     title: "Bane, Lord of Darkness",
     description:
-      "Un'app di ricette che abbiamo costruito come team con React e l'API MealDB. Sono stato lo sviluppatore front-end e ho programmato funzionalità come la ricerca vocale o la stampa in PDF. Il design è stato creato con Figma. Il sito web è responsive e ottimizzato per i dispositivi mobili.",
+      "Bane è un comandante che prospera in un mazzo che manipola la vita e sacrifica creature per ottenere vantaggi. Grazie alla sua abilità puoi giocare dalla mano senza castare, e quindi ti eviti i rognosi counter. E non dimentichiamoci della sua indistruttibilità quando la vita del giocatore è inferiore o uguale a metà del totale iniziale, ciò lo rende difficile da rimuovere in condizioni critiche.",
     description_EN:
-      "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
+      "Bane is a commander that thrives in a deck that manipulates life and sacrifices creatures to gain advantages. Thanks to his ability you can play from your hand without casting, and therefore you avoid the annoying counters. And let's not forget his indestructibility when the player's life is less than or equal to half of the initial total, making him difficult to remove in critical conditions.",
     technologies: [
-      { name: "Palude", icon: palude },
+      { name: "1", icon: cost1 },
       { name: "Pianura", icon: pianura },
       { name: "Isola", icon: isola },
-     
+      { name: "Palude", icon: palude },
     ],
-    image: tastyMockup,
-    deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
-    githuburl: "https://github.com/AlpayC/Frontend_Abschlussprojekt_Tasty",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
+    image: liveBane,
+    mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6443645#paper",
+    driveUrl:
+      "https://drive.google.com/file/d/1PtbqTwtj12LGTuhXFMK4NFz0nEjosz_-/view?usp=drive_link",
+    downloadIcon: FiDownload,
+    mtgGoldfishIcon: FiLink,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -101,31 +103,22 @@ export const projectsData = [
     },
   },
   {
-    title: "Silentmoon",
+    title: "Vraska, the Silencer",
     description:
-      "Un'app di yoga e meditazione che abbiamo costruito come team con React, MongoDB, Express e Node.js. Il mio compito come gitmaster e sviluppatore back-end era quello di programmare il back-end con connessione tramite un'API restful e modellare il database in MongoDB.",
+      "Vraska, the Silencer un perfetto mazzo Golgari basato sulla CLEPTOMANIA! Devi solo distruggere, rimuovere così da poter prendere il controllo delle creature avversarie, ed essere odiato da tutto il tavolo hehehehe 👿",
     description_EN:
-      "A yoga and meditation app that we built as a team with React, MongoDB, Express and Node.js. My task as a gitmaster and backend developer was to program the backend with connection using a restful API and to model the database in MongoDB.",
+      "Vraska, the Silencer a perfect Golgari deck based on CLEPTOMANIA! You just have to destroy, remove so that you can take control of the opponent's creatures, and be hated by the whole table hehehehe 👿",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "Spotify Api", icon: spotifyicon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
+      { name: "1", icon: cost1 },
+      { name: "Foresta", icon: foresta },
+      { name: "Palude", icon: palude },
     ],
-    image: silentmoonMockup,
-    deploymenturl: "https://silentmoon-grpw.onrender.com/",
-    githuburl:
-      "https://github.com/AlpayC/Fullstack_Abschlussprojekt_SilentMoon",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
+    image: vraska,
+    mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6472497#paper",
+    driveUrl:
+      "https://drive.google.com/file/d/1PwV3CuCTPhM2R9AiSGDkbuOV_nO0AW1n/view?usp=drive_link",
+    downloadIcon: FiDownload,
+    mtgGoldfishIcon: FiLink,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -134,30 +127,24 @@ export const projectsData = [
     },
   },
   {
-    title: "Furniture Organizer",
+    title: "The First liver",
     description:
-      "Un'app per l'organizzazione dei mobili che abbiamo programmato come team di duo con React, MongoDB, Express e Node.js. Come gitmaster, mi sono occupato della connessione del frontend al backend e della modellazione del database. L'app è responsive e ottimizzata per i dispositivi mobili.",
+      "The First Sliver è un comandante potente per un mazzo basato sulla meccanica Sliver e della cascata. Ti bastano 5 terre per creare il caos e riempire la board con tanti piccoli rognosi e successivamente enormi tramutanti",
     description_EN:
-      "A furniture organizer app that we programmed as a duo team with React, MongoDB, Express and Node.js. As a gitmaster, I took over the connection of the frontend to the backend and the database modeling. The app is responsive and mobile-optimized.",
+      "The First Sliver is a powerful commander for a deck based on the Sliver and cascade mechanics. You only need 5 lands to create chaos and fill the board with many small annoying",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
-      { name: "Trello", icon: trelloicon },
+      { name: "Pianura", icon: pianura },
+      { name: "Isola", icon: isola },
+      { name: "Palude", icon: palude },
+      { name: "Montagna", icon: montagna },
+      { name: "Foresta", icon: foresta },
     ],
-    image: instorMockup,
-    deploymenturl: "https://mern-haushaltsbuch.onrender.com/",
-    githuburl: "https://github.com/AlpayC/Furniture_MERN",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
+    image: sliver,
+    mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6029386#paper",
+    driveUrl:
+      "https://drive.google.com/file/d/1MCMgTe31SI7dRUcahUCNmqLJKzrz9cZT/view?usp=drive_link",
+    downloadIcon: FiDownload,
+    mtgGoldfishIcon: FiLink,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -169,7 +156,7 @@ export const projectsData = [
 
 export const liveTickerData = {
   content: {
-    it: "Altri progetti su Github",
+    it: "Trovi altre liste su GoldFish cercami, sono Bella li Colibrì!",
     en: "More Projects on Github",
   },
 } as const;
@@ -316,31 +303,31 @@ export const sideBarRightMail = {
 
 export const sideBarLeftSocials = [
   {
-    link: "https://www.linkedin.com/in/alpay/",
-    icon: FiLinkedin,
-    altimgname: "linkedin",
+    link: "https://www.instagram.com/bella_li_colibri?igsh=bTZsNzNoc2xtM282",
+    icon: FaInstagram,
+    altimgname: "instagram",
   },
   {
-    link: "https://github.com/AlpayC",
-    icon: FiGithub,
-    altimgname: "github",
+    link: "https://www.twitch.tv/bella_li_colibri",
+    icon: FaTwitch,
+    altimgname: "twitch",
   },
   {
-    link: "mailto:myemail@com",
-    icon: FiMail,
-    altimgname: "mail",
+    link: "https://www.tiktok.com/@bella_li_colibri?_t=8oP8WDyPIZ7&_r=1",
+    icon: FaTiktok,
+    altimgname: "tiktok",
   },
 ] as const;
 
 export const quotesData = [
   {
-    it: '"Facile montare un mazzo edh con le carte OP del gioco.. prova a farlo con un budget di 100$ 😎"',
-    en: `"It's not at all important to get it right the first time. It's vitally important to get it right the last time."`,
-    author: "Chi come me non ha soldi per comprare carte OP",
+    it: '"Facile montare un mazzo EDH con le carte OP del gioco.. prova a farlo con un budget di 100$ 😎"',
+    en: `"Easy to build an EDH deck with the OP game cards.. try to do it with a budget of 100$ 😎"`,
+    author: "Per chi come me non ha soldi per comprare carte OP 🍻",
   },
   {
     it: '"Scegli il commander, scegli le strategie, costruisci il mazzo e sfida i tuoi amici!"',
-    en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
+    en: `"Choose the commander, choose the strategies, build the deck and challenge your friends!"`,
   },
 ] as const;
 
@@ -481,7 +468,7 @@ export const contactData = {
 
 export const toastMessages = {
   loadingProject: {
-    it: "🦄 La demo live si aprirà a breve. Avvio dei server in corso...",
+    it: "🦄 Qualche secondo ed entrerai nel magico mondo delle liste... 🪄",
     en: "🦄 The live demo will open shortly. Starting servers...",
   },
   successEmailSent: {
