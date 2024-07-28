@@ -4,11 +4,13 @@ import Home from "./pages/Home";
 import ActiveSectionContextProvider from "./context/active-section-context";
 import ThemeContextProvider from "./context/theme-context";
 import LanguageContextProvider from "./context/language-context";
-
+import { Provider } from "react-redux";
+import {store} from "./store/index";
 function App() {
   return (
     <>
       <BrowserRouter>
+      <Provider store={store}>
         <ThemeContextProvider>
           <LanguageContextProvider>
             <ActiveSectionContextProvider>
@@ -20,6 +22,7 @@ function App() {
             </ActiveSectionContextProvider>
           </LanguageContextProvider>
         </ThemeContextProvider>
+        </Provider>
       </BrowserRouter>
     </>
   );

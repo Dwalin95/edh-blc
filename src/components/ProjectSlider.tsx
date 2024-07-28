@@ -14,6 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
+import RicercaComandante from "./ricercaPerComandante";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Lists");
@@ -224,6 +225,7 @@ const ProjectSlider: React.FC = () => {
           backgroundColor: "var(--orange)",
         }}
       />
+      <RicercaComandante/>
     </React.Fragment>
   );
 };
