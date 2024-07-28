@@ -1,7 +1,12 @@
+import pianura from "../icons/pianura.svg";
+import palude from "../../assets/icons/palude.svg";
+import isola from "../../assets/icons/isola.svg";
+import foresta from "../../assets/icons/foresta.svg";
+import montagna from "../../assets/icons/montagna.svg";
 import adobexdicon from "../../assets/icons/adobexdicon.svg";
 import canvaicon from "../../assets/icons/canvaicon.svg";
 import figmaicon from "../../assets/icons/figmaicon.svg";
-import htmlicon from "../../assets/icons/htmlicon.svg";
+import htmlicon from "../../assets/icons/trace.svg";
 import cssicon from "../../assets/icons/cssicon.svg";
 import javascripticon from "../../assets/icons/javascripticon.svg";
 import typescripticon from "../../assets/icons/typescripticon.svg";
@@ -26,7 +31,7 @@ import webflowicon from "../../assets/icons/webflowicon.svg";
 import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
-import profilepicture from "../img/me2.webp";
+import profilepicture from "../img/logo.webp";
 import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
@@ -39,13 +44,13 @@ import Privacy from "../../components/Privacy";
 
 export const headerIntroData = {
   title: {
-    it: "Ciao, sono Alpay",
-    en: "Hi, I'm Alpay",
+    it: "Ciao! sono Andrea",
+    en: "Hello! I'm Andrea",
   },
-  subtitle: "Sviluppatore Fullstack",
+  subtitle: "Gamer and Streamer",
   description: {
-    it: "Sono Alpay, uno sviluppatore fullstack con l'obiettivo di far progredire la mia carriera e partecipare a progetti stimolanti. Qui presento il mio lavoro e la mia passione per lo sviluppo web. Lavoriamo insieme per creare soluzioni digitali e plasmare il futuro!",
-    en: "I'm Alpay, a fullstack developer with the goal of advancing my career and participating in inspiring projects. Here I present my work and my passion for web development. Let's shape digital solutions together and shape the future!",
+    it: "Ciao Viandante sono Andrea, un appassionato di videogiochi, carte, giochi da tavolo e streamer (wow quante cose, e suono anche la chitarra 🤣). Qui troverai tutte le informazioni relative alle live, e anche tutte le liste dei mazzi budget e non che costruirò in live, sia per Magic che per Star Wars Unlimited! Cosa aspetti, vai subito a guardare!",
+    en: "Hello Plansewalker, I'm Andrea, a passionate gamer, card player, board game enthusiast, and streamer (wow, so many things, and I also play the guitar 🤣). Here you will find all the information about my live streams, as well as the lists of budget and non-budget decks that I will build live, both for Magic and Star Wars Unlimited! What are you waiting for, go check it out!",
   },
   buttons: [
     {
@@ -58,9 +63,9 @@ export const headerIntroData = {
       color: "main-btn",
     },
     {
-      name: "Projects",
+      name: "Mazzi",
       label: {
-        it: "I miei progetti",
+        it: "Alcune delle mie",
         en: "My Projects",
       },
       icon: FiGithub,
@@ -72,21 +77,16 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
-    title: "Tasty App",
+    title: "Bane, Lord of Darkness",
     description:
       "Un'app di ricette che abbiamo costruito come team con React e l'API MealDB. Sono stato lo sviluppatore front-end e ho programmato funzionalità come la ricerca vocale o la stampa in PDF. Il design è stato creato con Figma. Il sito web è responsive e ottimizzato per i dispositivi mobili.",
     description_EN:
       "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
-      { name: "React", icon: reacticon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Canva", icon: canvaicon },
-      { name: "Netlify", icon: netlifyicon },
-      { name: "Trello", icon: trelloicon },
+      { name: "Palude", icon: palude },
+      { name: "Pianura", icon: pianura },
+      { name: "Isola", icon: isola },
+     
     ],
     image: tastyMockup,
     deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
@@ -298,8 +298,8 @@ export const skillsDataCMS = [
 
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
-  { it: "Skills", en: "Skills", hash: "#skills", icon: GoStack },
-  { it: "Progetti", en: "Projects", hash: "#projects", icon: GoProject },
+  { it: "Esempi", en: "Example", hash: "#esempi", icon: GoStack },
+  { it: "Liste", en: "Lists", hash: "#lists", icon: GoProject },
   { it: "Chi sono", en: "About me", hash: "#about-me", icon: GoPerson },
   { it: "Contatti", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
@@ -334,12 +334,12 @@ export const sideBarLeftSocials = [
 
 export const quotesData = [
   {
-    it: '"Non è affatto importante farlo bene la prima volta. È fondamentale farlo bene l\'ultima volta."',
+    it: '"Facile montare un mazzo edh con le carte OP del gioco.. prova a farlo con un budget di 100$ 😎"',
     en: `"It's not at all important to get it right the first time. It's vitally important to get it right the last time."`,
-    author: "Andrew Hunt",
+    author: "Chi come me non ha soldi per comprare carte OP",
   },
   {
-    it: '"Il web è come una tela e il codice è il colore. Crea il tuo capolavoro."',
+    it: '"Scegli il commander, scegli le strategie, costruisci il mazzo e sfida i tuoi amici!"',
     en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
   },
 ] as const;

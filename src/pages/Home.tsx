@@ -51,8 +51,8 @@ const Home: React.FC = () => {
               dividerStyle="solid"
             />
 
-            <LazyTechStack />
-            <Divider
+            {/* <LazyTechStack /> */}
+            {/* <Divider
               thickness="0.25rem"
               direction="inner-right-to-middle"
               color="lightblue"
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
               color="lightblue"
               height="extraLarge"
               dividerStyle="solid"
-            />
+            /> */}
             <ProjectSlider />
             <div className="relative -mb-24 pb-32 -mt-10">
               <LazyRadialGradient

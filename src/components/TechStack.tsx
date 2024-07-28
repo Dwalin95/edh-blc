@@ -13,7 +13,7 @@ import RadialGradient from "./RadialGradient";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const TechStack: React.FC = () => {
-  const { ref } = useSectionInView("Skills");
+  const { ref } = useSectionInView("Example");
   const { theme } = useTheme();
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
@@ -27,7 +27,7 @@ const TechStack: React.FC = () => {
     <React.Fragment>
       <section
         className="relative tech-stack max-lg:p-16 "
-        id="skills"
+        id="esempi"
         ref={ref}
       >
         <RadialGradient
@@ -44,13 +44,13 @@ const TechStack: React.FC = () => {
             }}
           >
             <p className="font-black mb-6">
-              <span className="text-[--orange]">&lt;</span>Skills
+              <span className="text-[--orange]">&lt;</span>Esempi
               <span className="text-[--orange]">/&gt;</span>
             </p>
             <h2>
               {language === "IT"
-                ? "Meine Techstack und Skills"
-                : "My TechStack and Skills"}
+                ? "Ecco alcuni esempi di mazzi che ho realizzato"
+                : "Here are some examples of decks I've created"}
             </h2>
           </motion.div>
         </div>
