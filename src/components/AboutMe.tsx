@@ -104,12 +104,15 @@ const AboutMe: React.FC = () => {
                 </p>
               </div>
               <div className="flex gap-6 mt-6">
+             
                 <button className="bg-orange text-white py-2 px-4 rounded">
-                  Button 1
+                <a href={paragraph.driveUrl}>
+          
+              </a>
+                                  Vai la lista
+
                 </button>
-                <button className="bg-lightblue text-white py-2 px-4 rounded">
-                  Button 2
-                </button>
+                
               </div>
             </SwiperSlide>
             

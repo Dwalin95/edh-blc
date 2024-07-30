@@ -26,9 +26,6 @@ import liveBane from "../../assets/img/livebane.webp";
 import sliver from "../../assets/img/Sliver.webp";
 import vraska from "../../assets/img/vraska.webp";
 import profilepicture from "../img/logo.webp";
-import caricon from "../../assets/icons/car-icon.svg";
-import travelicon from "../../assets/icons/travel-icon.svg";
-import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import tarkin from "../img/tarkin-giallo.webp"; 
@@ -344,6 +341,7 @@ export const aboutMeData = {
       description:
         "Un mazzo bilanciato e versatile, con una struttura che consente flessibilità e adattabilità ai vari stili di gioco degli avversari. E poi dai.. giochi con Vader ROSSO!",
       icon: vader,
+      driveUrl:""
      
     },
     {
@@ -351,6 +349,7 @@ export const aboutMeData = {
       description:
         "Un mix di carte che garantiscono flessibilità e consistenza, con una strategia equilibrata. Questo mazzo è capace di adattarsi a varie situazioni di gioco grazie agli eventi gialli.",
       icon: tarkin,
+      driveUrl:""
      
 
     },
@@ -359,6 +358,7 @@ export const aboutMeData = {
       description:
         "Il caro e veccio Krennic.. che dire parla da solo, riesce a battere anche Boba",
       icon: krennik,
+      driveUrl:""
     },
   ],
   paragraphs_EN: [
@@ -367,18 +367,21 @@ export const aboutMeData = {
       description:
         "A balanced and versatile deck, with a structure that allows flexibility and adaptability to the various playing styles of opponents. And then come on.. you play with RED Vader!",
       icon: vader,
+      driveUrl:""
     },
     {
       title: "Grand Jabba's Palace",
       description:
         "A mix of cards that guarantee flexibility and consistency, with a balanced strategy. This deck is able to adapt to various game situations thanks to the yellow events.",
       icon: tarkin,
+      driveUrl:""
     },
     {
       title: "Krennic la Rana",
       description:
         "The dear old Krennic.. what can I say, he can even beat Boba",
       icon: krennik,
+      driveUrl:""
     },
   ],
 };
@@ -389,8 +392,8 @@ export const contactData = {
     en: "Contact",
   },
   description: {
-    it: "Scrivimi un messaggio e ti risponderò al più presto.",
-    en: "Write me a message and I will get back to you.",
+    it: "Qui è dove puoi trovarmi!",
+    en: "Here is where you can find me!",
   },
   inputfields: [
     {
