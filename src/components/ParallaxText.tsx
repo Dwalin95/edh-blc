@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 
 import { useRef, useState, useEffect } from "react";
 import {
@@ -13,7 +13,7 @@ import {
 import { wrap } from "@motionone/utils";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/language-context";
-import { sideBarLeftSocials, liveTickerData } from "../assets/lib/data";
+import { liveTickerData } from "../assets/lib/data";
 import gdfh from "../assets/img/gdfh.webp";
 interface ParallaxProps {
   children: any;
