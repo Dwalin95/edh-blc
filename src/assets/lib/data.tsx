@@ -31,11 +31,13 @@ import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
-import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
+import tarkin from "../img/tarkin-giallo.webp"; 
+import vader from "../img/Vader-blu.webp";
+import krennik from "../img/krennik-verde.webp";
+import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
 import {
   FiGithub,
   FiLink,
-  FiLinkedin,
   FiMail,
   FiDownload,
 } from "react-icons/fi";
@@ -55,7 +57,7 @@ export const headerIntroData = {
   },
   buttons: [
     {
-      name: "Contact",
+      name: "Contati",
       label: {
         it: "Contattami",
         en: "Contact me",
@@ -285,9 +287,9 @@ export const skillsDataCMS = [
 
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
-  { it: "Esempi", en: "Example", hash: "#esempi", icon: GoStack },
-  { it: "Liste", en: "Lists", hash: "#lists", icon: GoProject },
-  { it: "Chi sono", en: "About me", hash: "#about-me", icon: GoPerson },
+  // { it: "Esempi", en: "Example", hash: "#esempi", icon: GoStack },
+  { it: "Magic", en: "Magic", hash: "#lists", icon: GoProject },
+  { it: "Star Wars Unlimited", en: "Star Wars Unlimited", hash: "#about-me", icon: GoPerson },
   { it: "Contatti", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
 
@@ -332,28 +334,33 @@ export const quotesData = [
 ] as const;
 
 export const aboutMeData = {
-  title: "Chi sono",
-  title_EN: "About me",
-  description: "Alcuni frammenti di codice su di me",
-  description_EN: "A few code snippets about me",
+  title: "Star Wars Unlimited",
+  title_EN: "Star Wars Unlimited",
+  description: "Hey non scordiamici che faccio anche Star Wars!",
+  description_EN: "Hey don't forget that I also do Star Wars!",
   paragraphs_IT: [
     {
       title: "I circuiti del mio cuore",
       description:
         "Quando non sono immerso nel mondo digitale, esploro il fascinante mondo della tecnologia e dell'hardware. Circuiti e saldature sono come pezzi di un puzzle in un'avventura emozionante.",
-      icon: hardwareicon,
+      icon: vader,
+     
     },
     {
       title: "Sulla corsia veloce della vita",
       description:
         "Oltre al coding, mi piace essere sulla corsia veloce - nel vero senso della parola. Le auto sono la mia passione e mi piace percorrere strade sconosciute con macchine potenti.",
       icon: caricon,
+     
+
     },
     {
       title: "La gioia della scoperta come motto di vita",
       description:
         "Il mio percorso come sviluppatore web è solo una parte del mio cammino di vita. Vivo secondo il motto che l'avventura inizia solo quando si lascia alle spalle il familiare. Scoprire nuovi luoghi e culture è la mia forma di ispirazione creativa.",
       icon: travelicon,
+     
+
     },
   ],
   paragraphs_EN: [
@@ -362,18 +369,23 @@ export const aboutMeData = {
       description:
         "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
       icon: hardwareicon,
+     
+
     },
     {
       title: "On the Fast Lane of Life",
       description:
         "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
       icon: caricon,
+     
+
     },
     {
       title: "The Joy of Discovery as a Life Motto",
       description:
         "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
       icon: travelicon,
+      
     },
   ],
 };

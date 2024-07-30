@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
   const [message, setMessage] = useState<string>("");
   const [cursor, setCursor] = useState<string>("");
   const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null);
-  const { ref } = useSectionInView("Contact");
+  const { ref } = useSectionInView("Contatti");
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [error, setError] = useState<string | unknown>(null);

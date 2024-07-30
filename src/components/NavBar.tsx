@@ -6,8 +6,19 @@ import { useActiveSectionContext } from "../context/active-section-context";
 import { useTheme } from "../context/theme-context";
 import { useLanguage } from "../context/language-context";
 import LanguageSwitch from "./LanguageSwitch";
+import magic from "../assets/icons/magic.webp";
+import morteNera from "../assets/icons/MorteNera.webp";
+import logo from "../assets/img/logo.webp";
 
 const NavBar: React.FC = () => {
+
+  const iconMap: { [key: string]: string } = {
+    "Home": logo,
+    "Magic": magic,
+    "Star Wars Unlimited": morteNera,
+    "Contact": logo,
+  };
+
   const { theme } = useTheme();
   const { language } = useLanguage();
 
@@ -57,39 +68,41 @@ const NavBar: React.FC = () => {
   }) => {
     const [isHovered, setIsHovered] = useState(false);
     const isLinkActive = isHovered || linkEn === activeSection;
-
+  
     const linkClasses = isLinkActive
       ? "transition-all duration-200 relative"
       : "opacity-20 transition-all duration-700";
-
+  
+    const iconSrc = linkEn && iconMap[linkEn] ? iconMap[linkEn] : ""; // Ottieni l'icona dalla mappatura
+  
     const leftArrow = isLinkActive && (
-      <span className="text-[--orange] absolute -left-5 top-0 max-lg:hidden">
-        &lt;
+      <span className="text-[--orange] absolute -left-12 top-1 max-lg:hidden">
+        <img src={iconSrc} className="w-10" />
       </span>
     );
-
-    const rightArrow = isLinkActive && (
-      <span className="text-[--orange] absolute top-0 -right-10 max-lg:hidden">
-        /&gt;
-      </span>
-    );
-
+  
+    // const rightArrow = isLinkActive && (
+    //   <span className="text-[--orange] absolute top-3 -right-8 max-lg:hidden">
+    //     <img src={iconSrc} className="w-7" />
+    //   </span>
+    // );
+  
     return (
       <NavLink
         to={link}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={`relative ${linkClasses}`}
-        aria-aria-current={link}
       >
         <span>
           {leftArrow}
           {children}
-          {rightArrow}
+          {/* {rightArrow} */}
         </span>
       </NavLink>
     );
   };
+  
 
   return (
     <React.Fragment>
@@ -102,18 +115,13 @@ const NavBar: React.FC = () => {
                   theme === "dark" ? "bg-darkblue" : "bg-white"
                 }`
               : ""
-          }
-   `}
+          }`}
         >
           {navLinks.map((link, index) => (
             <CustomNavLink key={index} link={link.hash} linkEn={link.en}>
               {link.en === activeSection ? (
                 <div>
-                  <span className="text-[--orange] absolute -left-5 top-0">
-                    &lt;
-                  </span>
                   {language === "IT" ? link.it : link.en}
-                  {/* {link.it.toLocaleUpperCase()} */}
                 </div>
               ) : (
                 <div
@@ -123,8 +131,6 @@ const NavBar: React.FC = () => {
                   }}
                 >
                   {language === "IT" ? link.it : link.en}
-
-                  {/* {link.it.toLocaleUpperCase()} */}
                 </div>
               )}
             </CustomNavLink>
@@ -134,7 +140,7 @@ const NavBar: React.FC = () => {
       )}
       {isMobileMenuActive && (
         <nav
-          className={` max-lg:flex w-[100vw] flex-row justify-between fixed bottom-0 left-0 z-50 bg-darkblue p-10  text-center items-center transition-all ease-in-out duration-100 rounded-t-3xl bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
+          className={`max-lg:flex w-[100vw] flex-row justify-between fixed bottom-0 left-0 z-50 bg-darkblue p-10  text-center items-center transition-all ease-in-out duration-100 rounded-t-3xl bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
             theme === "dark" ? "bg-darkblue" : "bg-white"
           }`}
         >
@@ -142,7 +148,7 @@ const NavBar: React.FC = () => {
             <CustomNavLink key={mobileIndex} link={link.hash} linkEn={link.en}>
               {link.en === activeSection ? (
                 <div className="text-[3.2rem] flex flex-col items-center">
-                  <link.icon />
+                  <img src={iconMap[link.en]} className="w-8 h-8" />
                 </div>
               ) : (
                 <div
@@ -158,7 +164,7 @@ const NavBar: React.FC = () => {
                     }
                   }}
                 >
-                  <link.icon />
+                  <img src={iconMap[link.en]} className="w-6 h-6" />
                 </div>
               )}
             </CustomNavLink>
@@ -168,6 +174,7 @@ const NavBar: React.FC = () => {
       )}
     </React.Fragment>
   );
+  
 };
 
 interface CustomNavLinkProps {

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import me from "../assets/img/me.webp";
+import me from "../assets/img/Vader.webp";
 import { aboutMeData } from "../assets/lib/data";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,11 +9,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
+import morteNera from "../assets/icons/MorteNera.webp";
 
 const AboutMe: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
-  const { ref } = useSectionInView("About me");
+  const { ref } = useSectionInView("Star Wars Unlimited");
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,10 +47,14 @@ const AboutMe: React.FC = () => {
               textAlign: "left",
             }}
           >
-            <p className="text-[--black] mb-6">
-              <span className="text-orange">&lt;</span>
+            <p className="text-[--black] mb-6 flex items-center">
+              <span className="-left-8 top-3 max-lg:hidden mr-2">
+                <img src={morteNera} className="w-20" />
+              </span>
               {language === "IT" ? aboutMeData.title : aboutMeData.title_EN}
-              <span className="text-orange">/&gt;</span>
+              <span className="ml-2 max-lg:hidden">
+                <img src={morteNera} className="w-20" />
+              </span>
             </p>
 
             <h2 className="text-[--black] text-center max-lg:text-left break-words">
@@ -60,7 +65,7 @@ const AboutMe: React.FC = () => {
           </motion.div>
         </div>
         <div className="flex flex-row justify-center gap-6 items-center pl-32 pr-32 mb-16  max-lg:flex-col max-lg:p-16 min-[1921px]:px-[45rem] min-[1921px]:mb-48">
-          <article className="pl-60 max-lg:p-0">
+          <article className="pl-10 max-lg:p-0">
             <img src={me} alt={me} />
           </article>
           <Swiper
@@ -79,44 +84,35 @@ const AboutMe: React.FC = () => {
           >
             {paragraphs.map((paragraph, index) => (
               <SwiperSlide
-                className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-left max-lg:p-10 cursor-grab"
-                key={index}
-              >
-                <div className="flex gap-6 flex-row justify-start items-center max-lg:flex-col max-lg:justify-center max-lg:text-center ">
-                  <div>
-                    <img
-                      src={paragraph.icon}
-                      alt={paragraph.icon}
-                      className="w-24"
-                    />
-                  </div>
-                  <div>
-                    <h2>{paragraph.title}</h2>
-                  </div>
+              className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-center gap-12 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-center max-lg:p-10 cursor-grab"
+              key={index}
+            >
+              <div className="flex gap-10 flex-row justify-center items-center">
+                <div className="transform rotate-30">
+                  <img
+                    src={paragraph.icon}
+                    alt={paragraph.title}
+                    className="w-32"
+                  />
                 </div>
-                <div className="flex flex-row gap-10 max-lg:flex-col">
-                  <div className="flex flex-col gap-4 items-center justify-between -mt-10 -mb-10 max-lg:flex-row max-lg:m-0">
-                    <p className="text-white">
-                      <span className="text-orange">&lt;</span>h3
-                      <span className="text-orange">/&gt;</span>
-                    </p>
-                    <div className="flex justify-between items-center w-1 h-[100%] max-lg:flex-row max-lg:w-[10rem]  max-lg:bg-lightblue">
-                      <div></div>
-                      <div className="w-[0.5rem] bg-[--lightblue] h-[100%] max-lg:w-10  max-lg:bg-lightblue max-lg:h-[0.25rem]"></div>
-                      <div></div>
-                    </div>
-                    <p className="text-white">
-                      <span className="text-orange">&lt;</span>h3
-                      <span className="text-orange">/&gt;</span>
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-white text-4xl">
-                      {paragraph.description}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+                
+              </div>
+              <div>
+                <h2>{paragraph.title}</h2>
+                <p className="text-white text-4xl mt-4">
+                  {paragraph.description}
+                </p>
+              </div>
+              <div className="flex gap-6 mt-6">
+                <button className="bg-orange text-white py-2 px-4 rounded">
+                  Button 1
+                </button>
+                <button className="bg-lightblue text-white py-2 px-4 rounded">
+                  Button 2
+                </button>
+              </div>
+            </SwiperSlide>
+            
             ))}
             <div
               className="autoplay-progress absolute right-0 bottom-0 z-10 flex items-center justify-center font-bold text-orange text-4xl w-24 h-24 max-lg:w-16 max-lg:h-16 max-lg:text-3xl "

@@ -14,10 +14,11 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
-import RicercaComandante from "./ricercaPerComandante";
+import magic from "../assets/icons/magic.webp"; 
+// import RicercaComandante from "./ricercaPerComandante";
 
 const ProjectSlider: React.FC = () => {
-  const { ref } = useSectionInView("Lists");
+  const { ref } = useSectionInView("Magic");
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -72,11 +73,16 @@ const ProjectSlider: React.FC = () => {
                 textAlign: "center",
               }}
             >
-              <p className="text-[--white] mt-16 mb-6">
-                <span className="text-[--orange]">&lt;</span>
-                {language === "IT" ? "Liste" : "Lists"}
-                <span className="text-[--orange]">/&gt;</span>
-              </p>
+             <p className="text-[--white] mt-16 mb-6 flex items-center justify-between">
+  <span className="flex-shrink-0 mr-2 max-lg:hidden">
+    <img src={magic} className="w-20" />
+  </span>
+  {language === "IT" ? "Magic The Gathering" : "Magic The Gathering"}
+  <span className="flex-shrink-0 ml-2 max-lg:hidden">
+    <img src={magic} className="w-20" />
+  </span>
+</p>
+
               <h2 className="text-[--white] mb-16">
                 {language === "IT" ? "Alcune delle mie liste" : "Some of my lists"}
               </h2>
@@ -225,7 +231,7 @@ const ProjectSlider: React.FC = () => {
           backgroundColor: "var(--orange)",
         }}
       />
-      <RicercaComandante/>
+      {/* <RicercaComandante/> */}
     </React.Fragment>
   );
 };

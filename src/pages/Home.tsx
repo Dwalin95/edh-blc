@@ -6,12 +6,10 @@ import { useTheme } from "../context/theme-context";
 import { ScrollProgress } from "../components/ScrollProgress";
 import Divider from "../components/Divider";
 import ProjectSlider from "../components/ProjectSlider";
-import RicercaComandante from "../components/ricercaPerComandante";
 
 const LazyBannerQuote = lazy(() => import("../components/BannerQuote"));
 const LazySiteBarRight = lazy(() => import("../components/SideBarRight"));
 const LazySiteBarLeft = lazy(() => import("../components/SiteBarLeft"));
-const LazyTechStack = lazy(() => import("../components/TechStack"));
 const LazyAboutMe = lazy(() => import("../components/AboutMe"));
 const LazyContact = lazy(() => import("../components/Contact"));
 const LazyHeaderIntro = lazy(() => import("../components/HeaderIntro"));
@@ -74,7 +72,7 @@ const Home: React.FC = () => {
               dividerStyle="solid"
             /> */}
             <ProjectSlider />
-      <RicercaComandante/>
+
 
             <div className="relative -mb-24 pb-32 -mt-10">
               <LazyRadialGradient
