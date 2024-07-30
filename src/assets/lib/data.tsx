@@ -340,52 +340,45 @@ export const aboutMeData = {
   description_EN: "Hey don't forget that I also do Star Wars!",
   paragraphs_IT: [
     {
-      title: "I circuiti del mio cuore",
+      title: "HabogaD",
       description:
-        "Quando non sono immerso nel mondo digitale, esploro il fascinante mondo della tecnologia e dell'hardware. Circuiti e saldature sono come pezzi di un puzzle in un'avventura emozionante.",
+        "Un mazzo bilanciato e versatile, con una struttura che consente flessibilità e adattabilità ai vari stili di gioco degli avversari. E poi dai.. giochi con Vader ROSSO!",
       icon: vader,
      
     },
     {
-      title: "Sulla corsia veloce della vita",
+      title: "Grand Jabba's Palace",
       description:
-        "Oltre al coding, mi piace essere sulla corsia veloce - nel vero senso della parola. Le auto sono la mia passione e mi piace percorrere strade sconosciute con macchine potenti.",
-      icon: caricon,
+        "Un mix di carte che garantiscono flessibilità e consistenza, con una strategia equilibrata. Questo mazzo è capace di adattarsi a varie situazioni di gioco grazie agli eventi gialli.",
+      icon: tarkin,
      
 
     },
     {
-      title: "La gioia della scoperta come motto di vita",
+      title: "Krennic la Rana",
       description:
-        "Il mio percorso come sviluppatore web è solo una parte del mio cammino di vita. Vivo secondo il motto che l'avventura inizia solo quando si lascia alle spalle il familiare. Scoprire nuovi luoghi e culture è la mia forma di ispirazione creativa.",
-      icon: travelicon,
-     
-
+        "Il caro e veccio Krennic.. che dire parla da solo, riesce a battere anche Boba",
+      icon: krennik,
     },
   ],
   paragraphs_EN: [
     {
-      title: "The Circuits of My Heart",
+      title: "HabogaD",
       description:
-        "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
-      icon: hardwareicon,
-     
-
+        "A balanced and versatile deck, with a structure that allows flexibility and adaptability to the various playing styles of opponents. And then come on.. you play with RED Vader!",
+      icon: vader,
     },
     {
-      title: "On the Fast Lane of Life",
+      title: "Grand Jabba's Palace",
       description:
-        "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
-      icon: caricon,
-     
-
+        "A mix of cards that guarantee flexibility and consistency, with a balanced strategy. This deck is able to adapt to various game situations thanks to the yellow events.",
+      icon: tarkin,
     },
     {
-      title: "The Joy of Discovery as a Life Motto",
+      title: "Krennic la Rana",
       description:
-        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
-      icon: travelicon,
-      
+        "The dear old Krennic.. what can I say, he can even beat Boba",
+      icon: krennik,
     },
   ],
 };

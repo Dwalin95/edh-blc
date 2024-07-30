@@ -14,7 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
-import magic from "../assets/icons/magic.webp"; 
+import magic from "../assets/icons/magic.webp";
 // import RicercaComandante from "./ricercaPerComandante";
 
 const ProjectSlider: React.FC = () => {
@@ -73,18 +73,22 @@ const ProjectSlider: React.FC = () => {
                 textAlign: "center",
               }}
             >
-             <p className="text-[--white] mt-16 mb-6 flex items-center justify-between">
-  <span className="flex-shrink-0 mr-2 max-lg:hidden">
-    <img src={magic} className="w-20" />
-  </span>
-  {language === "IT" ? "Magic The Gathering" : "Magic The Gathering"}
-  <span className="flex-shrink-0 ml-2 max-lg:hidden">
-    <img src={magic} className="w-20" />
-  </span>
-</p>
+              <p className="text-[--white] mt-16 mb-6 flex items-center justify-between">
+                <span className="flex-shrink-0 mr-2 ">
+                  <img src={magic} className="w-20" />
+                </span>
+                {language === "IT"
+                  ? "Magic The Gathering"
+                  : "Magic The Gathering"}
+                <span className="flex-shrink-0 ml-2 ">
+                  <img src={magic} className="w-20" />
+                </span>
+              </p>
 
               <h2 className="text-[--white] mb-16">
-                {language === "IT" ? "Alcune delle mie liste" : "Some of my lists"}
+                {language === "IT"
+                  ? "Alcune delle mie liste"
+                  : "Some of my lists"}
               </h2>
             </motion.div>
             <Swiper
@@ -199,8 +203,7 @@ const ProjectSlider: React.FC = () => {
 
                 <div className="technologies">
                   <h3 className="text-white">
-                  {language === "IT" ? "Costo di mana" : "Mana cost"}
-
+                    {language === "IT" ? "Costo di mana" : "Mana cost"}
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(

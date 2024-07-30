@@ -92,7 +92,7 @@ const AboutMe: React.FC = () => {
                   <img
                     src={paragraph.icon}
                     alt={paragraph.title}
-                    className="w-32"
+                    className="w-50"
                   />
                 </div>
                 
