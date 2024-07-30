@@ -14,7 +14,7 @@ import { wrap } from "@motionone/utils";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/language-context";
 import { sideBarLeftSocials, liveTickerData } from "../assets/lib/data";
-
+import gdfh from "../assets/img/gdfh.webp";
 interface ParallaxProps {
   children: any;
   baseVelocity: number;
@@ -122,6 +122,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   );
 }
 
+
 export default function LiveTicker() {
   const { language } = useLanguage();
   return (
@@ -129,15 +130,19 @@ export default function LiveTicker() {
       <div className="bg-[--lightblue] h-[4.8vh] -rotate-3 flex justify-center items-center scale-110 relative z-[1] w-full min-[1921px]:h-[3.3vh]">
         <ParallaxText baseVelocity={-2}>
           <Link
-            to={sideBarLeftSocials[1].link}
+            to={'https://www.mtggoldfish.com/'}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-[--orange]">&lt;</span>
+            <p className="text-[--white] mt-7 mb-6 flex items-center justify-between">
+                 <span className="flex-shrink-0 mr-2 ">
+                  <img src={gdfh} className="w-10" />
+                </span>
             {language === "IT"
               ? liveTickerData.content.it
               : liveTickerData.content.en}
-            <span className="text-[--orange]">/&gt;</span>
+             
+                </p>
           </Link>
         </ParallaxText>
       </div>

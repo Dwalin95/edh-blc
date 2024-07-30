@@ -41,7 +41,7 @@ import {
 import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
-
+import gdfh from "../img/gdfh.webp";
 export const headerIntroData = {
   title: {
     it: "Ciao! sono Andrea",
@@ -285,7 +285,7 @@ export const skillsDataCMS = [
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
   // { it: "Esempi", en: "Example", hash: "#esempi", icon: GoStack },
-  { it: "Magic", en: "Magic", hash: "#lists", icon: GoProject },
+  { it: "Magic", en: "Magic", hash: "#magic", icon: GoProject },
   { it: "Star Wars Unlimited", en: "Star Wars Unlimited", hash: "#about-me", icon: GoPerson },
   { it: "Contatti", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
@@ -316,6 +316,7 @@ export const sideBarLeftSocials = [
     icon: FaTiktok,
     altimgname: "tiktok",
   },
+
 ] as const;
 
 export const quotesData = [
