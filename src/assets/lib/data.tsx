@@ -286,7 +286,7 @@ export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
   // { it: "Esempi", en: "Example", hash: "#esempi", icon: GoStack },
   { it: "Magic", en: "Magic", hash: "#magic", icon: GoProject },
-  { it: "Star Wars Unlimited", en: "Star Wars Unlimited", hash: "#about-me", icon: GoPerson },
+  { it: "Star Wars Unlimited", en: "Star Wars Unlimited", hash: "#swu", icon: GoPerson },
   { it: "Contatti", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
 
