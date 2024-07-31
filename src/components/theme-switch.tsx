@@ -2,13 +2,14 @@ import { useTheme } from "../context/theme-context";
 import {
   BsMoon,
   BsSun,
-  BsLinkedin,
-  BsFillEnvelopeAtFill,
-  BsGithub,
+  BsInstagram,
+  BsTiktok,
+  BsTwitch,
 } from "react-icons/bs";
 import { sideBarLeftSocials } from "../assets/lib/data";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
@@ -74,14 +75,14 @@ export default function ThemeSwitch() {
             ? "pointer-events-auto"
             : "pointer-events-none"
         }`}
-        aria-label="My Github Profile"
+        aria-label="My Twitch Profile"
       >
         <Link
           to={sideBarLeftSocials[1].link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsGithub />
+          <BsTwitch />
         </Link>
       </button>
       <button
@@ -99,14 +100,14 @@ export default function ThemeSwitch() {
             ? "pointer-events-auto"
             : "pointer-events-none"
         }`}
-        aria-label="My Linkedin Profile"
+        aria-label="My Instagram"
       >
         <Link
           to={sideBarLeftSocials[0].link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsLinkedin />
+          <BsInstagram />
         </Link>
       </button>
       <button
@@ -126,14 +127,14 @@ export default function ThemeSwitch() {
             : "pointer-events-none"
         }
         `}
-        aria-label="Send me an Email"
+        aria-label="My tiktok"
       >
         <Link
           to={sideBarLeftSocials[2].link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsFillEnvelopeAtFill />
+          <BsTiktok />
         </Link>
       </button>
     </div>

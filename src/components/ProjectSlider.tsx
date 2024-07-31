@@ -15,7 +15,6 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import magic from "../assets/icons/magic.webp";
-// import RicercaComandante from "./ricercaPerComandante";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Magic");
@@ -138,7 +137,7 @@ const ProjectSlider: React.FC = () => {
                         )}
                       </div>
                     </div>
-                    <div className="buttons flex gap-10">
+                    <div className="buttons flex flex-row gap-10">
                       <Button
                         label="Link lista"
                         link={project.mtgGoldfishUrl}
@@ -179,7 +178,7 @@ const ProjectSlider: React.FC = () => {
                   alt={project.image}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
-                <div className="buttons flex gap-10 max-lg:flex-col">
+                <div className="buttons flex flex-row gap-10">
                   <Button
                     label="Link lista"
                     link={project.mtgGoldfishUrl}
@@ -195,7 +194,7 @@ const ProjectSlider: React.FC = () => {
                     iconcolor={project.colors.icon}
                   />
                 </div>
-                <p className="text-white  max-lg:text-4xl">
+                <p className="text-white max-lg:text-4xl">
                   {language === "IT"
                     ? project.description
                     : project.description_EN}
@@ -234,7 +233,6 @@ const ProjectSlider: React.FC = () => {
           backgroundColor: "var(--orange)",
         }}
       />
-      {/* <RicercaComandante/> */}
     </React.Fragment>
   );
 };

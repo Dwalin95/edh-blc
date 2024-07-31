@@ -12,7 +12,6 @@ import magic from "../assets/icons/magic.webp";
 import morteNera from "../assets/icons/MorteNera.webp";
 import SkillSection from "./SkillSection.tsx";
 import {
-  skillsDataCMS,
   skillsDataDesign,
   skillsDataWeb,
 } from "../assets/lib/data";
@@ -78,7 +77,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
             <SkillSection skillsData={skillsDataDesign} theme={theme} />
-            <SkillSection skillsData={skillsDataCMS} theme={theme} />
+           
           </div>
         </div>
 {/* 

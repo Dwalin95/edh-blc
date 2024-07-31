@@ -1,9 +1,11 @@
 import React from "react";
-
+import dungeon from "../assets/img/dungeon-classic.svg";
 interface Skill {
   title: string;
   hash: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   color?: any;
 }
 
@@ -53,18 +55,23 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
       }`}
     >
       <div
-        className={`absolute top-10 left-1/2 transform -translate-x-1/2 px-4 py-2  rounded-t-xl `}
+        className={`absolute top-10 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-t-xl `}
       >
-        <p className="font-black text-4xl">
-          <span className="text-[--orange]">&lt;</span>
+        <p className="font-black text-4xl flex items-center justify-between">
+         
+          <span className="flex-shrink-0 mr-2 ">
+            <img src={dungeon} className="w-20" />
+          </span>
           {skillsData[0].skillsTitle}
-          <span className="text-[--orange]">/&gt;</span>
+          <span className="flex-shrink-0 ml-2 ">
+            <img src={dungeon} className="w-20" />
+          </span>
         </p>
       </div>
       {skillsData[0].skills.map((skill, index) => (
         <div
           key={index}
-          className={`skill-item cursor-pointer flex flex-col gap-6 rounded-2xl p-8 border-solid border-[0.25rem]  text-center max-lg:items-center    ${
+          className={`skill-item cursor-pointer flex flex-col gap-6 rounded-2xl mt-10 p-8 border-solid border-[0.25rem]  text-center max-lg:items-center    ${
             theme === "dark" ? "bg-[--darkblue]" : "bg-[--icewhite]"
           }`}
           data-tooltip-id="my-tooltip"
