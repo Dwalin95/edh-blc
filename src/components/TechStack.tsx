@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import {
-  schedule,
+  
   skillsDataDesign,
   skillsDataWeb,
 } from "../assets/lib/data";
