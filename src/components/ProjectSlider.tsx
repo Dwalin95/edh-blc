@@ -2,10 +2,10 @@ import bannerBg from "../assets/img/bannerbg.webp";
 import React, { useRef } from "react";
 import Button from "./Button";
 import LiveTicker from "./ParallaxText";
-import { projectsData, toastMessages } from "../assets/lib/data";
+import { projectsData } from "../assets/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
@@ -26,13 +26,7 @@ const ProjectSlider: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const notifyServerRequest = () => {
-    if (language === "IT") {
-      toast.info(toastMessages.loadingProject.it);
-    } else {
-      toast.info(toastMessages.loadingProject.en);
-    }
-  };
+
 
   return (
     <React.Fragment>
@@ -125,24 +119,24 @@ const ProjectSlider: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    <div className="buttons flex flex-row gap-10 max-sm:flex-wrap max-sm:gap-7">
-
-                      <Button
-                        label="Link lista"
-                        link={project.mtgGoldfishUrl}
-                        iconSVG={project.mtgGoldfishIcon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                        onClick={notifyServerRequest}
-                      />
-                      <Button
-                        label="Foto Lista"
-                        link={project.driveUrl}
-                        iconSVG={project.downloadIcon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                      />
-                    </div>
+                    <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
+  <Button
+    label="Link"
+    link={project.mtgGoldfishUrl}
+    iconSVG={project.mtgGoldfishIcon}
+    buttoncolor={project.colors.main}
+    iconcolor={project.colors.icon}
+    className="w-full max-lg:w-1/2 max-lg:w-auto"
+  />
+  <Button
+    label="Foto"
+    link={project.driveUrl}
+    iconSVG={project.downloadIcon}
+    buttoncolor={project.colors.main}
+    iconcolor={project.colors.icon}
+    className="w-full max-lg:w-1/2 max-lg:w-auto"
+  />
+</div>
                   </div>
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
                     <img
@@ -165,23 +159,24 @@ const ProjectSlider: React.FC = () => {
                   alt={project.image}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
-                <div className="buttons flex flex-row gap-10 max-sm:flex-wrap max-sm:gap-7">
-              
-                  <Button
-                    label="Link lista"
-                    link={project.mtgGoldfishUrl}
-                    iconSVG={project.mtgGoldfishIcon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                  />
-                  <Button
-                    label="Foto lista"
-                    link={project.driveUrl}
-                    iconSVG={project.downloadIcon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                  />
-                </div>
+                <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
+  <Button
+    label="Link"
+    link={project.mtgGoldfishUrl}
+    iconSVG={project.mtgGoldfishIcon}
+    buttoncolor={project.colors.main}
+    iconcolor={project.colors.icon}
+    className="w-full max-lg:w-1/2 max-lg:w-auto"
+  />
+  <Button
+    label="Foto"
+    link={project.driveUrl}
+    iconSVG={project.downloadIcon}
+    buttoncolor={project.colors.main}
+    iconcolor={project.colors.icon}
+    className="w-full max-lg:w-1/2 max-lg:w-auto"
+  />
+</div>
                 <p className="text-white max-lg:text-4xl">
                   {language === "IT" ? project.description : project.description_EN}
                 </p>

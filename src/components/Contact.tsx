@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
                 <img src={magic} className="w-20" />
               </span>
               {language === "IT" ? contactData.title.it : contactData.title.en}
-              <span className="ml-2 max-lg:hidden">
+              <span className="ml-2 ">
                 <img src={morteNera} className="w-20" />
               </span>
             </p>

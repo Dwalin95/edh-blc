@@ -48,11 +48,11 @@ const AboutMe: React.FC = () => {
             }}
           >
             <p className="text-[--black] mb-6 flex items-center">
-              <span className="-left-8 top-3 max-lg:hidden mr-2">
+              <span className="-left-8 top-3  mr-2">
                 <img src={morteNera} className="w-20" />
               </span>
               {language === "IT" ? aboutMeData.title : aboutMeData.title_EN}
-              <span className="ml-2 max-lg:hidden">
+              <span className="ml-2 ">
                 <img src={morteNera} className="w-20" />
               </span>
             </p>
