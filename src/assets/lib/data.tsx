@@ -143,7 +143,7 @@ export const projectsData = [
 export const liveTickerData = {
   content: {
     it: "Trovi altre liste su GoldFish cercami, sono Bella li Colibrì!",
-    en: "More Projects on Github",
+    en: "Find more lists on GoldFish look for me, I'm Bella li Colibrì!",
   },
 } as const;
 

@@ -16,7 +16,7 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 export default function LanguageContextProvider({
   children,
 }: LanguageContextProviderProps) {
-  const [language, setLanguage] = useState<language>("EN");
+  const [language, setLanguage] = useState<language>("IT");
 
   const toggleLanguage = () => {
     if (language === "EN") {
