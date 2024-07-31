@@ -4,6 +4,7 @@ import { headerIntroData } from "../assets/lib/data";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
 import { BsMouse } from "react-icons/bs";
+import Typewriter from "../hooks/Typerwrite";
 
 const HeaderIntro: React.FC = () => {
   const { language } = useLanguage();
@@ -34,7 +35,10 @@ const HeaderIntro: React.FC = () => {
           ? headerIntroData.description.it
           : headerIntroData.description.en}
       </p>
-
+      <p className="w-1/2 text-center sm:hidden mb-1">
+      <Typewriter text={language === "IT" ? headerIntroData.suTelefono.it : headerIntroData.suTelefono.en} />        
+        </p>
+     
       {/* <div className="button-container flex items-center justify-center mr-8 gap-10 mb-12 max-lg:flex-col max-lg:items-center">
         {headerIntroData.buttons.map((button, index) => (
           <Button

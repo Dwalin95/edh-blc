@@ -71,151 +71,17 @@ const Contact: React.FC = () => {
             </h2>
           </motion.div>
         </div>
-        <div className="flex mt-10 gap-40 justify-center max-lg:flex-col">
-          <div className="w-1/3 max-lg:w-full">
-            <SkillSection skillsData={skillsDataWeb} theme={theme} />
-          </div>
-          <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
-            <SkillSection skillsData={skillsDataDesign} theme={theme} />
-           
-          </div>
-        </div>
-{/* 
-        <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
-          <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
-            <Highlight
-              code={codeSnippet}
-              language="tsx"
-              theme={themes.nightOwl}
-            >
-              {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={`${className} text-4xl `} style={style}>
-                  {tokens.map((line, i) => (
-                    <div {...getLineProps({ line, key: i })}>
-                      {line.map((token, key) => (
-                        <span {...getTokenProps({ token, key })} />
-                      ))}
-                    </div>
-                  ))}
-                </pre>
-              )}
-            </Highlight>
-          </div>
-          <form
-            className="flex flex-col gap-6 justify-center items-center  px-32 w-1/2 max-lg:w-full max-lg:p-10"
-            onSubmit={notifySentForm}
-            autoComplete="off"
-          >
-            {contactData.inputfields.map((input, index) => (
-              <input
-                key={index}
-                type={input.type}
-                placeholder={
-                  language === "IT"
-                    ? `${input.placeholder.it}`
-                    : `${input.placeholder.en}`
-                }
-                name={input.name}
-                value={
-                  input.name === "name"
-                    ? name
-                    : input.name === "email"
-                    ? email
-                    : input.name === "subject"
-                    ? subject
-                    : message
-                }
-                required
-                onFocus={() => {
-                  handleInputFocus(input.name);
-                  setLastUpdatedField(input.name);
-                }}
-                onMouseEnter={() => {
-                  handleInputFocus(input.name);
-                  setLastUpdatedField(input.name);
-                }}
-                onChange={handleInputChange}
-                className={`${
-                  theme === "dark"
-                    ? "bg-[--blackblue] dark-mode-shadow "
-                    : "bg-[--icewhite] dark-shadow "
-                }`}
-              />
-            ))}
-            <textarea
-              rows={contactData.textarea.rows}
-              placeholder={
-                language === "IT"
-                  ? `${contactData.textarea.placeholder.it}`
-                  : `${contactData.textarea.placeholder.en}`
-              }
-              name={contactData.textarea.name}
-              onFocus={() => {
-                handleInputFocus(contactData.textarea.name);
-                setLastUpdatedField(contactData.textarea.name);
-              }}
-              onMouseEnter={() => {
-                handleInputFocus(contactData.textarea.name);
-                setLastUpdatedField(contactData.textarea.name);
-              }}
-              onChange={handleInputChange}
-              className={`${
-                theme === "dark"
-                  ? "bg-[--blackblue] dark-mode-shadow"
-                  : "bg-[--icewhite] dark-shadow"
-              }`}
-            />
-            <div className="privacy-checkbox flex gap-16">
-              <label
-                className="block w-2 h-2 cursor-pointer"
-                htmlFor="checkbox-label"
-              >
-                <input
-                  type="checkbox"
-                  required
-                  name="checkbox-label"
-                  id="checkbox-label"
-                />
-                <span className="checkbox"></span>
-              </label>
-              <p>
-                {language === "IT"
-                  ? `${contactData.privacyOptIn.checkbox.it}`
-                  : `${contactData.privacyOptIn.checkbox.en}`}
-              </p>
-            </div>
-            <p>
-              {language === "IT"
-                ? `${contactData.privacyOptIn.description.it}`
-                : `${contactData.privacyOptIn.description.en}`}
-            </p>
-            <Button
-              value={
-                language === "IT"
-                  ? `${contactData.button.value.it}`
-                  : `${contactData.button.value.en}`
-              }
-              iconSVG={contactData.icon}
-              buttoncolor={contactData.colors.main}
-              iconcolor={contactData.colors.icon}
-              type="submit"
-              elementType="input"
-            />
-            <ToastContainer
-              className="w-max text-3xl block p-3 max-lg:w-full "
-              position="bottom-center"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme={theme}
-            />
-          </form>
-        </div> */}
+        <div className="flex mt-10 gap-10 justify-center max-lg:flex-col">
+  <div className="w-1/3 max-lg:w-full">
+    <SkillSection skillsData={skillsDataWeb} theme={theme} />
+  </div>
+  <div className="w-1/3 flex flex-col gap-10 max-lg:w-full">
+    <SkillSection skillsData={skillsDataDesign} theme={theme} />
+    {/* <SkillSection skillsData={schedule} theme={theme} /> */}
+  </div>
+</div>
+
+
       </section>
     </React.Fragment>
   );

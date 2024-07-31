@@ -10,15 +10,11 @@ import sliver from "../../assets/img/Sliver.webp";
 import vraska from "../../assets/img/vraska.webp";
 import profilepicture from "../img/logo.webp";
 
-import tarkin from "../img/tarkin-giallo.webp"; 
+import tarkin from "../img/tarkin-giallo.webp";
 import vader from "../img/Vader-blu.webp";
 import krennik from "../img/krennik-verde.webp";
 import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
-import {
-  FiLink,
-  
-  FiDownload,
-} from "react-icons/fi";
+import { FiLink, FiDownload } from "react-icons/fi";
 import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
@@ -27,6 +23,7 @@ import tiktok from "../img/tiktok.svg";
 import youtube from "../img/youtube.svg";
 import twitch from "../img/twitch_noScritta.svg";
 import mox from "../img/mox.svg";
+// import scheda from "../img/schedule.svg";
 import gldfsh from "../img/gdfh.webp";
 
 export const headerIntroData = {
@@ -39,6 +36,11 @@ export const headerIntroData = {
     it: "Ciao Viandante sono Andrea, un appassionato di videogiochi, carte, giochi da tavolo e streamer (wow quante cose, e suono anche la chitarra 🤣). Qui troverai tutte le informazioni relative alle live, e anche tutte le liste dei mazzi budget e non che costruirò in live, sia per Magic che per Star Wars Unlimited! Cosa aspetti, vai subito a guardare!",
     en: "Hello Plansewalker, I'm Andrea, a passionate gamer, card player, board game enthusiast, and streamer (wow, so many things, and I also play the guitar 🤣). Here you will find all the information about my live streams, as well as the lists of budget and non-budget decks that I will build live, both for Magic and Star Wars Unlimited! What are you waiting for, go check it out!",
   },
+  suTelefono: {
+    it: "Ciao Viandante e benvenuto sul mio sito! Sono contento che tu sia qui! fatti un giro guarda liste e seguimi sui social! P.s. Guarda anche la versione desktop, è molto più figa! 🤣",
+    en: "Hello Plansewalker and welcome to my site!",
+  },
+ 
   // buttons: [
   //   {
   //     name: "Contati",
@@ -174,7 +176,7 @@ export const skillsDataWeb = [
         hash: "https://www.youtube.com/@BellaLiColibri",
         icon: youtube,
         color: "#800080",
-      }
+      },
     ],
   },
 ] as const;
@@ -183,20 +185,47 @@ export const skillsDataDesign = [
   {
     skillsTitle: "Siti",
     skills: [
-      { title: "Moxfield", hash: "https://www.moxfield.com", icon: mox, color: "#F24E1E" },  // URL completo
-      { title: "GoldFish", hash: "https://www.mtggoldfish.com", icon: gldfsh, color: "#FFD700" },  // URL completo
+      {
+        title: "Moxfield",
+        hash: "https://www.moxfield.com",
+        icon: mox,
+        color: "#F24E1E",
+      }, // URL completo
+      {
+        title: "GoldFish",
+        hash: "https://www.mtggoldfish.com",
+        icon: gldfsh,
+        color: "#FFD700",
+      }, // URL completo
     ],
   },
 ] as const;
 
-
-
+// export const schedule = [
+//   {
+//     skillsTitle: "Schedule",
+//     skills: [
+//       {
+        
+//         icon: scheda,
+//         color: "#F24E1E",
+//         text: "Sono live su Twitch il Lunedì e il Martedì/Giovedì dalle 21:30",
+//       }, 
+      
+//     ],
+//   },
+// ] as const;
 
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
   // { it: "Esempi", en: "Example", hash: "#esempi", icon: GoStack },
   { it: "Magic", en: "Magic", hash: "#magic", icon: GoProject },
-  { it: "Star Wars Unlimited", en: "Star Wars Unlimited", hash: "#swu", icon: GoPerson },
+  {
+    it: "Star Wars Unlimited",
+    en: "Star Wars Unlimited",
+    hash: "#swu",
+    icon: GoPerson,
+  },
   { it: "Contatti", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
 
@@ -226,7 +255,6 @@ export const sideBarLeftSocials = [
     icon: FaTiktok,
     altimgname: "tiktok",
   },
-
 ] as const;
 
 export const quotesData = [
@@ -252,24 +280,21 @@ export const aboutMeData = {
       description:
         "Un mazzo bilanciato e versatile, con una struttura che consente flessibilità e adattabilità ai vari stili di gioco degli avversari. E poi dai.. giochi con Vader ROSSO!",
       icon: vader,
-      driveUrl:""
-     
+      driveUrl: "",
     },
     {
       title: "Grand Jabba's Palace",
       description:
         "Un mix di carte che garantiscono flessibilità e consistenza, con una strategia equilibrata. Questo mazzo è capace di adattarsi a varie situazioni di gioco grazie agli eventi gialli.",
       icon: tarkin,
-      driveUrl:""
-     
-
+      driveUrl: "",
     },
     {
       title: "Krennic la Rana",
       description:
         "Il caro e veccio Krennic.. che dire parla da solo, riesce a battere anche Boba",
       icon: krennik,
-      driveUrl:""
+      driveUrl: "",
     },
   ],
   paragraphs_EN: [
@@ -278,21 +303,21 @@ export const aboutMeData = {
       description:
         "A balanced and versatile deck, with a structure that allows flexibility and adaptability to the various playing styles of opponents. And then come on.. you play with RED Vader!",
       icon: vader,
-      driveUrl:""
+      driveUrl: "",
     },
     {
       title: "Grand Jabba's Palace",
       description:
         "A mix of cards that guarantee flexibility and consistency, with a balanced strategy. This deck is able to adapt to various game situations thanks to the yellow events.",
       icon: tarkin,
-      driveUrl:""
+      driveUrl: "",
     },
     {
       title: "Krennic la Rana",
       description:
         "The dear old Krennic.. what can I say, he can even beat Boba",
       icon: krennik,
-      driveUrl:""
+      driveUrl: "",
     },
   ],
 };
@@ -303,7 +328,7 @@ export const contactData = {
     en: "Contact",
   },
   description: {
-    it: "Qui è dove puoi trovarmi!",
+    it: "Sono Live su Twitch il Lunedì e il Martedì/Giovedì dalle 21:30",
     en: "Here is where you can find me!",
   },
   inputfields: [

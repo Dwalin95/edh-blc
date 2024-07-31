@@ -1,12 +1,13 @@
 import React from "react";
 import dungeon from "../assets/img/dungeon-classic.svg";
 interface Skill {
-  title: string;
-  hash: string;
+  title?: string;
+  hash?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon?: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   color?: any;
+  text?: string;
 }
 
 interface SkillCategory {
@@ -23,7 +24,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
   const getSkillIconSrc = (theme: string, skill: Skill) => {
     if (
       theme === "dark" &&
-      (skill.title.includes("Next") || skill.title.includes("Express"))
+      ((skill.title ?? "").includes("Next") || (skill.title ?? "").includes("Express"))
     ) {
       return skill.icon[1];
     } else if (skill.title !== "Next.js" && skill.title !== "Express") {
@@ -36,7 +37,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
   const getSkillColor = (theme: string, skill: Skill) => {
     if (
       theme === "dark" &&
-      (skill.title.includes("Next") || skill.title.includes("Express"))
+      ((skill.title ?? "").includes("Next") || (skill.title ?? "").includes("Express"))
     ) {
       return skill.color[1];
     } else if (skill.title !== "Next.js" && skill.title !== "Express") {
@@ -69,6 +70,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
         </p>
       </div>
       {skillsData[0].skills.map((skill, index) => (
+        <>
         <div
           key={index}
           className={`skill-item cursor-pointer flex flex-col gap-6 rounded-2xl mt-10 p-8 border-solid border-[0.25rem]  text-center max-lg:items-center    ${
@@ -102,11 +104,16 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
               alt={`${skill.icon}-icon`}
               className="h-[10rem] flex"
             />
+           {skill.text && (
+          <span className="ml-4 text-center">{skill.text}</span>
+        )}
           </a>
           <h3 className="max-lg:text-[2rem] min-[1024px]:hidden">
             {skill.title}
           </h3>
         </div>
+        
+        </>
       ))}
     </article>
   );
