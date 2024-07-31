@@ -108,8 +108,8 @@ const AboutMe: React.FC = () => {
                 <button className="bg-orange text-white py-2 px-4 rounded">
                 <a href={paragraph.driveUrl}>
           
+ Vai la lista
               </a>
-                                  Vai la lista
 
                 </button>
                 

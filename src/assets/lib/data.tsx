@@ -38,7 +38,7 @@ export const headerIntroData = {
   },
   suTelefono: {
     it: "Ciao Viandante e benvenuto sul mio sito! Sono contento che tu sia qui! fatti un giro guarda liste e seguimi sui social! P.s. Guarda anche la versione desktop, è molto più figa! 🤣",
-    en: "Hello Plansewalker and welcome to my site!",
+    en: "Hello Plansewalker and welcome to my website! I'm glad you're here! take a look at the lists and follow me on social media! P.s. Also check out the desktop version, it's much cooler! 🤣",
   },
  
   // buttons: [
@@ -280,21 +280,21 @@ export const aboutMeData = {
       description:
         "Un mazzo bilanciato e versatile, con una struttura che consente flessibilità e adattabilità ai vari stili di gioco degli avversari. E poi dai.. giochi con Vader ROSSO!",
       icon: vader,
-      driveUrl: "",
+      driveUrl: "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
     },
     {
       title: "Grand Jabba's Palace",
       description:
         "Un mix di carte che garantiscono flessibilità e consistenza, con una strategia equilibrata. Questo mazzo è capace di adattarsi a varie situazioni di gioco grazie agli eventi gialli.",
       icon: tarkin,
-      driveUrl: "",
+      driveUrl: "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
     },
     {
       title: "Krennic la Rana",
       description:
         "Il caro e veccio Krennic.. che dire parla da solo, riesce a battere anche Boba",
       icon: krennik,
-      driveUrl: "",
+      driveUrl: "https://drive.google.com/file/d/1oweplRT3bOW0OoBdVITzFu8imC8VZLGa/view?usp=drive_link",
     },
   ],
   paragraphs_EN: [
@@ -303,21 +303,21 @@ export const aboutMeData = {
       description:
         "A balanced and versatile deck, with a structure that allows flexibility and adaptability to the various playing styles of opponents. And then come on.. you play with RED Vader!",
       icon: vader,
-      driveUrl: "",
+      driveUrl: "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
     },
     {
       title: "Grand Jabba's Palace",
       description:
         "A mix of cards that guarantee flexibility and consistency, with a balanced strategy. This deck is able to adapt to various game situations thanks to the yellow events.",
       icon: tarkin,
-      driveUrl: "",
+      driveUrl: "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
     },
     {
       title: "Krennic la Rana",
       description:
         "The dear old Krennic.. what can I say, he can even beat Boba",
       icon: krennik,
-      driveUrl: "",
+      driveUrl: "https://drive.google.com/file/d/1oweplRT3bOW0OoBdVITzFu8imC8VZLGa/view?usp=drive_link",
     },
   ],
 };
