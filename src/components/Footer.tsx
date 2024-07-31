@@ -18,12 +18,12 @@ interface SocialLink {
 }
 
 const Footer: React.FC = () => {
-  const { language } = useLanguage();
-  const { theme } = useTheme();
+  // const { language } = useLanguage();
+  // const { theme } = useTheme();
 
   return (
     <footer className="bg-darkblue flex justify-around items-center gap-10 p-10 max-lg:flex-col max-lg:pb-48 relative z-[1]">
-      <div className="flex gap-10">
+      {/* <div className="flex gap-10">
         {FooterLinks.map((link, index) => (
           <Popup
             trigger={
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
             }
           </Popup>
         ))}
-      </div>
+      </div> */}
       <div className="socials flex gap-10 ">
         {sideBarLeftSocials.map((social: SocialLink, index: number) => (
           <Link
@@ -88,9 +88,9 @@ const Footer: React.FC = () => {
         ))}
       </div>
       <div>
-        <Suspense fallback={<div>Loading...</div>}>
+        {/* <Suspense fallback={<div>Loading...</div>}>
           <LazyServiceStatus />
-        </Suspense>
+        </Suspense> */}
       </div>
     </footer>
   );

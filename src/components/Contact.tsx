@@ -1,30 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
-import Button from "./Button";
-import axios from "axios";
-import { Highlight, themes } from "prism-react-renderer";
-import { contactData, toastMessages } from "../assets/lib/data.tsx";
+import React, {  useRef } from "react";
+
+
+import { contactData } from "../assets/lib/data.tsx";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
-import { ToastContainer, toast } from "react-toastify";
+
 import { useTheme } from "../context/theme-context";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 import magic from "../assets/icons/magic.webp";
 import morteNera from "../assets/icons/MorteNera.webp";
+import SkillSection from "./SkillSection.tsx";
+import {
+  skillsDataCMS,
+  skillsDataDesign,
+  skillsDataWeb,
+} from "../assets/lib/data";
 
 const Contact: React.FC = () => {
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
-
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [cursor, setCursor] = useState<string>("");
-  const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null);
   const { ref } = useSectionInView("Contact");
   const { language } = useLanguage();
   const { theme } = useTheme();
-  const [error, setError] = useState<string | unknown>(null);
 
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -34,144 +30,11 @@ const Contact: React.FC = () => {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-  const notifySentForm: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    setError(null);
-    console.log(error);
+  
 
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
 
-    try {
-      const response = await axios.post(apiBaseUrl, data);
-      console.log(response);
-      if (language === "IT") {
-        toast.success(toastMessages.successEmailSent.it);
-      } else {
-        toast.success(toastMessages.successEmailSent.en);
-      }
-    } catch (error) {
-      console.log(error);
-      if (language === "IT") {
-        toast.error(toastMessages.failedEmailSent.it);
-      } else {
-        toast.error(toastMessages.failedEmailSent.en);
-      }
-      setError("An Error occured, try again later");
-    }
-  };
 
-  const handleInputFocus = (fieldName: string) => {
-    setCursor(`${fieldName}${cursor}`);
-  };
-
-  const wordWrap = (
-    text: string,
-    maxLineLength: number,
-    indentation: string
-  ) => {
-    const words = text.split(" ");
-    const lines: string[] = [];
-    let currentLine = "";
-
-    words.forEach((word) => {
-      if (currentLine.length + word.length <= maxLineLength) {
-        currentLine += word + " ";
-      } else {
-        lines.push(currentLine.trim());
-        currentLine = `${indentation}${word} `;
-      }
-    });
-
-    if (currentLine) {
-      lines.push(currentLine.trim());
-    }
-
-    return lines.join("\n");
-  };
-
-  const handleInputChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-
-    if (name === "name") {
-      setName(value);
-    } else if (name === "email") {
-      setEmail(value);
-    } else if (name === "subject") {
-      setSubject(value);
-    } else if (name === "message") {
-      setMessage(value);
-    }
-
-    setLastUpdatedField(name);
-  };
-
-  const [cursorBlink, setCursorBlink] = useState<boolean>(true);
-
-  useEffect(() => {
-    const blinkInterval = setInterval(() => {
-      setCursorBlink((prev) => !prev);
-    }, 400);
-
-    return () => {
-      clearInterval(blinkInterval);
-    };
-  }, []);
-
-  const codeSnippet = `
-import  { useState } from "react";
-
-// 🌈 Spreading Stardust: 
-// Crafting Cosmic Email 🌌
-
-const [sender, setSender] = "${name}${
-    lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
-  }🚀";
-const [recipient, setRecipient] = "${email}${
-    lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
-  }📧";
-const [subject, setSubject] = \n"${subject}${
-    lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
-  }✨";
-const [message, setMessage] = 
-\`Hello, intrepid traveler! 👋\n
-Across the cosmos, a message for you:\n
-"${wordWrap(message, 40, " ")}${
-    lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
-  }"\n
-Wishing you stardust dreams,\n
-${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
-\``;
-
-  //   const codeSnippet2 = `
-  // // 🚀 Initiating Quantum Email Transmission 🪐
-  // const launchEmail = async () => {
-  //   try {
-  //     const response = await fetch('https://alpaycelik.dev/send',{
-  //     method: 'POST',
-  //     headers: {'Content-Type': 'application/json'},
-  //     body: JSON.stringify({
-  //      sender,
-  //      recipient,
-  //      subject,
-  //      message
-  //     })
-  //    });
-
-  //    if (response.ok) {
-  //    console.log('🌌 Transmission successful!');
-  //    } else {
-  //    console.error('🌠 Cosmic glitch encountered...');
-  //    }
-  //   } catch (error) {
-  //   console.error('🌪 Quantum disturbance detected:', error);
-  //   }
-  // };
-  // // 🚀 Ready for Liftoff? 🛸
-  // launchEmail();`;
+  
 
   return (
     <React.Fragment>
@@ -180,36 +43,45 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
         id="contact"
       >
         <div
-  className="title-container flex flex-col gap-6 justify-center items-center py-16 max-lg:p-16"
-  ref={ref}
->
-  <motion.div
-    ref={animationReference}
-    style={{
-      scale: scaleProgess,
-      opacity: opacityProgess,
-      textAlign: "center",
-    }}
-    className="text-center" 
-  >
-    <p className="text-[--black] mb-6 ml-6 flex items-center justify-center"> 
-      <span className="flex-shrink-0 mr-2">
-        <img src={magic} className="w-20" />
-      </span>
-      {language === "IT" ? contactData.title.it : contactData.title.en}
-      <span className="ml-2 max-lg:hidden">
-        <img src={morteNera} className="w-20" />
-      </span>
-    </p>
+          className="title-container flex flex-col gap-6 justify-center items-center py-16 max-lg:p-16"
+          ref={ref}
+        >
+          <motion.div
+            ref={animationReference}
+            style={{
+              scale: scaleProgess,
+              opacity: opacityProgess,
+              textAlign: "center",
+            }}
+            className="text-center"
+          >
+            <p className="text-[--black] mb-6 ml-6 flex items-center justify-center">
+              <span className="flex-shrink-0 mr-2">
+                <img src={magic} className="w-20" />
+              </span>
+              {language === "IT" ? contactData.title.it : contactData.title.en}
+              <span className="ml-2 max-lg:hidden">
+                <img src={morteNera} className="w-20" />
+              </span>
+            </p>
 
-    <h2 className="text-[--black] text-center">
-      {language === "IT"
-        ? contactData.description.it
-        : contactData.description.en}
-    </h2>
-  </motion.div>
-</div>
-
+            <h2 className="text-[--black] text-center">
+              {language === "IT"
+                ? contactData.description.it
+                : contactData.description.en}
+            </h2>
+          </motion.div>
+        </div>
+        <div className="flex mt-10 gap-40 justify-center max-lg:flex-col">
+          <div className="w-1/3 max-lg:w-full">
+            <SkillSection skillsData={skillsDataWeb} theme={theme} />
+          </div>
+          <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
+            <SkillSection skillsData={skillsDataDesign} theme={theme} />
+            <SkillSection skillsData={skillsDataCMS} theme={theme} />
+          </div>
+        </div>
+{/* 
         <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
           <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
             <Highlight
@@ -344,7 +216,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               theme={theme}
             />
           </form>
-        </div>
+        </div> */}
       </section>
     </React.Fragment>
   );
