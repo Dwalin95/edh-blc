@@ -37,12 +37,12 @@ const ProjectSlider: React.FC = () => {
   return (
     <React.Fragment>
       <section
-        className=" skill-banner relative overflow-x-clip h-100% w-full flex flex-col gap-2 "
+        className="skill-banner relative overflow-x-clip h-100% w-full flex flex-col gap-2"
         id="magic"
         ref={ref}
       >
         <ToastContainer
-          className="w-max text-3xl block p-3 "
+          className="w-max text-3xl block p-3"
           position="bottom-center"
           autoClose={5000}
           hideProgressBar={false}
@@ -55,7 +55,7 @@ const ProjectSlider: React.FC = () => {
           theme="light"
         />
         <div
-          className="quote-outer-container bg-[--darkblue] -rotate-3 flex justify-center items-center scale-110 pt-32 pb-32 max-lg:pt-16 max-lg:pb-16 max-lg:-ml-44 max-lg:-mr-44 max-lg:scale-100 "
+          className="quote-outer-container bg-[--darkblue] -rotate-3 flex justify-center items-center scale-110 pt-32 pb-32 max-lg:pt-16 max-lg:pb-16 max-lg:-ml-44 max-lg:-mr-44 max-lg:scale-100"
           style={{
             backgroundImage: `url(${bannerBg})`,
             backgroundPosition: "center",
@@ -73,28 +73,23 @@ const ProjectSlider: React.FC = () => {
               }}
             >
               <p className="text-[--white] mt-16 mb-6 flex items-center justify-between">
-                <span className="flex-shrink-0 mr-2 ">
+                <span className="flex-shrink-0 mr-2">
                   <img src={magic} className="w-20" />
                 </span>
-                {language === "IT"
-                  ? "Magic The Gathering"
-                  : "Magic The Gathering"}
-                <span className="flex-shrink-0 ml-2 ">
+                {language === "IT" ? "Magic The Gathering" : "Magic The Gathering"}
+                <span className="flex-shrink-0 ml-2">
                   <img src={magic} className="w-20" />
                 </span>
               </p>
-
               <h2 className="text-[--white] mb-16">
-                {language === "IT"
-                  ? "Alcune delle mie liste"
-                  : "Some of my lists"}
+                {language === "IT" ? "Alcune delle mie liste" : "Some of my lists"}
               </h2>
             </motion.div>
             <Swiper
               effect={"cards"}
               grabCursor={true}
               modules={[EffectCards, Autoplay, Pagination]}
-              className=" w-[60vw] max-lg:hidden min-[1921px]:px-96"
+              className="w-[60vw] max-lg:hidden min-[1921px]:px-96"
               loop={true}
               autoplay={{
                 delay: 4000,
@@ -108,36 +103,29 @@ const ProjectSlider: React.FC = () => {
               {projectsData.map((project, index: number) => (
                 <SwiperSlide
                   key={index}
-                  className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between  rounded-2xl p-20 text-left max-lg:hidden "
+                  className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between rounded-2xl p-20 text-left max-lg:hidden"
                 >
-                  <div className=" w-[55%] flex flex-col gap-12 justify-between ">
+                  <div className="w-[55%] flex flex-col gap-12 justify-between">
                     <h2>{project.title}</h2>
-
                     <p className="text-white">
-                      {language === "IT"
-                        ? project.description
-                        : project.description_EN}
+                      {language === "IT" ? project.description : project.description_EN}
                     </p>
                     <div className="technologies">
-                      <h3>
-                        {language === "IT" ? "Costo di mana" : "Mana cost"}
-                      </h3>
+                      <h3>{language === "IT" ? "Costo di mana" : "Mana cost"}</h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
-                        {project.technologies.map(
-                          (technology, innerIndex: number) => (
-                            <img
-                              key={innerIndex}
-                              src={technology.icon}
-                              alt={`${project.title}-icon`}
-                              className="h-[5rem] w-[60%] "
-                              data-tooltip-id="my-tooltip"
-                              data-tooltip-content={technology.name}
-                            />
-                          )
-                        )}
+                        {project.technologies.map((technology, innerIndex: number) => (
+                          <img
+                            key={innerIndex}
+                            src={technology.icon}
+                            alt={`${project.title}-icon`}
+                            className="h-[5rem] w-[60%]"
+                            data-tooltip-id="my-tooltip"
+                            data-tooltip-content={technology.name}
+                          />
+                        ))}
                       </div>
                     </div>
-                    <div className="buttons flex flex-row gap-10">
+                    <div className="buttons flex flex-row gap-10 max-sm:flex-col max-sm:gap-4">
                       <Button
                         label="Link lista"
                         link={project.mtgGoldfishUrl}
@@ -155,13 +143,11 @@ const ProjectSlider: React.FC = () => {
                       />
                     </div>
                   </div>
-
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
                     <img
                       src={project.image}
                       alt={`${project.title}-project-mockup`}
-                      className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
-                      `}
+                      className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%]`}
                     />
                   </div>
                 </SwiperSlide>
@@ -170,7 +156,7 @@ const ProjectSlider: React.FC = () => {
             {projectsData.map((project, index: number) => (
               <article
                 key={index}
-                className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
+                className="bg-darkblue flex flex-col gap-10 w-[80%] h-full border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
                 <h2 className="text-white">{project.title}</h2>
                 <img
@@ -178,7 +164,7 @@ const ProjectSlider: React.FC = () => {
                   alt={project.image}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
-                <div className="buttons flex flex-row gap-10">
+                <div className="buttons flex flex-row gap-10 max-sm:flex-col max-sm:gap-4">
                   <Button
                     label="Link lista"
                     link={project.mtgGoldfishUrl}
@@ -195,28 +181,23 @@ const ProjectSlider: React.FC = () => {
                   />
                 </div>
                 <p className="text-white max-lg:text-4xl">
-                  {language === "IT"
-                    ? project.description
-                    : project.description_EN}
+                  {language === "IT" ? project.description : project.description_EN}
                 </p>
-
                 <div className="technologies">
                   <h3 className="text-white">
                     {language === "IT" ? "Costo di mana" : "Mana cost"}
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
-                    {project.technologies.map(
-                      (technology, innerIndex: number) => (
-                        <img
-                          key={innerIndex}
-                          src={technology.icon}
-                          alt={`${project.title}-icon`}
-                          className="h-[5rem] w-[60%] "
-                          data-tooltip-id="my-tooltip"
-                          data-tooltip-content={technology.name}
-                        />
-                      )
-                    )}
+                    {project.technologies.map((technology, innerIndex: number) => (
+                      <img
+                        key={innerIndex}
+                        src={technology.icon}
+                        alt={`${project.title}-icon`}
+                        className="h-[5rem] w-[60%]"
+                        data-tooltip-id="my-tooltip"
+                        data-tooltip-content={technology.name}
+                      />
+                    ))}
                   </div>
                 </div>
               </article>
