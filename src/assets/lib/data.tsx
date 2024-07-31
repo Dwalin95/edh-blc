@@ -41,7 +41,6 @@ import {
 import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
-import gdfh from "../img/gdfh.webp";
 export const headerIntroData = {
   title: {
     it: "Ciao! sono Andrea",

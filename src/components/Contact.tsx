@@ -9,6 +9,8 @@ import { ToastContainer, toast } from "react-toastify";
 import { useTheme } from "../context/theme-context";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
+import magic from "../assets/icons/magic.webp";
+import morteNera from "../assets/icons/MorteNera.webp";
 
 const Contact: React.FC = () => {
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
@@ -178,30 +180,36 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
         id="contact"
       >
         <div
-          className="title-container flex flex-col gap-6 justify-center items-center py-16  max-lg:p-16"
-          ref={ref}
-        >
-          <motion.div
-            ref={animationReference}
-            style={{
-              scale: scaleProgess,
-              opacity: opacityProgess,
-              textAlign: "center",
-            }}
-          >
-            <p className="text-[--black] mb-6">
-              <span className="text-[--orange]">&lt;</span>
-              {language === "IT" ? contactData.title.it : contactData.title.en}
-              <span className="text-[--orange]">/&gt;</span>
-            </p>
+  className="title-container flex flex-col gap-6 justify-center items-center py-16 max-lg:p-16"
+  ref={ref}
+>
+  <motion.div
+    ref={animationReference}
+    style={{
+      scale: scaleProgess,
+      opacity: opacityProgess,
+      textAlign: "center",
+    }}
+    className="text-center" 
+  >
+    <p className="text-[--black] mb-6 ml-6 flex items-center justify-center"> 
+      <span className="flex-shrink-0 mr-2">
+        <img src={magic} className="w-20" />
+      </span>
+      {language === "IT" ? contactData.title.it : contactData.title.en}
+      <span className="ml-2 max-lg:hidden">
+        <img src={morteNera} className="w-20" />
+      </span>
+    </p>
 
-            <h2 className="text-[--black] text-center">
-              {language === "IT"
-                ? contactData.description.it
-                : contactData.description.en}
-            </h2>
-          </motion.div>
-        </div>
+    <h2 className="text-[--black] text-center">
+      {language === "IT"
+        ? contactData.description.it
+        : contactData.description.en}
+    </h2>
+  </motion.div>
+</div>
+
         <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
           <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
             <Highlight
