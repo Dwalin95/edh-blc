@@ -125,7 +125,8 @@ const ProjectSlider: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    <div className="buttons flex flex-row gap-10 max-sm:flex-col max-sm:gap-4">
+                    <div className="buttons flex flex-row gap-10 max-sm:flex-wrap max-sm:gap-7">
+
                       <Button
                         label="Link lista"
                         link={project.mtgGoldfishUrl}
@@ -164,7 +165,8 @@ const ProjectSlider: React.FC = () => {
                   alt={project.image}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
-                <div className="buttons flex flex-row gap-10 max-sm:flex-col max-sm:gap-4">
+                <div className="buttons flex flex-row gap-10 max-sm:flex-wrap max-sm:gap-7">
+              
                   <Button
                     label="Link lista"
                     link={project.mtgGoldfishUrl}
