@@ -161,11 +161,11 @@ export const liveTickerData = {
 
 export const skillsDataWeb = [
   {
-    skillsTitle: "Sviluppo Web",
+    skillsTitle: "Social",
     skills: [
       {
         title: "HTML",
-        hash: "#html",
+        hash: "https://drive.google.com/file/d/1MCMgTe31SI7dRUcahUCNmqLJKzrz9cZT/view?usp=drive_link",
         icon: htmlicon,
         color: "#F1662A",
       },
