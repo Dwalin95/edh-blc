@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
-import { useSectionInView } from "../assets/lib/hooks";
 import {
-  skillsDataCMS,
   skillsDataDesign,
   skillsDataWeb,
 } from "../assets/lib/data";
@@ -28,7 +26,7 @@ const TechStack: React.FC = () => {
       <section
         className="relative tech-stack max-lg:p-16 "
         id="esempi"
-        ref={ref}
+        // ref={ref}
       >
         <RadialGradient
           scale="scale-y-[3]"
@@ -60,7 +58,6 @@ const TechStack: React.FC = () => {
           </div>
           <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
             <SkillSection skillsData={skillsDataDesign} theme={theme} />
-            <SkillSection skillsData={skillsDataCMS} theme={theme} />
           </div>
         </div>
       </section>

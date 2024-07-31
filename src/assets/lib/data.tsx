@@ -4,9 +4,7 @@ import isola from "../../assets/icons/isola.svg";
 import foresta from "../../assets/icons/foresta.svg";
 import cost1 from "../../assets/icons/1.svg";
 import montagna from "../../assets/icons/montagna.svg";
-import wordpressicon from "../../assets/icons/wordpressicon.svg";
-import shopifyicon from "../../assets/icons/shopifyicon.svg";
-import webflowicon from "../../assets/icons/webflowicon.svg";
+
 import liveBane from "../../assets/img/livebane.webp";
 import sliver from "../../assets/img/Sliver.webp";
 import vraska from "../../assets/img/vraska.webp";
@@ -191,31 +189,8 @@ export const skillsDataDesign = [
   },
 ] as const;
 
-export const skillsDataCMS = [
-  {
-    skillsTitle: "CMS",
-    skills: [
-      {
-        title: "WordPress",
-        hash: "#WordPress",
-        icon: wordpressicon,
-        color: "#21759B",
-      },
-      {
-        title: "Shopify",
-        hash: "#Shopify",
-        icon: shopifyicon,
-        color: "#7AB55C",
-      },
-      {
-        title: "Webflow",
-        hash: "#Webflow",
-        icon: webflowicon,
-        color: "#4353FF",
-      },
-    ],
-  },
-] as const;
+
+
 
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },

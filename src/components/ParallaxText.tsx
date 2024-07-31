@@ -16,6 +16,7 @@ import { useLanguage } from "../context/language-context";
 import { liveTickerData } from "../assets/lib/data";
 import gdfh from "../assets/img/gdfh.webp";
 interface ParallaxProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any;
   baseVelocity: number;
 }
@@ -42,7 +43,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef<number>(1);
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     /**
