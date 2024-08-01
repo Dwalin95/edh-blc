@@ -7,6 +7,7 @@ import LanguageContextProvider from "./context/language-context";
 import { Provider } from "react-redux";
 import {store} from "./store/index";
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
         </ThemeContextProvider>
         </Provider>
         <SpeedInsights/>
+        <Analytics/>
       </BrowserRouter>
     </>
   );
