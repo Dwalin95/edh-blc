@@ -37,7 +37,7 @@ export const headerIntroData = {
     en: "Hello Plansewalker, I'm Andrea, a passionate gamer, card player, board game enthusiast, and streamer (wow, so many things, and I also play the guitar 🤣). Here you will find all the information about my live streams, as well as the lists of budget and non-budget decks that I will build live, both for Magic and Star Wars Unlimited! What are you waiting for, go check it out!",
   },
   suTelefono: {
-    it: "Ciao Viandante e benvenuto sul mio sito! Guarda anche la versione desktop, è molto più figa! 🤣",
+    it: "Ciao Viandante e benvenuto sul mio sito!",
     en: "Hello Plansewalker and welcome to my website! I'm glad you're here! take a look at the lists and follow me on social media! P.s. Also check out the desktop version, it's much cooler! 🤣",
   },
  
