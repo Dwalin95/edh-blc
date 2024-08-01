@@ -400,8 +400,8 @@ export const contactData = {
   },
   privacyOptIn: {
     checkbox: {
-      it: "Acconsento che Alpay possa utilizzare i miei dati personali (nome e indirizzo email) per contattarmi.",
-      en: "I agree that Alpay may use my personal data (name and e-mail address) to contact me.",
+      it: "Acconsento che possa utilizzare i miei dati personali (nome e indirizzo email) per contattarmi.",
+      en: "I agree that may use my personal data (name and e-mail address) to contact me.",
     },
     description: {
       it: "Inviando questa richiesta, confermi di aver letto l'Informativa sulla privacy",
