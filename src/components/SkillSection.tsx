@@ -102,7 +102,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
             <img
               src={getSkillIconSrc(theme, skill)}
               alt={`${skill.icon}-icon`}
-              className="h-[10rem] flex"
+              className="w-[10rem] flex"
             />
            {skill.text && (
           <span className="ml-4 text-center">{skill.text}</span>
