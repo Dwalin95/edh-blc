@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import {store} from "./store/index";
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
+import SearchList from "./pages/SearchList";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
             <ActiveSectionContextProvider>
               <Routes>
                 <Route path="/" element={<Home />}></Route>
+                <Route path="/searchList" element={<SearchList />}></Route>
                 <Route path="/imprint" element={<Home />}></Route>
                 <Route path="/privacy" element={<Home />}></Route>
               </Routes>

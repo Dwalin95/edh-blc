@@ -38,7 +38,7 @@ export const headerIntroData = {
   },
   suTelefono: {
     it: "Ciao Viandante e benvenuto sul mio sito!",
-    en: "Hello Plansewalker and welcome to my website! I'm glad you're here! take a look at the lists and follow me on social media! P.s. Also check out the desktop version, it's much cooler! 🤣",
+    en: "Hello Plansewalker and welcome to my website!",
   },
  
   // buttons: [
