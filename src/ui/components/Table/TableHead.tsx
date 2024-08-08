@@ -1,16 +1,29 @@
 import { flexRender, Table } from '@tanstack/react-table';
 import { Children } from 'react';
 
-export default function TableHead<T>({ table }: { table: Table<T> }) {
+interface TableHeadProps<T> {
+  table: Table<T>;
+  theadClassName?: string;
+  trClassName?: string;
+  thClassName?: string;
+}
+
+export default function TableHead<T>({
+  table,
+  theadClassName,
+  trClassName,
+  thClassName,
+}: TableHeadProps<T>) {
   return (
-    <thead>
+    <thead className={theadClassName}>
       {Children.toArray(
         table.getHeaderGroups().map((headerGroup) => (
-          <tr>
+          <tr className={trClassName}>
             {Children.toArray(
               headerGroup.headers.map((header) => (
                 <th
                   scope="col"
+                  className={thClassName}
                   {...{
                     colSpan: header.colSpan,
                     style: {

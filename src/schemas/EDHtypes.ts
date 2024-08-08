@@ -33,6 +33,7 @@ export type TScryFallCardSymbol = {
 };
 
 export type TScryFallCardSymbolResponse = {
+  forEach(arg0: (symbol: { symbol: string; svg_uri: string; }) => void): unknown;
   object: string;
   has_more: boolean;
   data: TScryFallCardSymbol[];

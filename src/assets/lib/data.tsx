@@ -9,6 +9,7 @@ import liveBane from "../../assets/img/livebane.webp";
 import sliver from "../../assets/img/Sliver.webp";
 import vraska from "../../assets/img/vraska.webp";
 import profilepicture from "../img/logo.webp";
+import tutore from "../img/tutore.webp";
 
 import tarkin from "../img/tarkin-giallo.webp";
 import vader from "../img/Vader-blu.webp";
@@ -23,7 +24,7 @@ import tiktok from "../img/tiktok.svg";
 import youtube from "../img/youtube.svg";
 import twitch from "../img/twitch_noScritta.svg";
 import mox from "../img/mox.svg";
-// import scheda from "../img/schedule.svg";
+
 import gldfsh from "../img/gdfh.webp";
 
 export const headerIntroData = {
@@ -40,28 +41,13 @@ export const headerIntroData = {
     it: "Ciao Viandante e benvenuto sul mio sito!",
     en: "Hello Plansewalker and welcome to my website!",
   },
+ paginaRicerca:{
+  titolo: "Cerca la tua lista!",
+  descrizione: "Qui potrai trovare tutte le liste budget a 100$ che ho creato durante il corso del tempo e delle live, puoi inserire il nome del comandante che ti interessa e vedere se ho già creato una lista per te! Buona ricerca!",
+ }, 
  
-  // buttons: [
-  //   {
-  //     name: "Contati",
-  //     label: {
-  //       it: "Contattami",
-  //       en: "Contact me",
-  //     },
-  //     icon: FiMail,
-  //     color: "main-btn",
-  //   },
-  //   {
-  //     name: "Mazzi",
-  //     label: {
-  //       it: "Alcune delle mie",
-  //       en: "My Projects",
-  //     },
-  //     icon: FiGithub,
-  //     color: "secondary-btn",
-  //   },
-  // ],
   profilepicture: profilepicture,
+  seacrchPicture: tutore,
 } as const;
 
 export const projectsData = [

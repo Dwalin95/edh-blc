@@ -1,87 +1,69 @@
-import { createColumnHelper, getCoreRowModel, getPaginationRowModel, useReactTable } from '@tanstack/react-table';
 import { useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import Typewriter from '../../hooks/Typerwrite';
+import { createColumnHelper, getCoreRowModel, getPaginationRowModel, useReactTable } from '@tanstack/react-table';
 import { useGetSymbolsQuery } from '../../api';
 import { TCommanderData } from '../../schemas/EDHtypes';
-
 import data from '../archive/edhArchive.json';
 
-export default function useComandanteTable() {
-  const navigate = useNavigate();
+const useComandanteTable = () => {
   const columnHelper = createColumnHelper<TCommanderData>();
 
-  // Fetch data using RTK query
   const { data: symbolsData } = useGetSymbolsQuery();
 
-  // Create a mapping of symbol to svg_uri
   const symbolToSvgUri = useMemo(() => {
     const map: { [key: string]: string } = {};
     if (symbolsData) {
-      symbolsData.data.forEach((symbol) => {
+      symbolsData.data.forEach(symbol => {
         map[symbol.symbol.replace(/[{}]/g, '')] = symbol.svg_uri;
       });
     }
     return map;
   }, [symbolsData]);
 
-  const columns = useMemo(
-    () => [
-      columnHelper.accessor('nomeComandante', {
-        header: () => <Typewriter text="Commander" className="table-header-center" speed={0.05} />,
-        cell: (info) => <div className="table-cell-center">{info.getValue()}</div>,
-        enableSorting: false,
-      }),
-      columnHelper.accessor('listaComandante', {
-        header: () => <Typewriter text="Lista Comandante" className="table-header-center" speed={0.05} />,
-        cell: ({ row }) => (
-          <div className="d-flex align-items-center justify-content-center">
-            <p className="mb-0">Vai alla lista</p>
-            <a
-              href={row.original.listaComandante}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary btn-sm ms-2"
-            >
-              <img
-                src="https://svgs.scryfall.io/card-symbols/T.svg"
-                alt="Card Symbol"
-                style={{ width: '25px', height: '25px' }} // Imposta dimensioni fisse per l'immagine
-              />
-            </a>
-          </div>
-        ),
-        enableSorting: false,
-      }),
-      columnHelper.accessor('coloriComandante', {
-        header: () => <Typewriter text="Costo Comandante" className="table-header-center" speed={0.05} />,
-        cell: (info) => (
-          <div className="d-flex align-items-center justify-content-center">
-            {info
-              .getValue()
-              ?.map((color: string) => (
-                <img
-                  key={color}
-                  src={symbolToSvgUri[color]}
-                  alt={color}
-                  style={{ width: '20px', height: '20px', marginLeft: '5px' }}
-                />
-              ))}
-          </div>
-        ),
-        enableSorting: false,
-      }),
-    ],
-    [navigate, symbolToSvgUri],
-  );
+  const columns = useMemo(() => [
+    columnHelper.accessor('nomeComandante', {
+      header: "Nome Comandante",
+      cell: info => <div className="table-cell-center">{info.getValue()}</div>,
+      enableSorting: false,
+    }),
+    columnHelper.accessor('listaComandante', {
+      header: "Lista Comandante",
+      cell: () => (
+        <div className="flex items-center justify-center">
+          <img
+            src="https://svgs.scryfall.io/card-symbols/T.svg"
+            alt="Card Symbol"
+            className="w-6 h-6"
+          />
+        </div>
+      ),
+      enableSorting: false,
+    }),
+    columnHelper.accessor('coloriComandante', {
+      header: "Costo Comandante",
+      cell: info => (
+        <div className="flex items-center justify-center">
+          {info.getValue()?.map((color, index) => (
+            <img
+              key={`${color}-${index}`}
+              src={symbolToSvgUri[color]}
+              alt={color}
+              className="w-5 h-5 ml-1"
+            />
+          ))}
+        </div>
+      ),
+      enableSorting: false,
+    }),
+  ], [symbolToSvgUri]);
 
   const table = useReactTable<TCommanderData>({
-    data, // Usa i dati importati direttamente
+    data,
     columns,
-    getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
+    getCoreRowModel: getCoreRowModel(),
   });
 
-  return { table, data };
-}
+  return { table };
+};
+
+export default useComandanteTable;

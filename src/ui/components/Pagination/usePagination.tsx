@@ -1,6 +1,8 @@
 import { Table } from '@tanstack/react-table';
 import React, { useCallback, useMemo } from 'react';
-import { PageItem } from 'react-bootstrap';
+
+const getIconUrlForPageNumber = (pageNumber: number) => 
+  `https://svgs.scryfall.io/card-symbols/${pageNumber}.svg`;
 
 export function usePagination<T>(table: Table<T>) {
   const pageSize = table.getPageCount();
@@ -15,9 +17,17 @@ export function usePagination<T>(table: Table<T>) {
 
           if (isCurrentPageWithinTwoPageNumbers) {
             return (
-              <PageItem onClick={() => table.setPageIndex(pageNumber - 1)} active={pageNumber === currentPage}>
-                {pageNumber}
-              </PageItem>
+              <p
+                key={pageNumber}
+                onClick={() => table.setPageIndex(pageNumber - 1)}
+                className={pageNumber === currentPage ? 'active' : ''}
+              >
+                <img
+                  src={getIconUrlForPageNumber(pageNumber)}
+                  alt={`Page ${pageNumber}`}
+                  className="w-9 h-9"
+                />
+              </p>
             );
           }
 

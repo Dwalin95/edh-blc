@@ -128,7 +128,7 @@ const NavBar: React.FC = () => {
               </CustomNavLink>
             ))
           )}
-          <LanguageSwitch />
+          {!isSearchList && <LanguageSwitch />}
         </nav>
       )}
       {isMobileMenuActive && (
@@ -138,7 +138,7 @@ const NavBar: React.FC = () => {
           }`}
         >
           {isSearchList ? (
-            <CustomNavLink link="/home" linkEn="Home">
+            <CustomNavLink link="/" linkEn="Home">
               <div className="text-[3.2rem] flex flex-col items-center">
                 <img src={iconMap["Home"]} className="w-8 h-8" />
               </div>
@@ -170,7 +170,7 @@ const NavBar: React.FC = () => {
               </CustomNavLink>
             ))
           )}
-          <LanguageSwitch />
+          {!isSearchList && <LanguageSwitch />}
         </nav>
       )}
     </React.Fragment>

@@ -1,89 +1,96 @@
 import { createColumnHelper, getCoreRowModel, getPaginationRowModel, useReactTable } from '@tanstack/react-table';
 import { useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import Typewriter from '../../hooks/Typerwrite';
-import { useGetSymbolsQuery } from '../../api';
 import { TCommanderData } from '../../schemas/EDHtypes';
-
 import data from '../archive/edhArchive.json';
 
-export default function useRicercaTotaleTable() {
-  const navigate = useNavigate();
+interface UseRicercaTotaleTableOptions {
+  thClassName?: string;
+  tdClassName?: string;
+  searchTerm?: string; // Aggiungi searchTerm come opzione
+}
+
+export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOptions) {
   const columnHelper = createColumnHelper<TCommanderData>();
 
-  // Fetch data using RTK query
-  const { data: symbolsData } = useGetSymbolsQuery();
-
-  // Create a mapping of symbol to svg_uri
+  // Crea una mappa per l'URL degli SVG
   const symbolToSvgUri = useMemo(() => {
     const map: { [key: string]: string } = {};
-    if (symbolsData) {
-      symbolsData.data.forEach((symbol) => {
-        map[symbol.symbol.replace(/[{}]/g, '')] = symbol.svg_uri;
+    data.forEach((item) => {
+      item.coloriComandante.forEach((color) => {
+        map[color] = `https://svgs.scryfall.io/card-symbols/${color}.svg`;
       });
-    }
+    });
     return map;
-  }, [symbolsData]);
+  }, []);
+
+  // Filtra i dati in base al termine di ricerca
+  const filteredData = useMemo(() => {
+    if (options?.searchTerm) {
+      const lowercasedSearchTerm = options.searchTerm.toLowerCase();
+      return data.filter((item) =>
+        item.nomeComandante.toLowerCase().includes(lowercasedSearchTerm)
+      );
+    }
+    return data;
+  }, [options?.searchTerm]);
 
   const columns = useMemo(
     () => [
       columnHelper.accessor('nomeComandante', {
-        header: () => <Typewriter text="Commander" className="table-header-center" speed={0.05} />,
-        cell: (info) => <div className="table-cell-center">{info.getValue()}</div>,
+        header: "Commander",
+        cell: (info) => (
+          <div className={`my-3 text-xl ${options?.tdClassName}`}>
+            <strong>{info.getValue()}</strong>
+          </div>
+        ),
         enableSorting: false,
       }),
       columnHelper.accessor('listaComandante', {
-        header: () => <Typewriter text="Lista Comandante" className="table-header-center" speed={0.05} />,
+        header: "Lista",
         cell: ({ row }) => (
-          <div className="d-flex align-items-center justify-content-center">
-            <p className="mb-0">Vai alla lista</p>
+          <div className="flex items-center justify-center">
             <a
               href={row.original.listaComandante}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary btn-sm ms-2"
+              className="btn btn-primary btn-sm ml-2 flex items-center justify-center"
             >
               <img
                 src="https://svgs.scryfall.io/card-symbols/T.svg"
                 alt="Card Symbol"
-                style={{ width: '25px', height: '25px' }} // Imposta dimensioni fisse per l'immagine
+                className="w-9 h-9"
               />
-              {/* <i className="bi bi-search" style={{ fontSize: '1rem' }} /> */}
             </a>
           </div>
         ),
         enableSorting: false,
       }),
       columnHelper.accessor('coloriComandante', {
-        header: () => <Typewriter text="Costo Comandante" className="table-header-center" speed={0.05} />,
-
+        header: "Costo",
         cell: (info) => (
-          <div className="d-flex align-items-center justify-content-center">
-            {info
-              .getValue()
-              ?.map((color: string) => (
-                <img
-                  key={color}
-                  src={symbolToSvgUri[color]}
-                  alt={color}
-                  style={{ width: '20px', height: '20px', marginLeft: '5px' }}
-                />
-              ))}
+          <div className={`flex items-center justify-center ${options?.tdClassName}`}>
+            {info.getValue()?.map((color: string, index: number) => (
+              <img
+                key={`color-${color}-${index}`} // Usa una chiave unica
+                src={symbolToSvgUri[color]}
+                alt={color}
+                className="w-9 h-9 ml-1"
+              />
+            ))}
           </div>
         ),
         enableSorting: false,
       }),
     ],
-    [navigate, symbolToSvgUri],
+    [symbolToSvgUri, options?.tdClassName],
   );
 
   const table = useReactTable<TCommanderData>({
-    data, // Usa i dati importati direttamente
+    data: filteredData, // Usa i dati filtrati
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
 
-  return { table, data };
+  return { table, data: filteredData }; // Restituisci i dati filtrati
 }
