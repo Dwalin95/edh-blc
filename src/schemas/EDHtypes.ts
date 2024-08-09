@@ -9,6 +9,7 @@ export type RicercaPerComandante = {
 export type TCommanderData = {
   nomeComandante: string;
   listaComandante: string;
+  linkLista:string;
   coloriComandante?: string[];
 };
 

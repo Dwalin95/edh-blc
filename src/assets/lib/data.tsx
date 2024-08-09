@@ -43,7 +43,8 @@ export const headerIntroData = {
   },
  paginaRicerca:{
   titolo: "Cerca la tua lista!",
-  descrizione: "Qui potrai trovare tutte le liste budget a 100$ che ho creato durante il corso del tempo e delle live, puoi inserire il nome del comandante che ti interessa e vedere se ho già creato una lista per te! Buona ricerca!",
+  descrizione: "Qui trovi la lista dei mazzi budget a 100$ che ho creato durante il corso del tempo e delle live, tieniti aggiornato che ne inserisco sempre di nuove dopo ogni live!",
+  descrizione1: "Qui potrai trovare tutte le liste budget a 100$ che ho creato durante il corso del tempo e delle live, puoi inserire il nome del comandante che ti interessa e vedere se ho già creato una lista per te! Buona ricerca!",
  }, 
  
   profilepicture: profilepicture,

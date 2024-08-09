@@ -46,7 +46,7 @@ export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOpt
         enableSorting: false,
       }),
       columnHelper.accessor('listaComandante', {
-        header: "Lista",
+        header: "Foto lista",
         cell: ({ row }) => (
           <div className="flex items-center justify-center">
             <a
@@ -65,6 +65,26 @@ export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOpt
         ),
         enableSorting: false,
       }),
+      columnHelper.accessor('linkLista', {
+        header: "Link lista",
+        cell: ({ row }) => (
+          <div className="flex items-center justify-center">
+            <a
+              href={row.original.linkLista}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-sm ml-2 flex items-center justify-center"
+            >
+              <img
+                src="https://svgs.scryfall.io/card-symbols/C.svg"
+                alt="Card Symbol"
+                className="w-9 h-9"
+              />
+            </a>
+          </div>
+        ),
+        enableSorting: false,
+      }),
       columnHelper.accessor('coloriComandante', {
         header: "Costo",
         cell: (info) => (
@@ -74,7 +94,7 @@ export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOpt
                 key={`color-${color}-${index}`} // Usa una chiave unica
                 src={symbolToSvgUri[color]}
                 alt={color}
-                className="w-9 h-9 ml-1"
+                className="w-7 h-7"
               />
             ))}
           </div>
