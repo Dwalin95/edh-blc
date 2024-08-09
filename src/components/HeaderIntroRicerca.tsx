@@ -32,6 +32,9 @@ export default function HeaderIntroRicerca() {
       <div className="scroll-down-container animate-bounce flex gap-6">
         <BsMouse className="text-[2.6rem]" />
       </div>
+     
+      
+     
     </section>
   )
 }

@@ -15,7 +15,7 @@ import tarkin from "../img/tarkin-giallo.webp";
 import vader from "../img/Vader-blu.webp";
 import krennik from "../img/krennik-verde.webp";
 import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
-import { FiLink, FiDownload } from "react-icons/fi";
+import { FiLink, FiDownload, FiSearch } from "react-icons/fi";
 import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
@@ -24,6 +24,7 @@ import tiktok from "../img/tiktok.svg";
 import youtube from "../img/youtube.svg";
 import twitch from "../img/twitch_noScritta.svg";
 import mox from "../img/mox.svg";
+import biblio3 from "../img/biblio3.webp";
 
 import gldfsh from "../img/gdfh.webp";
 
@@ -52,6 +53,7 @@ export const headerIntroData = {
 } as const;
 
 export const projectsData = [
+  
   {
     title: "Bane, Lord of Darkness",
     description:
@@ -77,6 +79,31 @@ export const projectsData = [
       projectcolor: "#70B9BE",
     },
   },
+  {
+    title: "Clicca qui per altre liste!",
+      description:
+        "Se vuoi cercare altre liste clicca qui, e verrai portato in una pagina dove custodisco tutte le mie liste budget, con foto e link!",
+      description_EN:
+        "If you want to search for other lists click here, and you will be taken to a page where I keep all my budget lists, with photos and links!",
+      technologies: [
+     
+        { name: "Palude", icon: palude },
+       
+     
+      ],
+      image: biblio3,
+      mtgGoldfishUrl: "",
+      driveUrl:
+        "",
+      downloadIcon: FiSearch,
+      mtgGoldfishIcon: FiLink,
+      colors: {
+        main: "main-btn",
+        second: "secondary-btn",
+        icon: "white",
+        projectcolor: "#E3964A",
+      },
+    },
   {
     title: "Vraska, the Silencer",
     description:
@@ -127,6 +154,7 @@ export const projectsData = [
       projectcolor: "#E3964A",
     },
   },
+  
 ] as const;
 
 export const liveTickerData = {

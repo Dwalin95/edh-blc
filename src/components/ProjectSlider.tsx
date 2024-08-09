@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import magic from "../assets/icons/magic.webp";
+import { useNavigate } from "react-router-dom";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Magic");
@@ -27,6 +28,7 @@ const ProjectSlider: React.FC = () => {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const navigate = useNavigate();
 
   return (
     <React.Fragment>
@@ -70,13 +72,17 @@ const ProjectSlider: React.FC = () => {
                 <span className="flex-shrink-0 mr-2">
                   <img src={magic} className="w-20" />
                 </span>
-                {language === "IT" ? "Magic The Gathering" : "Magic The Gathering"}
+                {language === "IT"
+                  ? "Magic The Gathering"
+                  : "Magic The Gathering"}
                 <span className="flex-shrink-0 ml-2">
                   <img src={magic} className="w-20" />
                 </span>
               </p>
               <h2 className="text-[--white] mb-16">
-                {language === "IT" ? "Alcune delle mie liste" : "Some of my lists"}
+                {language === "IT"
+                  ? "Alcune delle mie liste"
+                  : "Some of my lists"}
               </h2>
             </motion.div>
             <Swiper
@@ -102,41 +108,60 @@ const ProjectSlider: React.FC = () => {
                   <div className="w-[55%] flex flex-col gap-12 justify-between">
                     <h2>{project.title}</h2>
                     <p className="text-white">
-                      {language === "IT" ? project.description : project.description_EN}
+                      {language === "IT"
+                        ? project.description
+                        : project.description_EN}
                     </p>
                     <div className="technologies">
-                      <h3>{language === "IT" ? "Costo di mana" : "Mana cost"}</h3>
+                      <h3>
+                        {language === "IT" ? "Costo di mana" : "Mana cost"}
+                      </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
-                        {project.technologies.map((technology, innerIndex: number) => (
-                          <img
-                            key={innerIndex}
-                            src={technology.icon}
-                            alt={`${project.title}-icon`}
-                            className="h-[5rem] w-[60%]"
-                            data-tooltip-id="my-tooltip"
-                            data-tooltip-content={technology.name}
-                          />
-                        ))}
+                        {project.technologies.map(
+                          (technology, innerIndex: number) => (
+                            <img
+                              key={innerIndex}
+                              src={technology.icon}
+                              alt={`${project.title}-icon`}
+                              className="h-[5rem] w-[60%]"
+                              data-tooltip-id="my-tooltip"
+                              data-tooltip-content={technology.name}
+                            />
+                          )
+                        )}
                       </div>
                     </div>
                     <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-  <Button
-    label="Link"
-    link={project.mtgGoldfishUrl}
-    iconSVG={project.mtgGoldfishIcon}
-    buttoncolor={project.colors.main}
-    iconcolor={project.colors.icon}
-    className="w-full max-lg:w-1/2 max-lg:w-auto"
-  />
-  <Button
-    label="Foto"
-    link={project.driveUrl}
-    iconSVG={project.downloadIcon}
-    buttoncolor={project.colors.main}
-    iconcolor={project.colors.icon}
-    className="w-full max-lg:w-1/2 max-lg:w-auto"
-  />
-</div>
+                      {project.title === "Clicca qui per altre liste!" ? (
+                        <Button
+                          label="Cerca"
+                          iconSVG={project.downloadIcon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                          className="w-full max-lg:w-1/2 max-lg:w-auto"
+                          onClick={() => navigate("/searchList")}
+                        />
+                      ) : (
+                        <>
+                          <Button
+                            label="Link"
+                            link={project.mtgGoldfishUrl}
+                            iconSVG={project.mtgGoldfishIcon}
+                            buttoncolor={project.colors.main}
+                            iconcolor={project.colors.icon}
+                            className="w-full max-lg:w-1/2 max-lg:w-auto"
+                          />
+                          <Button
+                            label="Foto"
+                            link={project.driveUrl}
+                            iconSVG={project.downloadIcon}
+                            buttoncolor={project.colors.main}
+                            iconcolor={project.colors.icon}
+                            className="w-full max-lg:w-1/2 max-lg:w-auto"
+                          />
+                        </>
+                      )}
+                    </div>
                   </div>
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
                     <img
@@ -160,41 +185,45 @@ const ProjectSlider: React.FC = () => {
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
                 <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-  <Button
-    label="Link"
-    link={project.mtgGoldfishUrl}
-    iconSVG={project.mtgGoldfishIcon}
-    buttoncolor={project.colors.main}
-    iconcolor={project.colors.icon}
-    className="w-full max-lg:w-1/2 max-lg:w-auto"
-  />
-  <Button
-    label="Foto"
-    link={project.driveUrl}
-    iconSVG={project.downloadIcon}
-    buttoncolor={project.colors.main}
-    iconcolor={project.colors.icon}
-    className="w-full max-lg:w-1/2 max-lg:w-auto"
-  />
-</div>
+                  <Button
+                    label="Link"
+                    link={project.mtgGoldfishUrl}
+                    iconSVG={project.mtgGoldfishIcon}
+                    buttoncolor={project.colors.main}
+                    iconcolor={project.colors.icon}
+                    className="w-full max-lg:w-1/2 max-lg:w-auto"
+                  />
+                  <Button
+                    label="Foto"
+                    link={project.driveUrl}
+                    iconSVG={project.downloadIcon}
+                    buttoncolor={project.colors.main}
+                    iconcolor={project.colors.icon}
+                    className="w-full max-lg:w-1/2 max-lg:w-auto"
+                  />
+                </div>
                 <p className="text-white max-lg:text-4xl">
-                  {language === "IT" ? project.description : project.description_EN}
+                  {language === "IT"
+                    ? project.description
+                    : project.description_EN}
                 </p>
                 <div className="technologies">
                   <h3 className="text-white">
                     {language === "IT" ? "Costo di mana" : "Mana cost"}
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
-                    {project.technologies.map((technology, innerIndex: number) => (
-                      <img
-                        key={innerIndex}
-                        src={technology.icon}
-                        alt={`${project.title}-icon`}
-                        className="h-[5rem] w-[60%]"
-                        data-tooltip-id="my-tooltip"
-                        data-tooltip-content={technology.name}
-                      />
-                    ))}
+                    {project.technologies.map(
+                      (technology, innerIndex: number) => (
+                        <img
+                          key={innerIndex}
+                          src={technology.icon}
+                          alt={`${project.title}-icon`}
+                          className="h-[5rem] w-[60%]"
+                          data-tooltip-id="my-tooltip"
+                          data-tooltip-content={technology.name}
+                        />
+                      )
+                    )}
                   </div>
                 </div>
               </article>

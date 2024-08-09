@@ -34,9 +34,12 @@ const SearchList: React.FC = () => {
             <LazySiteBarRight />
           </Suspense>
         </header>
+        <body>
+        <RicercaTotale />
+
+        </body>
 
        
-        <RicercaTotale />
         <Footer />
       </Layout>
     </>
