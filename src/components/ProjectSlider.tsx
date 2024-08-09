@@ -15,7 +15,6 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import magic from "../assets/icons/magic.webp";
-import { useNavigate } from "react-router-dom";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Magic");
@@ -28,7 +27,7 @@ const ProjectSlider: React.FC = () => {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-  const navigate = useNavigate();
+
 
   return (
     <React.Fragment>
@@ -132,15 +131,7 @@ const ProjectSlider: React.FC = () => {
                       </div>
                     </div>
                     <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-                      {project.title === "Clicca qui per altre liste!" ? (
-                        <Button
-                          label="Cerca"
-                          iconSVG={project.downloadIcon}
-                          buttoncolor={project.colors.main}
-                          iconcolor={project.colors.icon}
-                          className="w-full max-lg:w-1/2 max-lg:w-auto"
-                          onClick={() => navigate("/searchList")}
-                        />
+                      {project.title === "Cerchi altre liste?" ? (''
                       ) : (
                         <>
                           <Button
@@ -185,22 +176,27 @@ const ProjectSlider: React.FC = () => {
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
                 <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-                  <Button
-                    label="Link"
-                    link={project.mtgGoldfishUrl}
-                    iconSVG={project.mtgGoldfishIcon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                    className="w-full max-lg:w-1/2 max-lg:w-auto"
-                  />
-                  <Button
-                    label="Foto"
-                    link={project.driveUrl}
-                    iconSVG={project.downloadIcon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                    className="w-full max-lg:w-1/2 max-lg:w-auto"
-                  />
+                {project.title === "Cerchi altre liste?" ? (''
+                      ) : (
+                        <>
+                          <Button
+                            label="Link"
+                            link={project.mtgGoldfishUrl}
+                            iconSVG={project.mtgGoldfishIcon}
+                            buttoncolor={project.colors.main}
+                            iconcolor={project.colors.icon}
+                            className="w-full max-lg:w-1/2 max-lg:w-auto"
+                          />
+                          <Button
+                            label="Foto"
+                            link={project.driveUrl}
+                            iconSVG={project.downloadIcon}
+                            buttoncolor={project.colors.main}
+                            iconcolor={project.colors.icon}
+                            className="w-full max-lg:w-1/2 max-lg:w-auto"
+                          />
+                        </>
+                      )}
                 </div>
                 <p className="text-white max-lg:text-4xl">
                   {language === "IT"

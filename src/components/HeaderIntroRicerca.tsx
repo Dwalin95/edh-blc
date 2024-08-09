@@ -18,7 +18,6 @@ export default function HeaderIntroRicerca() {
       />
       <h1>
          {headerIntroData.paginaRicerca.titolo}
-         
         <span className="wave text-7xl">&#128269;</span>
       </h1>
       <p className="w-1/2 flex max-lg:hidden">

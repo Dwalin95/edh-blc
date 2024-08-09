@@ -9,6 +9,7 @@ import LanguageSwitch from "./LanguageSwitch";
 import magic from "../assets/icons/magic.webp";
 import morteNera from "../assets/icons/MorteNera.webp";
 import logo from "../assets/img/logo.webp";
+import search from "../assets/icons/search.svg";
 
 const NavBar: React.FC = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const NavBar: React.FC = () => {
     Magic: magic,
     "Star Wars Unlimited": morteNera,
     Contact: logo,
+    Search: search,
   };
 
   const { theme } = useTheme();
@@ -65,13 +67,15 @@ const NavBar: React.FC = () => {
   const CustomNavLink: React.FC<CustomNavLinkProps> = ({ link, children, linkEn }) => {
     const [isHovered, setIsHovered] = useState(false);
     const isLinkActive = isHovered || linkEn === activeSection;
-
-    const linkClasses = isLinkActive
-      ? "transition-all duration-200 relative"
-      : "opacity-20 transition-all duration-700";
-
+  
+    const linkClasses = isMobileMenuActive
+      ? "transition-all duration-200 relative"  // Tutte le icone visibili su mobile
+      : isLinkActive
+        ? "transition-all duration-200 relative"
+        : "opacity-20 transition-all duration-700";  // Opacità ridotta su desktop
+  
     const iconSrc = linkEn && iconMap[linkEn] ? iconMap[linkEn] : "";
-
+  
     const leftArrow = isLinkActive && (
       <span className="text-[--orange] absolute -left-12 top-1 max-lg:hidden">
         <img src={iconSrc} className="w-10" />

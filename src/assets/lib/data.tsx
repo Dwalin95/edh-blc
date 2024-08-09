@@ -80,9 +80,9 @@ export const projectsData = [
     },
   },
   {
-    title: "Clicca qui per altre liste!",
+    title: "Cerchi altre liste?",
       description:
-        "Se vuoi cercare altre liste clicca qui, e verrai portato in una pagina dove custodisco tutte le mie liste budget, con foto e link!",
+        "Se vuoi cercare altre liste clicca il tasto Cerca o l'icona della lente di ingrandimento con il mondo per acceder a tutte le liste che ho fato fino ad ora, con foto e link!",
       description_EN:
         "If you want to search for other lists click here, and you will be taken to a page where I keep all my budget lists, with photos and links!",
       technologies: [
@@ -233,7 +233,7 @@ export const skillsDataDesign = [
 
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
-  // { it: "Esempi", en: "Example", hash: "#esempi", icon: GoStack },
+  { it: "Cerca", en: "Search", hash: "/searchList", icon: FiSearch },
   { it: "Magic", en: "Magic", hash: "#magic", icon: GoProject },
   {
     it: "Star Wars Unlimited",
