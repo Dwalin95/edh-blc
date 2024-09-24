@@ -170,13 +170,13 @@ export const skillsDataWeb = [
     skills: [
       {
         title: "Instagram",
-        hash: "https://www.instagram.com/mtg_colibri",
+        hash: "https://www.instagram.com/mtg_colibri?igsh=OWk3Nmx6b3BwdHhw",
         icon: igIcon,
         color: "#F1662A",
       },
       {
         title: "TikTok",
-        hash: "https://www.tiktok.com/@mtg_colibri",
+        hash: "https://www.tiktok.com/@mtg_colibri?_t=8pzun8g5lRZ&_r=1",
         icon: tiktok,
         color: "#8A2BE2",
       },
