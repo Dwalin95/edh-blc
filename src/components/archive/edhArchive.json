@@ -35,4 +35,10 @@
     "listaComandante": "https://drive.google.com/drive/folders/1eqMPQ-Gf3cCDu7OxlALxd7GT9zEU_-LN?usp=drive_link",
     "linkLista":"https://www.mtggoldfish.com/deck/6472497#paper"
   }
+  ,{
+    "nomeComandante": "Xantcha, Sleeper Agent",
+    "coloriComandante": ["1", "B", "R"],
+    "listaComandante": "https://drive.google.com/file/d/1cwprLIa81GYB3NX4IiNoZFxYIdgzEDJz/view?usp=drive_link",
+    "linkLista":"https://www.mtggoldfish.com/deck/6540545#paper"
+  }
 ]
