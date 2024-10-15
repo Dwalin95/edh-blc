@@ -25,7 +25,7 @@ const useComandanteTable = () => {
       cell: info => <div className="table-cell-center">{info.getValue()}</div>,
       enableSorting: false,
     }),
-    columnHelper.accessor('listaComandante', {
+    columnHelper.accessor('arkideck', {
       header: "Lista Comandante",
       cell: () => (
         <div className="flex items-center justify-center">

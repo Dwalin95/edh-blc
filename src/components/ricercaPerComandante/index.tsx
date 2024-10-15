@@ -9,7 +9,7 @@ import RicercaPerComandante from './RicercaComandante';
 
 export default function RicercaComandante() {
   const [searchResults, setSearchResults] = useState<
-    { nomeComandante: string; coloriComandante: string[]; listaComandante: string }[]
+    { nomeComandante: string; coloriComandante: string[]; arkideck: string }[]
   >([]);
 
   const onSubmit: SubmitHandler<MagicFormSchemaType> = (comandante) => {

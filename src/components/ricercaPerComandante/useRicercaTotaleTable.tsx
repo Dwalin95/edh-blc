@@ -45,12 +45,12 @@ export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOpt
         ),
         enableSorting: false,
       }),
-      columnHelper.accessor('listaComandante', {
-        header: "Foto lista",
+      columnHelper.accessor('arkideck', {
+        header: "Arkideck",
         cell: ({ row }) => (
           <div className="flex items-center justify-center">
             <a
-              href={row.original.listaComandante}
+              href={row.original.arkideck}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-sm ml-2 flex items-center justify-center"
@@ -66,7 +66,7 @@ export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOpt
         enableSorting: false,
       }),
       columnHelper.accessor('linkLista', {
-        header: "Link lista",
+        header: "Gold-Fish",
         cell: ({ row }) => (
           <div className="flex items-center justify-center">
             <a
