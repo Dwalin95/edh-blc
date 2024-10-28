@@ -11,8 +11,8 @@ import vraska from "../../assets/img/vraska.webp";
 import profilepicture from "../img/logo.webp";
 import tutore from "../img/tutore.webp";
 
-import tarkin from "../img/tarkin-giallo.webp";
-import vader from "../img/Vader-blu.webp";
+import idilliaco from "../img/idilliaco.webp";
+import botpng from "../img/botpng.webp";
 import krennik from "../img/krennik-verde.webp";
 import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
 import { FiLink, FiDownload, FiSearch } from "react-icons/fi";
@@ -35,8 +35,8 @@ export const headerIntroData = {
   },
   subtitle: "Gamer and Streamer",
   description: {
-    it: "Ciao Viandante sono Andrea, un appassionato di videogiochi, carte, giochi da tavolo e streamer (wow quante cose, e suono anche la chitarra 🤣). Qui troverai tutte le informazioni relative alle live, e anche tutte le liste dei mazzi budget e non che costruirò in live, sia per Magic che per Star Wars Unlimited! Cosa aspetti, vai subito a guardare!",
-    en: "Hello Plansewalker, I'm Andrea, a passionate gamer, card player, board game enthusiast, and streamer (wow, so many things, and I also play the guitar 🤣). Here you will find all the information about my live streams, as well as the lists of budget and non-budget decks that I will build live, both for Magic and Star Wars Unlimited! What are you waiting for, go check it out!",
+    it: "Ciao Viandante sono Andrea, un appassionato di videogiochi, carte, giochi da tavolo e streamer (wow quante cose, e suono anche la chitarra 🤣). Qui troverai tutte le informazioni relative alle live, e anche tutte le liste dei mazzi budget e non che costruirò in live! Cosa aspetti, vai subito a guardare!",
+    en: "Hello Plansewalker, I'm Andrea, a passionate gamer, card player, board game enthusiast, and streamer (wow, so many things, and I also play the guitar 🤣). Here you will find all the information about my live streams, as well as the lists of budget and non-budget decks that I will build live! What are you waiting for, go check it out!",
   },
   suTelefono: {
     it: "Ciao Viandante e benvenuto sul mio sito!",
@@ -234,13 +234,13 @@ export const skillsDataDesign = [
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
   { it: "Cerca", en: "Search", hash: "/searchList", icon: FiSearch },
-  { it: "Magic", en: "Magic", hash: "#magic", icon: GoProject },
   {
-    it: "Star Wars Unlimited",
-    en: "Star Wars Unlimited",
-    hash: "#swu",
+    it: "Mazzi e liste",
+    en: "Mazzi e liste",
+    hash: "#liste",
     icon: GoPerson,
   },
+  { it: "Magic", en: "Magic", hash: "#magic", icon: GoProject },
   { it: "Contatti", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
 
@@ -256,7 +256,7 @@ export const sideBarRightMail = {
 
 export const sideBarLeftSocials = [
   {
-    link: "https://www.instagram.com/bella_li_colibri?igsh=bTZsNzNoc2xtM282",
+    link: "https://www.instagram.com/mtg_colibri?igsh=OWk3Nmx6b3BwdHhw",
     icon: FaInstagram,
     altimgname: "instagram",
   },
@@ -266,7 +266,7 @@ export const sideBarLeftSocials = [
     altimgname: "twitch",
   },
   {
-    link: "https://www.tiktok.com/@bella_li_colibri?_t=8oP8WDyPIZ7&_r=1",
+    link: "https://www.tiktok.com/@mtg_colibri?_t=8pzun8g5lRZ&_r=1",
     icon: FaTiktok,
     altimgname: "tiktok",
   },
@@ -285,46 +285,41 @@ export const quotesData = [
 ] as const;
 
 export const aboutMeData = {
-  title: "Star Wars Unlimited",
-  title_EN: "Star Wars Unlimited",
-  description: "Hey non scordiamici che faccio anche Star Wars!",
-  description_EN: "Hey don't forget that I also do Star Wars!",
+  title: "Tutora una lista!",
+  title_EN: "List tutor!",
+  description: "Qui potrai trovare tutte le liste che ho creato, se ti interessa ho anche un bot Telegram!",
+  description_EN: "Here you can find all the lists I have created, if you are interested I also have a Telegram bot!",
   paragraphs_IT: [
     {
-      title: "HabogaD",
+      title: "Telegram Bot",
       description:
-        "Un mazzo bilanciato e versatile, con una struttura che consente flessibilità e adattabilità ai vari stili di gioco degli avversari. E poi dai.. giochi con Vader ROSSO!",
-      icon: vader,
-      driveUrl: "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
+        "Sfruttiamo la potenza di Telegram, clicca sul link per accedere al bot e cercare la tua lista!",
+      icon: botpng,
+      driveUrl: "https://t.me/MTG_Colibri_Bot",
     },
     {
-      title: "Grand Jabba's Palace",
+      title: "Cerca la tua Lista!",
       description:
-        "Un mix di carte che garantiscono flessibilità e consistenza, con una strategia equilibrata. Questo mazzo è capace di adattarsi a varie situazioni di gioco grazie agli eventi gialli.",
-      icon: tarkin,
-      driveUrl: "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
+        "In questa sezione troverai tutte le liste e i collegamenti ai siti dove poterle vedere e scaricare!",
+      icon: idilliaco,
+      driveUrl: "/searchList"
     },
-    {
-      title: "Krennic la Rana",
-      description:
-        "Il caro e veccio Krennic.. che dire parla da solo, riesce a battere anche Boba",
-      icon: krennik,
-      driveUrl: "https://drive.google.com/file/d/1oweplRT3bOW0OoBdVITzFu8imC8VZLGa/view?usp=drive_link",
-    },
+    
+   
   ],
   paragraphs_EN: [
     {
-      title: "HabogaD",
+      title: "Telegram Bot",
       description:
         "A balanced and versatile deck, with a structure that allows flexibility and adaptability to the various playing styles of opponents. And then come on.. you play with RED Vader!",
-      icon: vader,
+      icon: botpng,
       driveUrl: "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
     },
     {
-      title: "Grand Jabba's Palace",
+      title: "Search your List!",
       description:
         "A mix of cards that guarantee flexibility and consistency, with a balanced strategy. This deck is able to adapt to various game situations thanks to the yellow events.",
-      icon: tarkin,
+      icon: idilliaco,
       driveUrl: "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
     },
     {

@@ -7,7 +7,7 @@ import { useTheme } from "../context/theme-context";
 import { useLanguage } from "../context/language-context";
 import LanguageSwitch from "./LanguageSwitch";
 import magic from "../assets/icons/magic.webp";
-import morteNera from "../assets/icons/MorteNera.webp";
+import vampirico from "../assets/icons/Vampiric.ico";
 import logo from "../assets/img/logo.webp";
 import search from "../assets/icons/search.svg";
 
@@ -18,7 +18,7 @@ const NavBar: React.FC = () => {
   const iconMap: { [key: string]: string } = {
     Home: logo,
     Magic: magic,
-    "Star Wars Unlimited": morteNera,
+    "Mazzi e liste": vampirico,
     Contact: logo,
     Search: search,
   };

@@ -42,37 +42,13 @@ const Home: React.FC = () => {
               quoteIndex={0}
               containerType="quote"
             />
-            <Divider
+            {/* <Divider
               thickness="0.25rem"
               direction="outer-right-to-inner-left"
               color="lightblue"
               height="small"
               dividerStyle="solid"
-            />
-
-            {/* <LazyTechStack /> */}
-            {/* <Divider
-              thickness="0.25rem"
-              direction="inner-right-to-middle"
-              color="lightblue"
-              height="middle"
-              dividerStyle="solid"
-            />
-
-            <LazyBannerQuote
-              style={"noBG"}
-              quoteIndex={1}
-              containerType="statement"
-            />
-            <Divider
-              thickness="0.25rem"
-              direction="middle"
-              color="lightblue"
-              height="extraLarge"
-              dividerStyle="solid"
-            /> */}
-            <ProjectSlider />
-
+              /> */}
 
             <div className="relative -mb-24 pb-32 -mt-10">
               <LazyRadialGradient
@@ -97,9 +73,33 @@ const Home: React.FC = () => {
                 height="middle"
                 dividerStyle="solid"
               />
+            <ProjectSlider />
 
               <LazyContact />
             </div>
+            {/* <LazyTechStack /> */}
+            {/* <Divider
+              thickness="0.25rem"
+              direction="inner-right-to-middle"
+              color="lightblue"
+              height="middle"
+              dividerStyle="solid"
+            />
+
+            <LazyBannerQuote
+              style={"noBG"}
+              quoteIndex={1}
+              containerType="statement"
+            />
+            <Divider
+              thickness="0.25rem"
+              direction="middle"
+              color="lightblue"
+              height="extraLarge"
+              dividerStyle="solid"
+            /> */}
+
+
           </Suspense>
         </main>
         <Footer />

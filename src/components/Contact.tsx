@@ -9,7 +9,7 @@ import { useTheme } from "../context/theme-context";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 import magic from "../assets/icons/magic.webp";
-import morteNera from "../assets/icons/MorteNera.webp";
+import vampirico from "../assets/icons/Vampiric.ico";
 import SkillSection from "./SkillSection.tsx";
 import {
   skillsDataDesign,
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
               </span>
               {language === "IT" ? contactData.title.it : contactData.title.en}
               <span className="ml-2 ">
-                <img src={morteNera} className="w-20" />
+                <img src={vampirico} className="w-20" />
               </span>
             </p>
 
