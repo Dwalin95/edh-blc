@@ -58,7 +58,7 @@ const Home: React.FC = () => {
               />
               <Divider
                 thickness="0.25rem"
-                direction="middle-to-inner-left"
+                direction="middle"
                 color="lightblue"
                 height="middle"
                 dividerStyle="solid"
@@ -68,12 +68,20 @@ const Home: React.FC = () => {
               
               <Divider
                 thickness="0.25rem"
-                direction="inner-left-to-middle"
+                direction="middle"
                 color="lightblue"
                 height="middle"
                 dividerStyle="solid"
               />
             <ProjectSlider />
+
+    <Divider
+              thickness="0.25rem"
+              direction="middle"
+              color="lightblue"
+              height="small"
+              dividerStyle="solid"
+              /> 
 
               <LazyContact />
             </div>
