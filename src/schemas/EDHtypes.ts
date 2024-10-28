@@ -8,7 +8,7 @@ export type RicercaPerComandante = {
 
 export type TCommanderData = {
   nomeComandante: string;
-  arkideck: string;
+  archidekt: string;
   linkLista:string;
   coloriComandante?: string[];
 };

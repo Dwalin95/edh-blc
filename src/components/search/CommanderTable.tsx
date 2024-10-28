@@ -3,7 +3,7 @@ import React from 'react';
 interface Commander {
   nomeComandante: string;
   coloriComandante: string[];
-  arkideck: string;
+  archidekt: string;
 }
 
 interface CommanderTableProps {
@@ -25,7 +25,7 @@ const CommanderTable: React.FC<CommanderTableProps> = ({ commanders }) => {
           {commanders.map((commander) => (
             <tr key={commander.nomeComandante}>
               <td className="border px-4 py-2">{commander.nomeComandante}</td>
-              <td className="border px-4 py-2">{commander.arkideck}</td>
+              <td className="border px-4 py-2">{commander.archidekt}</td>
               <td className="border px-4 py-2">{/* Costo da API */}</td>
             </tr>
           ))}

@@ -25,7 +25,7 @@ import youtube from "../img/youtube.svg";
 import twitch from "../img/twitch_noScritta.svg";
 import mox from "../img/mox.svg";
 import biblio3 from "../img/biblio3.webp";
-
+import arkidek from "../img/arkidek.svg";
 import gldfsh from "../img/gdfh.webp";
 
 export const headerIntroData = {
@@ -210,6 +210,12 @@ export const skillsDataDesign = [
         title: "GoldFish",
         hash: "https://www.mtggoldfish.com",
         icon: gldfsh,
+        color: "#FFD700",
+      }, // URL completo
+      {
+        title: "Archidekt",
+        hash: "https://www.archidekt.com/folders/727949?dir=asc&orderBy=name",
+        icon: arkidek,
         color: "#FFD700",
       }, // URL completo
     ],

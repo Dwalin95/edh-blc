@@ -15,7 +15,7 @@ import useComandanteTable from './useComandanteTable';
 
 interface FormProps {
   onSubmit: SubmitHandler<MagicFormSchemaType>;
-  searchResults: { nomeComandante: string; coloriComandante: string[]; arkideck: string }[];
+  searchResults: { nomeComandante: string; coloriComandante: string[]; archidekt: string }[];
 }
 
 export default function RicercaPerComandante({ onSubmit, searchResults }: FormProps) {

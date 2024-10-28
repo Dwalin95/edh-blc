@@ -45,12 +45,12 @@ export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOpt
         ),
         enableSorting: false,
       }),
-      columnHelper.accessor('arkideck', {
-        header: "Arkideck",
+      columnHelper.accessor('archidekt', {
+        header: "Archidekt",
         cell: ({ row }) => (
           <div className="flex items-center justify-center">
             <a
-              href={row.original.arkideck}
+              href={row.original.archidekt}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-sm ml-2 flex items-center justify-center"
