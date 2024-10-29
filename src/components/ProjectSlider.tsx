@@ -131,8 +131,7 @@ const ProjectSlider: React.FC = () => {
                       </div>
                     </div>
                     <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-                      {project.title === "Cerchi altre liste?" ? (''
-                      ) : (
+                     
                         <>
                           <Button
                             label="Link"
@@ -151,7 +150,7 @@ const ProjectSlider: React.FC = () => {
                             className="w-full max-lg:w-1/2 max-lg:w-auto"
                           />
                         </>
-                      )}
+                      
                     </div>
                   </div>
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
@@ -176,8 +175,7 @@ const ProjectSlider: React.FC = () => {
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
                 <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-                {project.title === "Cerchi altre liste?" ? (''
-                      ) : (
+               
                         <>
                           <Button
                             label="Link"
@@ -196,7 +194,6 @@ const ProjectSlider: React.FC = () => {
                             className="w-full max-lg:w-1/2 max-lg:w-auto"
                           />
                         </>
-                      )}
                 </div>
                 <p className="text-white max-lg:text-4xl">
                   {language === "IT"
