@@ -14,7 +14,9 @@ import tutore from "../img/tutore.webp";
 import idilliaco from "../img/idilliaco.webp";
 import botpng from "../img/botpng.webp";
 import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
-import { FiLink, FiDownload } from "react-icons/fi";
+import { GiPorcupinefish } from "react-icons/gi";
+import { MdOutlineArchitecture } from "react-icons/md";
+
 import { FcSearch } from "react-icons/fc";
 import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
@@ -42,18 +44,19 @@ export const headerIntroData = {
     it: "Ciao Viandante e benvenuto sul mio sito!",
     en: "Hello Plansewalker and welcome to my website!",
   },
- paginaRicerca:{
-  titolo: "Cerca la tua lista!",
-  descrizione: "Qui trovi la lista dei mazzi budget a 100$ che ho creato durante il corso del tempo e delle live, tieniti aggiornato che ne inserisco sempre di nuove dopo ogni live!",
-  descrizione1: "Qui potrai trovare tutte le liste budget a 100$ che ho creato durante il corso del tempo e delle live, puoi inserire il nome del comandante che ti interessa e vedere se ho già creato una lista per te! Buona ricerca!",
- }, 
- 
+  paginaRicerca: {
+    titolo: "Cerca la tua lista!",
+    descrizione:
+      "Qui trovi la lista dei mazzi budget a 100$ che ho creato durante il corso del tempo e delle live, tieniti aggiornato che ne inserisco sempre di nuove dopo ogni live!",
+    descrizione1:
+      "Qui potrai trovare tutte le liste budget a 100$ che ho creato durante il corso del tempo e delle live, puoi inserire il nome del comandante che ti interessa e vedere se ho già creato una lista per te! Buona ricerca!",
+  },
+
   profilepicture: profilepicture,
   seacrchPicture: tutore,
 } as const;
 
 export const projectsData = [
-  
   {
     title: "Bane, Lord of Darkness",
     description:
@@ -69,9 +72,9 @@ export const projectsData = [
     image: liveBane,
     mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6443645#paper",
     driveUrl:
-      "https://drive.google.com/file/d/1PtbqTwtj12LGTuhXFMK4NFz0nEjosz_-/view?usp=drive_link",
-    downloadIcon: FiDownload,
-    mtgGoldfishIcon: FiLink,
+      "https://www.archidekt.com/decks/9653926/live_bane",
+    downloadIcon: MdOutlineArchitecture,
+    mtgGoldfishIcon: GiPorcupinefish,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -86,17 +89,16 @@ export const projectsData = [
   //     description_EN:
   //       "If you want to search for other lists click here, and you will be taken to a page where I keep all my budget lists, with photos and links!",
   //     technologies: [
-     
+
   //       { name: "Palude", icon: palude },
-       
-     
+
   //     ],
   //     image: biblio3,
   //     mtgGoldfishUrl: "",
   //     driveUrl:
   //       "",
   //     downloadIcon: FcSearch,
-  //     mtgGoldfishIcon: FiLink,
+  //     mtgGoldfishIcon: GiPorcupinefish,
   //     colors: {
   //       main: "main-btn",
   //       second: "secondary-btn",
@@ -118,9 +120,9 @@ export const projectsData = [
     image: vraska,
     mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6472497#paper",
     driveUrl:
-      "https://drive.google.com/file/d/1PwV3CuCTPhM2R9AiSGDkbuOV_nO0AW1n/view?usp=drive_link",
-    downloadIcon: FiDownload,
-    mtgGoldfishIcon: FiLink,
+      "https://www.archidekt.com/decks/9653946/give_it_to_me",
+    downloadIcon: MdOutlineArchitecture,
+    mtgGoldfishIcon: GiPorcupinefish,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -144,9 +146,9 @@ export const projectsData = [
     image: sliver,
     mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6029386#paper",
     driveUrl:
-      "https://drive.google.com/file/d/1MCMgTe31SI7dRUcahUCNmqLJKzrz9cZT/view?usp=drive_link",
-    downloadIcon: FiDownload,
-    mtgGoldfishIcon: FiLink,
+      "https://www.archidekt.com/decks/9654037/the_hive_budget",
+    downloadIcon: MdOutlineArchitecture,
+    mtgGoldfishIcon: GiPorcupinefish,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -154,7 +156,6 @@ export const projectsData = [
       projectcolor: "#E3964A",
     },
   },
-  
 ] as const;
 
 export const liveTickerData = {
@@ -227,12 +228,12 @@ export const skillsDataDesign = [
 //     skillsTitle: "Schedule",
 //     skills: [
 //       {
-        
+
 //         icon: scheda,
 //         color: "#F24E1E",
 //         text: "Sono live su Twitch il Lunedì e il Martedì/Giovedì dalle 21:30",
-//       }, 
-      
+//       },
+
 //     ],
 //   },
 // ] as const;
@@ -293,8 +294,10 @@ export const quotesData = [
 export const aboutMeData = {
   title: "Tutora una lista!",
   title_EN: "List tutor!",
-  description: "Qui potrai trovare tutte le liste che ho creato, se ti interessa ho anche un bot Telegram!",
-  description_EN: "Here you can find all the lists I have created, if you are interested I also have a Telegram bot!",
+  description:
+    "Qui potrai trovare tutte le liste che ho creato, se ti interessa ho anche un bot Telegram!",
+  description_EN:
+    "Here you can find all the lists I have created, if you are interested I also have a Telegram bot!",
   paragraphs_IT: [
     {
       title: "Telegram Bot",
@@ -308,10 +311,8 @@ export const aboutMeData = {
       description:
         "In questa sezione troverai tutte le liste e i collegamenti ai siti dove poterle vedere e scaricare!",
       icon: idilliaco,
-      driveUrl: "/searchList"
+      driveUrl: "/searchList",
     },
-    
-   
   ],
   paragraphs_EN: [
     {
@@ -319,16 +320,17 @@ export const aboutMeData = {
       description:
         "Let's take advantage of the power of Telegram, click on the link to access the bot and search for your list!",
       icon: botpng,
-      driveUrl: "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
+      driveUrl:
+        "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
     },
     {
       title: "Search your List!",
       description:
         "In this section you will find all the lists and links to the sites where you can view and download them!",
       icon: idilliaco,
-      driveUrl: "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
+      driveUrl:
+        "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
     },
-    
   ],
 };
 

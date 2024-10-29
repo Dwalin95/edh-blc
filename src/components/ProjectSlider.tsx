@@ -134,7 +134,7 @@ const ProjectSlider: React.FC = () => {
                      
                         <>
                           <Button
-                            label="Link"
+                            label="Gold-Fish"
                             link={project.mtgGoldfishUrl}
                             iconSVG={project.mtgGoldfishIcon}
                             buttoncolor={project.colors.main}
@@ -142,7 +142,7 @@ const ProjectSlider: React.FC = () => {
                             className="w-full max-lg:w-1/2 max-lg:w-auto"
                           />
                           <Button
-                            label="Foto"
+                            label="Archidekt"
                             link={project.driveUrl}
                             iconSVG={project.downloadIcon}
                             buttoncolor={project.colors.main}
@@ -178,7 +178,7 @@ const ProjectSlider: React.FC = () => {
                
                         <>
                           <Button
-                            label="Link"
+                            label="Gold-Fish"
                             link={project.mtgGoldfishUrl}
                             iconSVG={project.mtgGoldfishIcon}
                             buttoncolor={project.colors.main}
@@ -186,7 +186,7 @@ const ProjectSlider: React.FC = () => {
                             className="w-full max-lg:w-1/2 max-lg:w-auto"
                           />
                           <Button
-                            label="Foto"
+                            label="Archidekt"
                             link={project.driveUrl}
                             iconSVG={project.downloadIcon}
                             buttoncolor={project.colors.main}
