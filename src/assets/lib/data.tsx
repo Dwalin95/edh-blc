@@ -79,31 +79,31 @@ export const projectsData = [
       projectcolor: "#70B9BE",
     },
   },
-  {
-    title: "Cerchi altre liste?",
-      description:
-        "Se vuoi cercare altre liste clicca il tasto Cerca o l'icona della lente di ingrandimento con il mondo per acceder a tutte le liste che ho fato fino ad ora, con foto e link!",
-      description_EN:
-        "If you want to search for other lists click here, and you will be taken to a page where I keep all my budget lists, with photos and links!",
-      technologies: [
+  // {
+  //   title: "Cerchi altre liste?",
+  //     description:
+  //       "Se vuoi cercare altre liste clicca il tasto Cerca o l'icona della lente di ingrandimento con il mondo per acceder a tutte le liste che ho fato fino ad ora, con foto e link!",
+  //     description_EN:
+  //       "If you want to search for other lists click here, and you will be taken to a page where I keep all my budget lists, with photos and links!",
+  //     technologies: [
      
-        { name: "Palude", icon: palude },
+  //       { name: "Palude", icon: palude },
        
      
-      ],
-      image: biblio3,
-      mtgGoldfishUrl: "",
-      driveUrl:
-        "",
-      downloadIcon: FcSearch,
-      mtgGoldfishIcon: FiLink,
-      colors: {
-        main: "main-btn",
-        second: "secondary-btn",
-        icon: "white",
-        projectcolor: "#E3964A",
-      },
-    },
+  //     ],
+  //     image: biblio3,
+  //     mtgGoldfishUrl: "",
+  //     driveUrl:
+  //       "",
+  //     downloadIcon: FcSearch,
+  //     mtgGoldfishIcon: FiLink,
+  //     colors: {
+  //       main: "main-btn",
+  //       second: "secondary-btn",
+  //       icon: "white",
+  //       projectcolor: "#E3964A",
+  //     },
+  //   },
   {
     title: "Vraska, the Silencer",
     description:
