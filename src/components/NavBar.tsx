@@ -9,7 +9,7 @@ import LanguageSwitch from "./LanguageSwitch";
 import magic from "../assets/icons/magic.webp";
 import vampirico from "../assets/icons/Vampiric.ico";
 import logo from "../assets/img/logo.webp";
-import search from "../assets/icons/search.svg";
+import search from "../assets/icons/cerca-96.svg";
 
 const NavBar: React.FC = () => {
   const location = useLocation();

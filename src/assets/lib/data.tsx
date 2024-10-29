@@ -13,9 +13,9 @@ import tutore from "../img/tutore.webp";
 
 import idilliaco from "../img/idilliaco.webp";
 import botpng from "../img/botpng.webp";
-import krennik from "../img/krennik-verde.webp";
 import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
-import { FiLink, FiDownload, FiSearch } from "react-icons/fi";
+import { FiLink, FiDownload } from "react-icons/fi";
+import { FcSearch } from "react-icons/fc";
 import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
@@ -95,7 +95,7 @@ export const projectsData = [
       mtgGoldfishUrl: "",
       driveUrl:
         "",
-      downloadIcon: FiSearch,
+      downloadIcon: FcSearch,
       mtgGoldfishIcon: FiLink,
       colors: {
         main: "main-btn",
@@ -239,7 +239,7 @@ export const skillsDataDesign = [
 
 export const navLinks = [
   { it: "Home", en: "Home", hash: "#home", icon: GoHome },
-  { it: "Cerca", en: "Search", hash: "/searchList", icon: FiSearch },
+  { it: "Cerca", en: "Search", hash: "/searchList", icon: FcSearch },
   {
     it: "Mazzi e liste",
     en: "Mazzi e liste",
@@ -317,24 +317,18 @@ export const aboutMeData = {
     {
       title: "Telegram Bot",
       description:
-        "A balanced and versatile deck, with a structure that allows flexibility and adaptability to the various playing styles of opponents. And then come on.. you play with RED Vader!",
+        "Let's take advantage of the power of Telegram, click on the link to access the bot and search for your list!",
       icon: botpng,
       driveUrl: "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
     },
     {
       title: "Search your List!",
       description:
-        "A mix of cards that guarantee flexibility and consistency, with a balanced strategy. This deck is able to adapt to various game situations thanks to the yellow events.",
+        "In this section you will find all the lists and links to the sites where you can view and download them!",
       icon: idilliaco,
       driveUrl: "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
     },
-    {
-      title: "Krennic la Rana",
-      description:
-        "The dear old Krennic.. what can I say, he can even beat Boba",
-      icon: krennik,
-      driveUrl: "https://drive.google.com/file/d/1oweplRT3bOW0OoBdVITzFu8imC8VZLGa/view?usp=drive_link",
-    },
+    
   ],
 };
 

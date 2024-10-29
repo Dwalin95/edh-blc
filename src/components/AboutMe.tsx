@@ -10,17 +10,21 @@ import "swiper/css/navigation";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
 import vampirico from "../assets/icons/Vampiric.ico";
+import { useNavigate } from "react-router-dom";
 
 const AboutMe: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
   const { ref } = useSectionInView("Mazzi e liste");
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: animationReference,
     offset: ["0 1", "1.33 1"],
   });
+  const isExternalLink = (url:string) => url.startsWith("http");
+
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const onAutoplayTimeLeft = (_s: unknown, time: number, progress: number) => {
@@ -104,7 +108,19 @@ const AboutMe: React.FC = () => {
                 </div>
                 <div className="flex gap-6 mt-6">
                   <button className="bg-orange text-white py-2 px-4 rounded">
-                    <a href={paragraph.driveUrl}>Vai alla lista</a>
+                    {isExternalLink(paragraph.driveUrl) ? (
+                      <a
+                        href={paragraph.driveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Vai alla lista
+                      </a>
+                    ) : (
+                      <span onClick={() => navigate(paragraph.driveUrl)}>
+                        Vai alla lista
+                      </span>
+                    )}
                   </button>
                 </div>
               </SwiperSlide>
