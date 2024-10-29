@@ -24,7 +24,7 @@ import tiktok from "../img/tiktok.svg";
 import youtube from "../img/youtube.svg";
 import twitch from "../img/twitch_noScritta.svg";
 import mox from "../img/mox.svg";
-import biblio3 from "../img/biblio3.webp";
+// import biblio3 from "../img/biblio3.webp";
 import arkidek from "../img/arkidek.svg";
 import gldfsh from "../img/gdfh.webp";
 
