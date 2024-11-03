@@ -58,5 +58,11 @@
     "coloriComandante": ["1", "W", "B", "G"],
     "archidekt": "https://www.archidekt.com/decks/9653984/piantala",
     "linkLista":"https://www.mtggoldfish.com/deck/6689054#paper"
+  },
+  {
+    "nomeComandante": "Reaper King",
+    "coloriComandante": ["W", "U", "B", "R", "G"],
+    "archidekt": "https://www.archidekt.com/decks/9914265/spaventalo",
+    "linkLista":"https://www.mtggoldfish.com/deck/6682263#paper"
   }
 ]
