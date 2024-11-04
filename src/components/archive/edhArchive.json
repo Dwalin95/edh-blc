@@ -65,4 +65,18 @@
     "archidekt": "https://www.archidekt.com/decks/9914265/spaventalo",
     "linkLista":"https://www.mtggoldfish.com/deck/6682263#paper"
   }
+  ,
+  {
+    "nomeComandante": "Satoru Umezawa",
+    "coloriComandante": ["1", "U", "B"],
+    "archidekt": "https://www.archidekt.com/decks/9929462/satourino_discardino",
+    "linkLista":"https://www.mtggoldfish.com/deck/6138744#paper"
+  }
+  ,
+  {
+    "nomeComandante": "Mikaeus, the Unhallowed",
+    "coloriComandante": ["3", "B", "B", "B"],
+    "archidekt": "https://www.archidekt.com/decks/9929468/mikabudget",
+    "linkLista":"https://www.mtggoldfish.com/deck/6734951#paper"
+  }
 ]
