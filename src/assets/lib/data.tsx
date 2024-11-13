@@ -183,7 +183,7 @@ export const skillsDataWeb = [
       },
       {
         title: "Twitch",
-        hash: "https://www.twitch.tv/bella_li_colibri",
+        hash: "https://www.twitch.tv/mtg_colibri",
         icon: twitch,
         color: "#800080",
       },
@@ -268,7 +268,7 @@ export const sideBarLeftSocials = [
     altimgname: "instagram",
   },
   {
-    link: "https://www.twitch.tv/bella_li_colibri",
+    link: "https://www.twitch.tv/mtg_colibri",
     icon: FaTwitch,
     altimgname: "twitch",
   },
