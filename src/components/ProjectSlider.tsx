@@ -223,8 +223,8 @@ const ProjectSlider: React.FC = () => {
             ))}
           </div>
         </div>
-        <LiveTicker />
       </section>
+        <LiveTicker />
       <ReactTooltip
         place="top"
         id="my-tooltip"

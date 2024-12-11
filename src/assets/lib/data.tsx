@@ -32,8 +32,8 @@ import gldfsh from "../img/gdfh.webp";
 
 export const headerIntroData = {
   title: {
-    it: "Ciao! sono Andrea",
-    en: "Hello! I'm Andrea",
+    it: "Sono Andrea!",
+    en: "I'm Andrea!",
   },
   subtitle: "Gamer and Streamer",
   description: {
@@ -295,17 +295,17 @@ export const aboutMeData = {
   title: "Tutora una lista!",
   title_EN: "List tutor!",
   description:
-    "Qui potrai trovare tutte le liste che ho creato, se ti interessa ho anche un bot Telegram!",
+    "Qui potrai trovare tutte le liste che ho creato.",
   description_EN:
-    "Here you can find all the lists I have created, if you are interested I also have a Telegram bot!",
+    "Here you can find all the lists I have created.",
   paragraphs_IT: [
-    {
-      title: "Telegram Bot",
-      description:
-        "Sfruttiamo la potenza di Telegram, clicca sul link per accedere al bot e cercare la tua lista!",
-      icon: botpng,
-      driveUrl: "https://t.me/MTG_Colibri_Bot",
-    },
+    // {
+    //   title: "Telegram Bot",
+    //   description:
+    //     "Sfruttiamo la potenza di Telegram, clicca sul link per accedere al bot e cercare la tua lista!",
+    //   icon: botpng,
+    //   driveUrl: "https://t.me/MTG_Colibri_Bot",
+    // },
     {
       title: "Cerca la tua Lista!",
       description:
