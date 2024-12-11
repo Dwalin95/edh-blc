@@ -2,12 +2,12 @@ import pianura from "../icons/pianura.svg";
 import palude from "../../assets/icons/palude.svg";
 import isola from "../../assets/icons/isola.svg";
 import foresta from "../../assets/icons/foresta.svg";
-import cost1 from "../../assets/icons/1.svg";
+// import cost1 from "../../assets/icons/1.svg";
 import montagna from "../../assets/icons/montagna.svg";
 
-import liveBane from "../../assets/img/livebane.webp";
+// import liveBane from "../../assets/img/livebane.webp";
 import sliver from "../../assets/img/Sliver.webp";
-import vraska from "../../assets/img/vraska.webp";
+// import vraska from "../../assets/img/vraska.webp";
 import profilepicture from "../img/logo.webp";
 import tutore from "../img/tutore.webp";
 
