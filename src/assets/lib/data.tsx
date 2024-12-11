@@ -29,6 +29,8 @@ import mox from "../img/mox.svg";
 // import biblio3 from "../img/biblio3.webp";
 import arkidek from "../img/arkidek.svg";
 import gldfsh from "../img/gdfh.webp";
+import spotify from "../icons/spotify.png";
+import iTunes from "../icons/itunes.png";
 
 export const headerIntroData = {
   title: {
@@ -57,31 +59,31 @@ export const headerIntroData = {
 } as const;
 
 export const projectsData = [
-  {
-    title: "Bane, Lord of Darkness",
-    description:
-      "Bane è un comandante che prospera in un mazzo che manipola la vita e sacrifica creature per ottenere vantaggi. Grazie alla sua abilità puoi giocare dalla mano senza castare, e quindi ti eviti i rognosi counter. E non dimentichiamoci della sua indistruttibilità quando la vita del giocatore è inferiore o uguale a metà del totale iniziale, ciò lo rende difficile da rimuovere in condizioni critiche.",
-    description_EN:
-      "Bane is a commander that thrives in a deck that manipulates life and sacrifices creatures to gain advantages. Thanks to his ability you can play from your hand without casting, and therefore you avoid the annoying counters. And let's not forget his indestructibility when the player's life is less than or equal to half of the initial total, making him difficult to remove in critical conditions.",
-    technologies: [
-      { name: "1", icon: cost1 },
-      { name: "Pianura", icon: pianura },
-      { name: "Isola", icon: isola },
-      { name: "Palude", icon: palude },
-    ],
-    image: liveBane,
-    mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6443645#paper",
-    driveUrl:
-      "https://www.archidekt.com/decks/9653926/live_bane",
-    downloadIcon: MdOutlineArchitecture,
-    mtgGoldfishIcon: GiPorcupinefish,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#70B9BE",
-    },
-  },
+  // {
+  //   title: "Bane, Lord of Darkness",
+  //   description:
+  //     "Bane è un comandante che prospera in un mazzo che manipola la vita e sacrifica creature per ottenere vantaggi. Grazie alla sua abilità puoi giocare dalla mano senza castare, e quindi ti eviti i rognosi counter. E non dimentichiamoci della sua indistruttibilità quando la vita del giocatore è inferiore o uguale a metà del totale iniziale, ciò lo rende difficile da rimuovere in condizioni critiche.",
+  //   description_EN:
+  //     "Bane is a commander that thrives in a deck that manipulates life and sacrifices creatures to gain advantages. Thanks to his ability you can play from your hand without casting, and therefore you avoid the annoying counters. And let's not forget his indestructibility when the player's life is less than or equal to half of the initial total, making him difficult to remove in critical conditions.",
+  //   technologies: [
+  //     { name: "1", icon: cost1 },
+  //     { name: "Pianura", icon: pianura },
+  //     { name: "Isola", icon: isola },
+  //     { name: "Palude", icon: palude },
+  //   ],
+  //   image: liveBane,
+  //   mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6443645#paper",
+  //   driveUrl:
+  //     "https://www.archidekt.com/decks/9653926/live_bane",
+  //   downloadIcon: MdOutlineArchitecture,
+  //   mtgGoldfishIcon: GiPorcupinefish,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#70B9BE",
+  //   },
+  // },
   // {
   //   title: "Cerchi altre liste?",
   //     description:
@@ -106,30 +108,30 @@ export const projectsData = [
   //       projectcolor: "#E3964A",
   //     },
   //   },
-  {
-    title: "Vraska, the Silencer",
-    description:
-      "Vraska, the Silencer un perfetto mazzo Golgari basato sulla CLEPTOMANIA! Devi solo distruggere, rimuovere così da poter prendere il controllo delle creature avversarie, ed essere odiato da tutto il tavolo hehehehe 👿",
-    description_EN:
-      "Vraska, the Silencer a perfect Golgari deck based on CLEPTOMANIA! You just have to destroy, remove so that you can take control of the opponent's creatures, and be hated by the whole table hehehehe 👿",
-    technologies: [
-      { name: "1", icon: cost1 },
-      { name: "Foresta", icon: foresta },
-      { name: "Palude", icon: palude },
-    ],
-    image: vraska,
-    mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6472497#paper",
-    driveUrl:
-      "https://www.archidekt.com/decks/9653946/give_it_to_me",
-    downloadIcon: MdOutlineArchitecture,
-    mtgGoldfishIcon: GiPorcupinefish,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#FFD5BD",
-    },
-  },
+  // {
+  //   title: "Vraska, the Silencer",
+  //   description:
+  //     "Vraska, the Silencer un perfetto mazzo Golgari basato sulla CLEPTOMANIA! Devi solo distruggere, rimuovere così da poter prendere il controllo delle creature avversarie, ed essere odiato da tutto il tavolo hehehehe 👿",
+  //   description_EN:
+  //     "Vraska, the Silencer a perfect Golgari deck based on CLEPTOMANIA! You just have to destroy, remove so that you can take control of the opponent's creatures, and be hated by the whole table hehehehe 👿",
+  //   technologies: [
+  //     { name: "1", icon: cost1 },
+  //     { name: "Foresta", icon: foresta },
+  //     { name: "Palude", icon: palude },
+  //   ],
+  //   image: vraska,
+  //   mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6472497#paper",
+  //   driveUrl:
+  //     "https://www.archidekt.com/decks/9653946/give_it_to_me",
+  //   downloadIcon: MdOutlineArchitecture,
+  //   mtgGoldfishIcon: GiPorcupinefish,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#FFD5BD",
+  //   },
+  // },
   {
     title: "The First liver",
     description:
@@ -160,8 +162,8 @@ export const projectsData = [
 
 export const liveTickerData = {
   content: {
-    it: "Trovi altre liste su GoldFish cercami, sono Bella li Colibrì!",
-    en: "Find more lists on GoldFish look for me, I'm Bella li Colibrì!",
+    it: "Sono anche su Spotify!",
+    en: "I'm also on Spotify!",
   },
 } as const;
 
@@ -191,6 +193,18 @@ export const skillsDataWeb = [
         title: "Youtube",
         hash: "https://www.youtube.com/@MtgColibri",
         icon: youtube,
+        color: "#800080",
+      },
+      {
+        title: "iTunes",
+        hash: "http://itunes.apple.com/album/id1782732757?ls=1&app=itunes",
+        icon: iTunes,
+        color: "#800080",
+      },
+      {
+        title: "Spotify",
+        hash: "https://open.spotify.com/intl-it/artist/72o9wb21qrmxrciRNAUvy1?si=9lW6eFIhQSahiRiSynjtIg",
+        icon: spotify,
         color: "#800080",
       },
     ],

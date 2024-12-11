@@ -14,7 +14,7 @@ import { wrap } from "@motionone/utils";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/language-context";
 import { liveTickerData } from "../assets/lib/data";
-import gdfh from "../assets/img/gdfh.webp";
+import spotify from "../assets/icons/spotify.png";
 interface ParallaxProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any;
@@ -131,13 +131,13 @@ export default function LiveTicker() {
       <div className="bg-[--lightblue] h-[4.8vh] -rotate-3 flex justify-center items-center scale-110 relative z-[1] w-full min-[1921px]:h-[3.3vh]">
         <ParallaxText baseVelocity={-2}>
           <Link
-            to={'https://www.mtggoldfish.com/'}
+            to={'https://open.spotify.com/intl-it/artist/72o9wb21qrmxrciRNAUvy1?si=9lW6eFIhQSahiRiSynjtIg'}
             target="_blank"
             rel="noopener noreferrer"
           >
             <p className="text-[--white] mt-7 mb-6 flex items-center justify-between">
                  <span className="flex-shrink-0 mr-2 ">
-                  <img src={gdfh} className="w-10" />
+                  <img src={spotify} className="w-10" />
                 </span>
             {language === "IT"
               ? liveTickerData.content.it
