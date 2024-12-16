@@ -69,7 +69,7 @@ const AboutMe: React.FC = () => {
           </motion.div>
         </div>
         <div className="flex flex-row justify-center gap-6 items-center pl-32 pr-32 mb-16  max-lg:flex-col max-lg:p-16 min-[1921px]:px-[45rem] min-[1921px]:mb-48">
-          <article className="pl-10 max-lg:p-0">
+          <article className="pl-10 max-lg:p-0 max-lg:hidden">
             <img src={me} alt={me} />
           </article>
           <Swiper
@@ -88,41 +88,41 @@ const AboutMe: React.FC = () => {
           >
             {paragraphs.map((paragraph, index) => (
               <div
-                className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-center gap-12 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-center max-lg:p-10 cursor-grab"
-                key={index}
+          className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-center gap-12 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-center max-lg:p-10 cursor-grab"
+          key={index}
               >
-                <div className="flex gap-10 flex-row justify-center items-center">
-                  <div className="transform rotate-30">
-                    <img
-                      src={paragraph.icon}
-                      alt={paragraph.title}
-                      className="w-50"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h2>{paragraph.title}</h2>
-                  <p className="text-white text-4xl mt-4">
-                    {paragraph.description}
-                  </p>
-                </div>
-                <div className="flex gap-6 mt-6">
-                  <button className="bg-orange text-white py-2 px-4 rounded">
-                    {isExternalLink(paragraph.driveUrl) ? (
-                      <a
-                        href={paragraph.driveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Vai alla lista
-                      </a>
-                    ) : (
-                      <span onClick={() => navigate(paragraph.driveUrl)}>
-                        Vai alla lista
-                      </span>
-                    )}
-                  </button>
-                </div>
+          <div className="flex gap-10 flex-row justify-center items-center">
+            <div className="transform rotate-30">
+              <img
+                src={paragraph.icon}
+                alt={paragraph.title}
+                className="w-50"
+              />
+            </div>
+          </div>
+          <div>
+            <h2>{paragraph.title}</h2>
+            <p className="text-white text-4xl mt-4">
+              {paragraph.description}
+            </p>
+          </div>
+          <div className="flex gap-6 mt-6">
+            <button className="bg-orange text-white py-2 px-4 rounded">
+              {isExternalLink(paragraph.driveUrl) ? (
+                <a
+            href={paragraph.driveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+                >
+            Vai alla lista
+                </a>
+              ) : (
+                <span onClick={() => navigate(paragraph.driveUrl)}>
+            Vai alla lista
+                </span>
+              )}
+            </button>
+          </div>
               </div>
             ))}
             <div
@@ -130,7 +130,7 @@ const AboutMe: React.FC = () => {
               slot="container-end"
             >
               {/* <svg viewBox="0 0 48 48" ref={progressCircle}>
-                <circle cx="24" cy="24" r="20"></circle>
+          <circle cx="24" cy="24" r="20"></circle>
               </svg>
               <span ref={progressContent}></span> */}
             </div>
