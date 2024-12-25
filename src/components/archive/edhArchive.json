@@ -90,5 +90,17 @@
     "coloriComandante": ["3", "BG", "BG"],
     "archidekt": "https://www.archidekt.com/decks/10292606/hoogaky",
     "linkLista":"https://www.mtggoldfish.com/deck/6741254#paper"
+  },
+  {
+    "nomeComandante": "Kenrith, the Returned King",
+    "coloriComandante": ["4", "W"],
+    "archidekt": "https://www.archidekt.com/decks/10607301/kenrith_the_christmas_king_hohoho",
+    "linkLista":"https://www.mtggoldfish.com/deck/6780240#paper"
+  },
+  {
+    "nomeComandante": "Alela, Cunning Conqueror",
+    "coloriComandante": ["3", "U", "B"],
+    "archidekt": "https://www.archidekt.com/decks/10500382/alela_devil_goad",
+    "linkLista":"https://www.mtggoldfish.com/deck/6740287#paper"
   }
 ]
