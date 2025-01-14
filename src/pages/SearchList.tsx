@@ -5,7 +5,6 @@ import ThemeSwitch from "../components/theme-switch";
 import { ScrollProgress } from "../components/ScrollProgress";
 
 import RicercaTotale from "../components/ricercaPerComandante/RicercaTotale";
-
 const LazySiteBarRight = lazy(() => import("../components/SideBarRight"));
 const LazySiteBarLeft = lazy(() => import("../components/SiteBarLeft"));
 
@@ -36,6 +35,7 @@ const SearchList: React.FC = () => {
         </header>
         <body>
         <RicercaTotale />
+
 
         </body>
 
