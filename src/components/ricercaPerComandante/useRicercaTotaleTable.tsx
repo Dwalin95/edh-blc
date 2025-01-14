@@ -12,7 +12,7 @@ interface UseRicercaTotaleTableOptions {
 export default function useRicercaTotaleTable(options?: UseRicercaTotaleTableOptions) {
   const columnHelper = createColumnHelper<TCommanderData>();
 
-  // Crea una mappa per l'URL degli SVG
+  // Crea una mappa per l'URL degli SVG da far vedere
   const symbolToSvgUri = useMemo(() => {
     const map: { [key: string]: string } = {};
     data.forEach((item) => {
