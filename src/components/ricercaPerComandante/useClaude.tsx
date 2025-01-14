@@ -1,4 +1,3 @@
-import React from 'react';
 import { useGetCardQuery } from '../../api';
 
 interface CardProps {
