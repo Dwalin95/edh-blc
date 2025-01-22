@@ -99,8 +99,16 @@
   },
   {
     "nomeComandante": "Alela, Cunning Conqueror",
-    "coloriComandante": ["3", "U", "B"],
+    "coloriComandante": ["2", "U", "B"],
     "archidekt": "https://www.archidekt.com/decks/10500382/alela_devil_goad",
     "linkLista":"https://www.mtggoldfish.com/deck/6740287#paper"
+  },
+  {
+    "nomeComandante": "Minthara, Merciless Soul",
+    "coloriComandante": ["2", "W", "B"],
+    "archidekt": "https://archidekt.com/decks/11002121/minnala",
+    "linkLista":"https://www.mtggoldfish.com/deck/6765761#paper"
   }
 ]
+
+
