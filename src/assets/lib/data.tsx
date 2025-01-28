@@ -12,7 +12,7 @@ import profilepicture from "../img/logo.webp";
 import tutore from "../img/tutore.webp";
 
 import idilliaco from "../img/idilliaco.webp";
-import botpng from "../img/botpng.webp";
+// import botpng from "../img/botpng.webp";
 import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
 import { GiPorcupinefish } from "react-icons/gi";
 import { MdOutlineArchitecture } from "react-icons/md";
@@ -47,9 +47,9 @@ export const headerIntroData = {
     en: "Hello Plansewalker and welcome to my website!",
   },
   paginaRicerca: {
-    titolo: "Cerca la tua lista!",
+    titolo: "Elenco liste!",
     descrizione:
-      "Qui trovi la lista dei mazzi budget a 100$ che ho creato durante il corso del tempo e delle live!",
+      "Qua potrai trovare tutte le liste che ho creato durante le live, con foto e link!",
     descrizione1:
       "Qui potrai trovare tutte le liste budget a 100$ che ho creato durante il corso del tempo e delle live!",
   },
@@ -329,21 +329,21 @@ export const aboutMeData = {
     },
   ],
   paragraphs_EN: [
-    {
-      title: "Telegram Bot",
-      description:
-        "Let's take advantage of the power of Telegram, click on the link to access the bot and search for your list!",
-      icon: botpng,
-      driveUrl:
-        "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
-    },
+    // {
+    //   title: "Telegram Bot",
+    //   description:
+    //     "Let's take advantage of the power of Telegram, click on the link to access the bot and search for your list!",
+    //   icon: botpng,
+    //   driveUrl:
+    //     "https://drive.google.com/file/d/1gg3mYLPE7nyNQFuaI_q1_mUj1bFrxM57/view?usp=drive_link",
+    // },
     {
       title: "Search your List!",
       description:
         "In this section you will find all the lists and links to the sites where you can view and download them!",
       icon: idilliaco,
       driveUrl:
-        "https://drive.google.com/file/d/1XSoANiRMh7gCJAPJqfddo62C-lAl5NhS/view?usp=drive_link",
+        "/searchList",
     },
   ],
 };

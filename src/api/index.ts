@@ -18,7 +18,16 @@ const edhApi = api.injectEndpoints({
       }),
       providesTags: ['ScryFallService'],
     }),
+    getFilteredCards: builder.query<CardResponseScryfall[], { name?: string; colors?: string[] }>({
+      query: ({ name, colors }) => ({
+        url: `https://api.scryfall.com/cards/search`,
+        params: {
+          q: `${name || ''} ${colors?.map(c => `c:${c}`).join(' ') || ''}`.trim()
+        }
+      }),
+      providesTags: ['ScryFallService'],
+    }),
   }),
 });
 
-export const { useGetSymbolsQuery, useGetCardQuery } = edhApi;
+export const { useGetSymbolsQuery, useGetCardQuery, useGetFilteredCardsQuery } = edhApi;
