@@ -116,7 +116,7 @@ const CommanderSearch = () => {
               <label className="block text-gray-700 dark:text-white text-xl font-bold">
                 Colori (exact match)
               </label>
-              <div className="flex flex-wrap gap-5 my-6 lg:gap-12">
+              <div className="flex flex-wrap my-6 lg:gap-12">
                 {colorOptions.map((color) => (
                   <Controller
                     key={color.value}
