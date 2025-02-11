@@ -154,11 +154,15 @@ const ProjectSlider: React.FC = () => {
                     </div>
                   </div>
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
-                    <img
+                  <div 
+            dangerouslySetInnerHTML={{ __html: project.embedHtml }}
+            className="w-full"
+          />
+                    {/* <img
                       src={project.image}
                       alt={`${project.title}-project-mockup`}
                       className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%]`}
-                    />
+                    /> */}
                   </div>
                 </SwiperSlide>
               ))}
@@ -169,11 +173,15 @@ const ProjectSlider: React.FC = () => {
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
                 <h2 className="text-white">{project.title}</h2>
-                <img
+                <div 
+            dangerouslySetInnerHTML={{ __html: project.embedHtml }}
+            className="w-full"
+          />
+                {/* <img
                   src={project.image}
                   alt={project.image}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
-                />
+                /> */}
                 <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
                
                         <>

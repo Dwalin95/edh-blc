@@ -6,7 +6,7 @@ import foresta from "../../assets/icons/foresta.svg";
 import montagna from "../../assets/icons/montagna.svg";
 
 // import liveBane from "../../assets/img/livebane.webp";
-import sliver from "../../assets/img/Sliver.webp";
+// import sliver from "../../assets/img/Sliver.webp";
 // import vraska from "../../assets/img/vraska.webp";
 import profilepicture from "../img/logo.webp";
 import tutore from "../img/tutore.webp";
@@ -135,9 +135,9 @@ export const projectsData = [
   {
     title: "The First liver",
     description:
-      "The First Sliver è un comandante potente per un mazzo basato sulla meccanica Sliver e della cascata. Ti bastano 5 terre per creare il caos e riempire la board con tanti piccoli rognosi e successivamente enormi tramutanti",
+      "Ahh le nuove espansioni, chissà quali novità portano, che carte succulente ci sono, e soprattutto quali nuovi comandanti! qui nella pagella del Colibrì potrai trovare tutte le informazioni in pillole riguardanti le nuove espansioni!",
     description_EN:
-      "The First Sliver is a powerful commander for a deck based on the Sliver and cascade mechanics. You only need 5 lands to create chaos and fill the board with many small annoying",
+      "Ahh the new expansions, who knows what news they bring, what succulent cards there are, and above all what new commanders! here in the Colibrì's report card you can find all the information in pills about the new expansions!",
     technologies: [
       { name: "Pianura", icon: pianura },
       { name: "Isola", icon: isola },
@@ -145,7 +145,14 @@ export const projectsData = [
       { name: "Montagna", icon: montagna },
       { name: "Foresta", icon: foresta },
     ],
-    image: sliver,
+    embedHtml: `<div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
+      padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+      border-radius: 8px; will-change: transform;">
+      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+        src="https://www.canva.com/design/DAGdm_s200Y/OOu_XX4zNITg67v8lkb_sg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+      </iframe>
+    </div>
+   `,
     mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6029386#paper",
     driveUrl:
       "https://www.archidekt.com/decks/9654037/the_hive_budget",
