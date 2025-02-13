@@ -27,8 +27,6 @@ const ProjectSlider: React.FC = () => {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-
-
   return (
     <React.Fragment>
       <section
@@ -80,8 +78,8 @@ const ProjectSlider: React.FC = () => {
               </p>
               <h2 className="text-[--white] mb-16">
                 {language === "IT"
-                  ? "Alcune delle mie liste"
-                  : "Some of my lists"}
+                  ? "News dal Magic! 🪄"
+                  : "News from Magic! 🪄"}
               </h2>
             </motion.div>
             <Swiper
@@ -111,7 +109,8 @@ const ProjectSlider: React.FC = () => {
                         ? project.description
                         : project.description_EN}
                     </p>
-                    <div className="technologies">
+                    {/* --- icone costo di mana commentate --- */}
+                    {/* <div className="technologies">
                       <h3>
                         {language === "IT" ? "Costo di mana" : "Mana cost"}
                       </h3>
@@ -129,35 +128,33 @@ const ProjectSlider: React.FC = () => {
                           )
                         )}
                       </div>
-                    </div>
-                    <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-                     
-                        <>
-                          <Button
-                            label="Gold-Fish"
-                            link={project.mtgGoldfishUrl}
-                            iconSVG={project.mtgGoldfishIcon}
-                            buttoncolor={project.colors.main}
-                            iconcolor={project.colors.icon}
-                            className="w-full max-lg:w-1/2 max-lg:w-auto"
-                          />
-                          <Button
-                            label="Archidekt"
-                            link={project.driveUrl}
-                            iconSVG={project.downloadIcon}
-                            buttoncolor={project.colors.main}
-                            iconcolor={project.colors.icon}
-                            className="w-full max-lg:w-1/2 max-lg:w-auto"
-                          />
-                        </>
-                      
+                    </div> */}
+                    <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-col max-lg:items-center">
+                      <>
+                        <Button
+                          label="Instagram"
+                          link={project.mtgGoldfishUrl}
+                          iconSVG={project.mtgGoldfishIcon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                          className="w-full max-lg:w-1/2 max-lg:w-auto"
+                        />
+                        <Button
+                          label="Twitch"
+                          link={project.driveUrl}
+                          iconSVG={project.downloadIcon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                          className="w-full max-lg:w-1/2 max-lg:w-auto"
+                        />
+                      </>
                     </div>
                   </div>
-                  <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
-                  <div 
-            dangerouslySetInnerHTML={{ __html: project.embedHtml }}
-            className="w-full"
-          />
+                  <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 ">
+                    <div
+                      dangerouslySetInnerHTML={{ __html: project.embedHtml }}
+                      className="w-full"
+                    />
                     {/* <img
                       src={project.image}
                       alt={`${project.title}-project-mockup`}
@@ -173,66 +170,59 @@ const ProjectSlider: React.FC = () => {
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
                 <h2 className="text-white">{project.title}</h2>
-                <div 
-            dangerouslySetInnerHTML={{ __html: project.embedHtml }}
-            className="w-full"
-          />
-                {/* <img
-                  src={project.image}
-                  alt={project.image}
-                  className="h-[35vh] w-full object-cover object-top rounded-3xl"
-                /> */}
-                <div className="buttons flex flex-row flex-wrap gap-2 max-w-full max-lg:flex-row max-lg:justify-center">
-               
-                        <>
-                          <Button
-                            label="Gold-Fish"
-                            link={project.mtgGoldfishUrl}
-                            iconSVG={project.mtgGoldfishIcon}
-                            buttoncolor={project.colors.main}
-                            iconcolor={project.colors.icon}
-                            className="w-full max-lg:w-1/2 max-lg:w-auto"
-                          />
-                          <Button
-                            label="Archidekt"
-                            link={project.driveUrl}
-                            iconSVG={project.downloadIcon}
-                            buttoncolor={project.colors.main}
-                            iconcolor={project.colors.icon}
-                            className="w-full max-lg:w-1/2 max-lg:w-auto"
-                          />
-                        </>
+                <div
+                  dangerouslySetInnerHTML={{ __html: project.embedHtml }}
+                  className="w-full"
+                />
+                <div className="flex justify-center items-center gap-4">
+                  <Button
+                    label=""
+                    link={project.mtgGoldfishUrl}
+                    iconSVG={project.mtgGoldfishIcon}
+                    buttoncolor={project.colors.main}
+                    iconcolor={project.colors.icon}
+                    className="w-[45%]"
+                  />
+                  <Button
+                    label=""
+                    link={project.driveUrl}
+                    iconSVG={project.downloadIcon}
+                    buttoncolor={project.colors.main}
+                    iconcolor={project.colors.icon}
+                    className="w-[45%]"
+                  />
                 </div>
                 <p className="text-white max-lg:text-4xl">
                   {language === "IT"
                     ? project.description
                     : project.description_EN}
                 </p>
-                <div className="technologies">
-                  <h3 className="text-white">
-                    {language === "IT" ? "Costo di mana" : "Mana cost"}
-                  </h3>
-                  <div className="grid grid-cols-3 gap-10 p-4">
-                    {project.technologies.map(
-                      (technology, innerIndex: number) => (
-                        <img
-                          key={innerIndex}
-                          src={technology.icon}
-                          alt={`${project.title}-icon`}
-                          className="h-[5rem] w-[60%]"
-                          data-tooltip-id="my-tooltip"
-                          data-tooltip-content={technology.name}
-                        />
-                      )
-                    )}
-                  </div>
-                </div>
+                {/* --- Commentati costi di mana --- */}
+                {/* <div className="technologies">
+              <h3 className="text-white">
+                {language === "IT" ? "Costo di mana" : "Mana cost"}
+              </h3>
+              <div className="grid grid-cols-3 gap-10 p-4">
+                {project.technologies.map(
+                  (technology, innerIndex: number) => (
+                    <img
+                      key={innerIndex}
+                      src={technology.icon}
+                      alt={`${project.title}-icon`}
+                      className="h-[5rem] w-[60%]"
+                      data-tooltip-id="my-tooltip"
+                      data-tooltip-content={technology.name}
+                    />
+                  )
+                )}
+              </div>
+            </div> */}
               </article>
             ))}
           </div>
         </div>
       </section>
-        <LiveTicker />
+      <LiveTicker />
       <ReactTooltip
         place="top"
         id="my-tooltip"

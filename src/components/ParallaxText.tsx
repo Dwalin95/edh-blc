@@ -128,7 +128,7 @@ export default function LiveTicker() {
   const { language } = useLanguage();
   return (
     <>
-      <div className="bg-[--lightblue] h-[4.8vh] -rotate-3 flex justify-center items-center scale-110 relative z-[1] w-full min-[1921px]:h-[3.3vh]">
+      <div className="bg-[--lightblue] h-[4.8vh] -rotate-3 flex justify-center items-center relative z-[1] w-full min-[1921px]:h-[3.3vh]">
         <ParallaxText baseVelocity={-2}>
           <Link
             to={'https://open.spotify.com/intl-it/artist/72o9wb21qrmxrciRNAUvy1?si=9lW6eFIhQSahiRiSynjtIg'}

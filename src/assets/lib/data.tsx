@@ -14,8 +14,8 @@ import tutore from "../img/tutore.webp";
 import idilliaco from "../img/idilliaco.webp";
 // import botpng from "../img/botpng.webp";
 import { GoHome, GoPerson, GoMail, GoProject } from "react-icons/go";
-import { GiPorcupinefish } from "react-icons/gi";
-import { MdOutlineArchitecture } from "react-icons/md";
+// import { GiPorcupinefish } from "react-icons/gi";
+// import { MdOutlineArchitecture } from "react-icons/md";
 
 import { FcSearch } from "react-icons/fc";
 import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
@@ -133,11 +133,11 @@ export const projectsData = [
   //   },
   // },
   {
-    title: "The First liver",
+    title: "Commander Bracket",
     description:
-      "Ahh le nuove espansioni, chissà quali novità portano, che carte succulente ci sono, e soprattutto quali nuovi comandanti! qui nella pagella del Colibrì potrai trovare tutte le informazioni in pillole riguardanti le nuove espansioni!",
+      "I Commander Brackets sono un sistema di matchmaking per le partite di Commander, suddiviso in cinque livelli per migliorare l’esperienza di gioco, dai mazzi ultra-casual del Bracket 1 ai mazzi competitivi del Bracket 5. I Game Changers sono carte che influenzano fortemente le partite, offrendo vantaggi strategici. Attualmente in fase di beta testing, il feedback dei giocatori sarà essenziale per perfezionare questo sistema e garantire un’esperienza di gioco ottimale.",
     description_EN:
-      "Ahh the new expansions, who knows what news they bring, what succulent cards there are, and above all what new commanders! here in the Colibrì's report card you can find all the information in pills about the new expansions!",
+      "The Commander Brackets are a matchmaking system for Commander games, divided into five levels to improve the gaming experience, from ultra-casual decks of Bracket 1 to competitive decks of Bracket 5. The Game Changers are cards that strongly influence the games, offering strategic advantages. Currently in beta testing, player feedback will be essential to refine this system and ensure an optimal gaming experience.",
     technologies: [
       { name: "Pianura", icon: pianura },
       { name: "Isola", icon: isola },
@@ -146,18 +146,19 @@ export const projectsData = [
       { name: "Foresta", icon: foresta },
     ],
     embedHtml: `<div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
-      padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-      border-radius: 8px; will-change: transform;">
-      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-        src="https://www.canva.com/design/DAGdm_s200Y/OOu_XX4zNITg67v8lkb_sg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-      </iframe>
-    </div>
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGe02gd3kE/YEcT0V9gJXmTifyvdilOdA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+
    `,
-    mtgGoldfishUrl: "https://www.mtggoldfish.com/deck/6029386#paper",
-    driveUrl:
-      "https://www.archidekt.com/decks/9654037/the_hive_budget",
-    downloadIcon: MdOutlineArchitecture,
-    mtgGoldfishIcon: GiPorcupinefish,
+    mtgGoldfishUrl:
+      "https://www.instagram.com/mtg_colibri?igsh=OWk3Nmx6b3BwdHhw",
+    driveUrl: "https://www.twitch.tv/mtg_colibri",
+    downloadIcon: FaTwitch,
+    mtgGoldfishIcon: FaInstagram,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -315,10 +316,8 @@ export const quotesData = [
 export const aboutMeData = {
   title: "Tutora una lista!",
   title_EN: "List tutor!",
-  description:
-    "Qui potrai trovare tutte le liste che ho creato.",
-  description_EN:
-    "Here you can find all the lists I have created.",
+  description: "Qui potrai trovare tutte le liste che ho creato.",
+  description_EN: "Here you can find all the lists I have created.",
   paragraphs_IT: [
     // {
     //   title: "Telegram Bot",
@@ -349,8 +348,7 @@ export const aboutMeData = {
       description:
         "In this section you will find all the lists and links to the sites where you can view and download them!",
       icon: idilliaco,
-      driveUrl:
-        "/searchList",
+      driveUrl: "/searchList",
     },
   ],
 };
