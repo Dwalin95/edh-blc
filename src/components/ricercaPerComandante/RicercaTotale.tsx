@@ -95,28 +95,28 @@ const CommanderSearch = () => {
   return (
     <div className="min-h-screen">
       {/* <RadialGradient scale="scale-y-1" opacity="opacity-30" /> */}
-      <div className="px-4 sm:px-6 py-8">
+      <div className="px-4 sm:px-6 py-8 ">
         <div className="max-w-3xl mx-auto mb-8">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-white dark:bg-[--darkblue] rounded-lg shadow-md p-6"
+            className="bg-[--darkblue] text-[--white] rounded-lg shadow-md p-6"
           >
-            <div className="mb-6">
-              <label className="block text-gray-700 dark:text-white text-xl font-bold my-2">
+            <div className="mb-6 ">
+              <label className="block text-[--white] text-xl font-bold my-2">
                 Commander Name
               </label>
               <input
                 {...register("commanderName")}
-                className="w-full mt-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 text-black dark:text-white"
+                className="w-full mt-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[--darkblue] text-[--white]"
                 placeholder="Cerca per nome..."
               />
             </div>
 
             <div className="">
-              <label className="block text-gray-700 dark:text-white text-xl font-bold">
+              <label className="block text-[--white] text-xl font-bold">
                 Colori (exact match)
               </label>
-              <div className="flex flex-wrap my-6 lg:gap-12">
+              <div className="flex flex-wrap my-6 lg:gap-12 ">
                 {colorOptions.map((color) => (
                   <Controller
                     key={color.value}
