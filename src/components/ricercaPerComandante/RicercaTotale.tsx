@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import commanderData from "../archive/edhArchive.json";
 import { Card } from "./useClaude";
-// import RadialGradient from "../RadialGradient";
 
 const colorOptions = [
   {
@@ -94,14 +93,13 @@ const CommanderSearch = () => {
 
   return (
     <div className="min-h-screen">
-      {/* <RadialGradient scale="scale-y-1" opacity="opacity-30" /> */}
-      <div className="px-4 sm:px-6 py-8 ">
+      <div className="px-4 sm:px-6 py-8">
         <div className="max-w-3xl mx-auto mb-8">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="bg-[--darkblue] text-[--white] rounded-lg shadow-md p-6"
           >
-            <div className="mb-6 ">
+            <div className="mb-6">
               <label className="block text-[--white] text-xl font-bold my-2">
                 Commander Name
               </label>
@@ -112,18 +110,18 @@ const CommanderSearch = () => {
               />
             </div>
 
-            <div className="">
-              <label className="block text-[--white] text-xl font-bold">
+            <div>
+              <label className="block text-[--white] text-xl font-bold mb-4">
                 Colori (exact match)
               </label>
-              <div className="flex flex-wrap my-6 lg:gap-12 ">
+              <div className="flex flex-wrap items-center justify-center sm:justify-center gap-4 my-6">
                 {colorOptions.map((color) => (
                   <Controller
                     key={color.value}
                     name="colors"
                     control={control}
                     render={({ field }) => (
-                      <label className="flex items-center justify-center space-x-2 cursor-pointer">
+                      <label className="flex items-center justify-center cursor-pointer">
                         <input
                           type="checkbox"
                           className="hidden"
@@ -155,7 +153,7 @@ const CommanderSearch = () => {
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex justify-center gap-4">
               <button
                 type="submit"
                 className="px-4 py-2 bg-blue-500 dark:bg-blue-600 text-white rounded-lg hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors"
@@ -182,7 +180,6 @@ const CommanderSearch = () => {
               frameBorder="0"
               allowFullScreen
             ></iframe>
-
             <p className="italic text-gray-600 dark:text-gray-400 mt-4">
               Dannazione la lista non c'è!
             </p>
