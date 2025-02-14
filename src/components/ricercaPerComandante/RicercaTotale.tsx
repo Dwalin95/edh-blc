@@ -189,7 +189,7 @@ const CommanderSearch = () => {
           </div>
         )}
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-5 p-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-5 p-5">
           {filteredCommanders.map((commander, index) => (
             <Card
               key={index}

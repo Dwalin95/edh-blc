@@ -1,5 +1,4 @@
 import { useGetCardQuery } from '../../api';
-
 interface CardProps {
   commander: {
     nomeComandante: string;
@@ -68,7 +67,8 @@ interface CardGridProps {
 
 export function CardGrid({ commanders }: CardGridProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 p-4">
+    <div>
+    {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 p-4"> */}
       {commanders.map((commander, index) => (
         <Card key={`commander-${index}`} commander={commander} />
       ))}
