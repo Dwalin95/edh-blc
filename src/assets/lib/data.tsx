@@ -199,7 +199,7 @@ export const skillsDataWeb = [
       },
       {
         title: "Youtube",
-        hash: "https://www.youtube.com/@MtgColibri",
+        hash: "https://www.youtube.com/@Mtg_Colibri",
         icon: youtube,
         color: "#800080",
       },
