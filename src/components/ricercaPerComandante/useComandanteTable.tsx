@@ -54,7 +54,7 @@ const useComandanteTable = () => {
       ),
       enableSorting: false,
     }),
-  ], [symbolToSvgUri]);
+  ], [symbolToSvgUri, columnHelper]);
 
   const table = useReactTable<TCommanderData>({
     data,

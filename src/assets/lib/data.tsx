@@ -225,7 +225,7 @@ export const skillsDataDesign = [
     skills: [
       {
         title: "Moxfield",
-        hash: "https://www.moxfield.com",
+        hash: "https://moxfield.com/bookmarks/oWMJJ-100-",
         icon: mox,
         color: "#F24E1E",
       }, // URL completo

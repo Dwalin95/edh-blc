@@ -34,6 +34,7 @@ const colorOptions = [
 type SearchFormData = {
   commanderName: string;
   colors: string[];
+  bracket: string;
 };
 
 const CommanderSearch = () => {
@@ -42,6 +43,7 @@ const CommanderSearch = () => {
     defaultValues: {
       commanderName: "",
       colors: [],
+      bracket: "",
     },
   });
 
@@ -78,7 +80,10 @@ const CommanderSearch = () => {
         data.colors
       );
 
-      return nameMatch && colorMatch;
+      const bracketMatch = data.bracket === "" || 
+        commander.bracket.toString() === data.bracket;
+
+      return nameMatch && colorMatch && bracketMatch;
     });
 
     setFilteredCommanders(filtered);
@@ -108,6 +113,30 @@ const CommanderSearch = () => {
                 className="w-full mt-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[--darkblue] text-[--white]"
                 placeholder="Cerca per nome..."
               />
+            </div>
+
+            <div className="mb-6">
+
+              <label className="block text-[--white] text-xl font-bold my-2">
+              ⚠️ Attenzione!: ⚠️ 
+              </label>
+              <label className="block text-[--white] text-xl font-bold my-2">
+              I bracket sono indicativi e presi da Moxfield, possono non rispecchiare il livello del mazzo perchè la costruzione si basa su un budget massimo di 100$
+              </label>
+              <label className="block text-[--white] text-xl font-bold my-2">
+                Bracket (1-5)
+              </label>
+              <select
+                {...register("bracket")}
+                className="w-full mt-4 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-[--darkblue] text-[--white]"
+              >
+                <option value="">Qualsiasi bracket</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
 
             <div>
@@ -195,6 +224,8 @@ const CommanderSearch = () => {
                 coloriComandante: commander.coloriComandante,
                 archidekt: commander.archidekt,
                 linkLista: commander.linkLista,
+                moxfield: commander.moxfield,
+                bracket: commander.bracket,
               }}
             />
           ))}
