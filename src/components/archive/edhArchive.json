@@ -150,5 +150,21 @@
     "linkLista":"https://www.mtggoldfish.com/deck/6878625#paper",
     "moxfield": "https://moxfield.com/decks/V-oSC0mi3UKiAavTb3uZtA",
     "bracket" : 1
+  },
+  {
+    "nomeComandante": "Jeleva, Nephalia's Scourge",
+    "coloriComandante": ["1", "U", "B", "R"],
+    "archidekt": "https://archidekt.com/decks/11520243/jeleva",
+    "linkLista":"https://www.mtggoldfish.com/deck/6800847#paper",
+    "moxfield": "https://moxfield.com/decks/3_UmU2VpwUG6DMZsFv3c_w",
+    "bracket" : 2
+  },
+  {
+    "nomeComandante": "Magus Lucea Kane",
+    "coloriComandante": ["1", "G", "U", "R"],
+    "archidekt": "https://archidekt.com/decks/11519396/magus",
+    "linkLista":"https://www.mtggoldfish.com/deck/6941743#paper",
+    "moxfield": "https://moxfield.com/decks/QE69nTS54kaXS6p2JVF7vg",
+    "bracket" : 2
   }
 ]
