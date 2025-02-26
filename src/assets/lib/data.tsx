@@ -30,6 +30,7 @@ import mox from "../img/mox.svg";
 import arkidek from "../img/arkidek.svg";
 import gldfsh from "../img/gdfh.webp";
 import spotify from "../icons/spotify.png";
+import sleeve from "../img/sleevechief.webp";
 import iTunes from "../icons/itunes.png";
 
 export const headerIntroData = {
@@ -239,21 +240,28 @@ export const skillsDataDesign = [
         title: "Archidekt",
         hash: "https://www.archidekt.com/folders/727949?dir=asc&orderBy=name",
         icon: arkidek,
+        color: "#FFD720",
+      },
+      {
+        title: "5% COLIBRI",
+        hash: "https://sleevechief.myshopify.com?sca_ref=8189350.8TfzeCs7AV",
+        icon: sleeve,
         color: "#FFD700",
-      }, // URL completo
+      },
+
     ],
   },
 ] as const;
 
 // export const schedule = [
 //   {
-//     skillsTitle: "Schedule",
+//     skillsTitle: "Discount",
 //     skills: [
 //       {
 
-//         icon: scheda,
+//         icon: sleeve,
 //         color: "#F24E1E",
-//         text: "Sono live su Twitch il Lunedì e il Martedì/Giovedì dalle 21:30",
+//         text: "5%",
 //       },
 
 //     ],

@@ -112,7 +112,6 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
             {skill.title}
           </h3>
         </div>
-        
         </>
       ))}
     </article>

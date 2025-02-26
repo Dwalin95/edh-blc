@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import {
-  
   skillsDataDesign,
   skillsDataWeb,
 } from "../assets/lib/data";
@@ -54,13 +53,13 @@ const TechStack: React.FC = () => {
           </motion.div>
         </div>
        
+        
         <div className="flex gap-40 justify-center max-lg:flex-col">
           <div className="w-1/3 max-lg:w-full">
             <SkillSection skillsData={skillsDataWeb} theme={theme} />
           </div>
           <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
             <SkillSection skillsData={skillsDataDesign} theme={theme} />
-            
           </div>
         </div>
       </section>
