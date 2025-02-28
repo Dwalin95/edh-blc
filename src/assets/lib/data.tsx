@@ -22,6 +22,7 @@ import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
 import igIcon from "../img/instagram.svg";
+import telegram from "../icons/telegram.svg";
 import tiktok from "../img/tiktok.svg";
 import youtube from "../img/youtube.svg";
 import twitch from "../img/twitch_noScritta.svg";
@@ -184,25 +185,25 @@ export const skillsDataWeb = [
         title: "Instagram",
         hash: "https://www.instagram.com/mtg_colibri?igsh=OWk3Nmx6b3BwdHhw",
         icon: igIcon,
-        color: "#F1662A",
+        color: "#ff00cc",
       },
       {
         title: "TikTok",
         hash: "https://www.tiktok.com/@mtg_colibri?_t=8pzun8g5lRZ&_r=1",
         icon: tiktok,
-        color: "#8A2BE2",
+        color: "#00ddff",
       },
       {
         title: "Twitch",
         hash: "https://www.twitch.tv/mtg_colibri",
         icon: twitch,
-        color: "#800080",
+        color: "#a600ff",
       },
       {
         title: "Youtube",
         hash: "https://www.youtube.com/@Mtg_Colibri",
         icon: youtube,
-        color: "#800080",
+        color: "#ff0011",
       },
       {
         title: "iTunes",
@@ -214,7 +215,7 @@ export const skillsDataWeb = [
         title: "Spotify",
         hash: "https://open.spotify.com/intl-it/artist/72o9wb21qrmxrciRNAUvy1?si=9lW6eFIhQSahiRiSynjtIg",
         icon: spotify,
-        color: "#800080",
+        color: "#1fbf0d",
       },
     ],
   },
@@ -234,19 +235,25 @@ export const skillsDataDesign = [
         title: "GoldFish",
         hash: "https://www.mtggoldfish.com",
         icon: gldfsh,
-        color: "#FFD700",
+        color: "#ff9d00",
       }, // URL completo
       {
         title: "Archidekt",
         hash: "https://www.archidekt.com/folders/727949?dir=asc&orderBy=name",
         icon: arkidek,
-        color: "#FFD720",
+        color: "#aba9a2",
       },
       {
         title: "5% COLIBRI",
         hash: "https://sleevechief.myshopify.com?sca_ref=8189350.8TfzeCs7AV",
         icon: sleeve,
         color: "#FFD700",
+      },
+      {
+        title: "Telegram Bot!",
+        hash: "https://t.me/MTG_Colibri_Bot",
+        icon: telegram,
+        color: "#00f7ff",
       },
 
     ],
