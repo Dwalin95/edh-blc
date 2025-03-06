@@ -22,7 +22,7 @@ import { FaInstagram, FaTwitch, FaTiktok } from "react-icons/fa";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
 import igIcon from "../img/instagram.svg";
-// import telegram from "../icons/telegram.svg";
+import telegram from "../icons/telegram.svg";
 import tiktok from "../img/tiktok.svg";
 import youtube from "../img/youtube.svg";
 import twitch from "../img/twitch_noScritta.svg";
@@ -249,12 +249,12 @@ export const skillsDataDesign = [
         icon: sleeve,
         color: "#FFD700",
       },
-      // {
-      //   title: "Telegram Bot!",
-      //   hash: "https://t.me/MTG_Colibri_Bot",
-      //   icon: telegram,
-      //   color: "#00f7ff",
-      // },
+      {
+        title: "Telegram Bot!",
+        hash: "https://t.me/MTG_Colibri_Bot",
+        icon: telegram,
+        color: "#00f7ff",
+      },
 
     ],
   },
