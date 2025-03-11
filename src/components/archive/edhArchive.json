@@ -166,5 +166,13 @@
     "linkLista":"https://www.mtggoldfish.com/deck/6941743#paper",
     "moxfield": "https://moxfield.com/decks/QE69nTS54kaXS6p2JVF7vg",
     "bracket" : 2
+  },
+  {
+    "nomeComandante": "Narset, Enlightened Master",
+    "coloriComandante": ["3", "u", "R", "W"],
+    "archidekt": "https://archidekt.com/decks/11843093/narset_fragore_infernale",
+    "linkLista":"https://www.mtggoldfish.com/deck/6976988#paper",
+    "moxfield": "https://moxfield.com/decks/Yxgz_vZK5kycEYuOyc4qYg",
+    "bracket" : 4
   }
 ]
