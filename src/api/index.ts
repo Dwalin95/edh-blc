@@ -27,7 +27,13 @@ const edhApi = api.injectEndpoints({
       }),
       providesTags: ['ScryFallService'],
     }),
+    getCommanders: builder.query<CardResponseScryfall[], void>({
+      query: () => ({
+        url: `http://localhost:5000/api/decks`, // Assicurati che il dominio e la porta siano corretti
+      }),
+      providesTags: ['Commanders'],
+    }),
   }),
 });
 
-export const { useGetSymbolsQuery, useGetCardQuery, useGetFilteredCardsQuery } = edhApi;
+export const { useGetSymbolsQuery, useGetCardQuery, useGetFilteredCardsQuery, useGetCommandersQuery } = edhApi;
