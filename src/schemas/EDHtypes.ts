@@ -41,14 +41,14 @@ export type TScryFallCardSymbolResponse = {
 };
 
 
-export interface CardResponseScryfall {
+export type CardResponseScryfall = CardFace & {
   nomeComandante: string;
   coloriComandante: string[];
   archidekt?: string;
   linkLista?: string;
   moxfield?: string;
   bracket?: number;
-}
+} 
 
 export type ImageUris = {
   small: string;
@@ -93,6 +93,7 @@ export type CardFace = {
   artist_id?: string;
   illustration_id?: string;
   image_uris: ImageUris;
+  card_faces?: CardFace[];
 };
 
 export type RelatedCard = {
