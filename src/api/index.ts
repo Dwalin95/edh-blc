@@ -2,7 +2,7 @@
 import { api } from '../services/api';
 import { CardResponseScryfall, TScryFallCardSymbolResponse } from '../schemas/EDHtypes';
 
-
+// se vuoi tornare alla versione con il file json devi tornare a questo commit, basta aggiungere sul json le carte e hai fatto, senza usare il BE e Mongo
 
 const edhApi = api.injectEndpoints({
   endpoints: (builder) => ({
