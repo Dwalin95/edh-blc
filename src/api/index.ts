@@ -29,7 +29,7 @@ const edhApi = api.injectEndpoints({
     }),
     getCommanders: builder.query<CardResponseScryfall[], void>({
       query: () => ({
-        url: `http://localhost:5000/api/decks`, // Assicurati che il dominio e la porta siano corretti
+        url: `https://edh-blc-be.vercel.app/api/decks`, 
       }),
       providesTags: ['Commanders'],
     }),
