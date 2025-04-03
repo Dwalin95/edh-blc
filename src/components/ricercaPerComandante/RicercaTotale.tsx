@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
-import commanderData from "../archive/edhArchive.json";
+import { useGetCommandersQuery } from "../../api";
 import { Card } from "./useClaude";
 
 const colorOptions = [
@@ -37,8 +37,25 @@ type SearchFormData = {
   bracket: string;
 };
 
+// Definisci il tipo CardResponseScryfall se non è già definito
+type CardResponseScryfall = {
+  nomeComandante: string;
+  coloriComandante: string[];
+  archidekt?: string;
+  linkLista?: string;
+  moxfield?: string;
+  bracket?: number;
+};
+
 const CommanderSearch = () => {
-  const [filteredCommanders, setFilteredCommanders] = useState(commanderData);
+  const { data: commanderData = [], isLoading } = useGetCommandersQuery();
+  const [filteredCommanders, setFilteredCommanders] = useState<CardResponseScryfall[]>([]);
+
+  useEffect(() => {
+    // Aggiorna lo stato quando commanderData cambia
+    setFilteredCommanders(commanderData);
+  }, [commanderData]);
+
   const { register, handleSubmit, control, reset } = useForm<SearchFormData>({
     defaultValues: {
       commanderName: "",
@@ -81,7 +98,7 @@ const CommanderSearch = () => {
       );
 
       const bracketMatch = data.bracket === "" || 
-        commander.bracket.toString() === data.bracket;
+        (commander.bracket?.toString() ?? "") === data.bracket;
 
       return nameMatch && colorMatch && bracketMatch;
     });
@@ -94,7 +111,11 @@ const CommanderSearch = () => {
     setFilteredCommanders(commanderData);
   };
 
-  const noResults = filteredCommanders.length === 0;
+  const noResults = !isLoading && filteredCommanders.length === 0;
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="min-h-screen">
@@ -204,8 +225,7 @@ const CommanderSearch = () => {
           <div className="flex flex-col items-center py-10">
             <iframe
               src="https://giphy.com/embed/s0FsE5TsEF8g8"
-              width="480"
-              height="271"
+              className="w-full max-w-xs sm:max-w-md h-auto"
               frameBorder="0"
               allowFullScreen
             ></iframe>
@@ -222,10 +242,10 @@ const CommanderSearch = () => {
               commander={{
                 nomeComandante: commander.nomeComandante,
                 coloriComandante: commander.coloriComandante,
-                archidekt: commander.archidekt,
-                linkLista: commander.linkLista,
-                moxfield: commander.moxfield,
-                bracket: commander.bracket,
+                archidekt: commander.archidekt ?? "",
+                linkLista: commander.linkLista ?? "",
+                moxfield: commander.moxfield ?? "",
+                bracket: commander.bracket ?? 0,
               }}
             />
           ))}

@@ -27,7 +27,13 @@ const edhApi = api.injectEndpoints({
       }),
       providesTags: ['ScryFallService'],
     }),
+    getCommanders: builder.query<CardResponseScryfall[], void>({
+      query: () => ({
+        url: `https://edh-blc-be.vercel.app/api/decks`, 
+      }),
+      providesTags: ['Commanders'],
+    }),
   }),
 });
 
-export const { useGetSymbolsQuery, useGetCardQuery, useGetFilteredCardsQuery } = edhApi;
+export const { useGetSymbolsQuery, useGetCardQuery, useGetFilteredCardsQuery, useGetCommandersQuery } = edhApi;
